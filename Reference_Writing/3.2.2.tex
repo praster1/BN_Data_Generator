@@ -1,0 +1,61 @@
+~~~~Information-theoretic scoring functions are based on compression:
+
+\begin{itemize}
+	\item The score of a Bayesian network $B$ is related to the compression that can be achieved over the data $T$ with an optimal code induced by $B$.
+	
+	\item Shannon’s source coding theorem (or noiseless coding theorem) establishes the limits to possible data compression.
+\end{itemize}
+
+
+\begin{center}\rule[0.5ex]{0.9\columnwidth}{1pt}\end{center}
+
+\textbf{Theorem.} \underline{Shannon source coding theorem}
+
+As the number of instances of an i.i.d. data tends to infinity, no compression of the data is possible into a shorter message length than the total Shannon entropy, without losing information.
+
+Several optimal codes asymptotically achieve Shannon’s limit:
+
+\begin{itemize}
+	\item Fano-Shannon code and Huffman code, for instance.
+	
+	\item Building such codes requires a probability distribution over data $T$.
+\end{itemize}
+
+\begin{center}\rule[0.5ex]{0.9\columnwidth}{1pt}\end{center}
+
+Information content of $T$ by $B$
+
+\begin{itemize}
+	\item The size of an optimal code, induced by the distribution $B$, when encoding $T$.
+	
+	\item This value can be used to score the BN $B$.
+\end{itemize}
+
+\begin{eqnarray*}
+L(T|B) & = & -\log(P_{B}(T))\\
+ & = & -\sum_{i=1}^{n}\sum_{j=1}^{q_{i}}\sum_{k=1}^{r_{i}}N_{ijk}\log(\theta_{ijk})\\
+ & = & -\sum_{i=1}^{n}\sum_{j=1}^{q_{i}}N_{ijk}\sum_{k=1}^{r_{i}}\frac{N_{ijk}}{N_{ij}}\log(\theta_{ijk}).
+\end{eqnarray*}
+
+
+
+\begin{center}\rule[0.5ex]{0.9\columnwidth}{1pt}\end{center}
+
+\textbf{Lemma.} \underline{Gibb’s inequality}
+
+Let $P(x)$ and $Q(x)$ be two probability distributions over the same domain, then
+$$\sum_{x}P(x)\log(Q(x))\leq\sum_{x}P(x)\log(P(x)).$$
+
+\begin{center}\rule[0.5ex]{0.9\columnwidth}{1pt}\end{center}
+
+Some observations from Gibb’s inequality:
+
+\begin{itemize}
+	\item When fixing the DAG structure of a BN $B$, $L(T|B)$ is minimized when
+	$$\theta_{ijk}=\frac{N_{ijk}}{N_{ij}}.$$
+	
+	\item $L(T|B)$ is minimal when the likelihood $P_{B}(T)$ of $T$ given $B$ is maximal. 
+	
+	\item The parameters of $B$ that induces a code that compresses $T$ the most is precisely the
+parameters that maximizes the probability of observing $T$.
+\end{itemize}

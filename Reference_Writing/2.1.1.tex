@@ -1,0 +1,35 @@
+~~~~Based on the Grow-Shrink Markov Blanket, the simplest Markov blanket detection algorithm (Margaritis, 2003) used in a structure learning algorithm.
+
+The definition of a Markov blanket is as follows: for any variable $X \in U$, the Markov blanket $BL(X) \subseteq U$ is any set of variables such that for any $Y \in U - BL(X) - \{X\}, X \perp Y | BL(X)$. In other words, $BL(X)$ completely "shields" (d-separates) variable $X$ from any other variable outside $BL(X) \cup \{X\}$.
+
+In a Bayesian network graph, the Markov blanket of a node includes its parents, children and other parents of all of its children.
+
+\begin{center}\rule[0.5ex]{0.9\columnwidth}{1pt}\end{center}
+
+\textbf{Algorithm.} \underline{The GS Markov Blanket Algorithm}
+
+\begin{enumerate}
+	\item $S \leftarrow NULL$
+	
+	\item \textbf{While} $\exists$ $Y\in U-\{X\}$
+	
+	~~~~such that $Y \not\perp X | S$,
+	
+	~~~~\textbf{do} $S \leftarrow S \cup \{Y\}$. (Growing phase)
+	
+	~~~~\textbf{End While}
+	
+	\item \textbf{While} $\exists$ $Y\in S$
+	
+	~~~~such that $Y \perp X | S - \{Y\}$,
+	
+	~~~~\textbf{do} $S \leftarrow S - \{Y\}$. (Shrinking phase)
+	
+	~~~~\textbf{End While}
+	
+	\item $B(X) \leftarrow S$.
+\end{enumerate}
+
+\begin{center}\rule[0.5ex]{0.9\columnwidth}{1pt}\end{center}
+
+GS, for the recovery of the Markov blanket of $X$ is based on pairwise independent tests. It consists of two phases, a growing and a shrinking one. Starting from an empty set $S$, the growing phase adds variables to $S$ as long as they are dependent with $X$ given the current contents of $S$.

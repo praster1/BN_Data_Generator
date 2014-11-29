@@ -1,0 +1,15 @@
+The measure of the quality of a BN can be computed in several different ways:
+
+$$\phi(B|T) = LL(B|T) - f(N)|B|,$$
+
+where $f(N)$ is a non-negative penalization function.
+
+\begin{itemize}
+	\item If f(N) = 1, we have the \textbf{Akaike Information Criterion (AIC)} scoring function:
+	
+	$$AIC(B|T) = LL(B|T) - |B|.$$
+	
+	\item If $f(N) = \frac{1}{2} \log(N)$, we have the \textbf{Bayesian Information Criterion (BIC)} score.
+	
+	\item If $f(N) = 0$, we have the LL score.
+\end{itemize}

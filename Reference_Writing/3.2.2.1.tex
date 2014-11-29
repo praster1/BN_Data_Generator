@@ -1,0 +1,12 @@
+~~~~The \textbf{$\log$-likelihood (LL) Score} is defined in the following way:
+$$LL(B|T)=\sum_{i=1}^{n}\sum_{j=1}^{q_{i}}\sum_{k=1}^{r_{i}}N_{ijk}\log(\frac{N_{ijk}}{N_{ij}}).$$
+
+The LL score tends to favor complete network structures and it does not provide an useful representation of the independence assumptions of the learned network.
+
+This phenomenon of overfitting is usually avoided in two different ways:
+
+\begin{itemize}
+	\item By limiting the number of parents per network variable.
+	
+	\item By using some penalization factor over the LL score : AIC, BIC
+\end{itemize}

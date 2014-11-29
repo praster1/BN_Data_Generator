@@ -1,0 +1,7 @@
+~~~~Compute the posterior probability distribution, starting from a prior probability distribution on the possilbe networks, conditioned to data $T$, that is, $P(B|T)$.
+
+The best network is the one that maximizes the posterior probability.
+
+Since the term $P(T)$ is the same for all possible networks, in practice, for comparative purposes, computing $P(B, T)$ is sufficient.
+
+As it is easier to work in the logarithmic space, the scoring functions use the value $\log(P(B,T))$ instead of $P(B,T)$.
