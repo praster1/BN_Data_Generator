@@ -1,0 +1,25 @@
+\begin{description}
+
+	\item[$r_{i}$]: Number of states of the finite random variable $X_{i}$,
+	
+	\item[$x_{ik}$]: $k$-th value of $X_{i}$.
+	
+	\item[$q_{i}=\prod_{X_{j}\in\prod_{X_{i}}}r_{j}$]: Number of possible configurations of the parent set $\prod_{X_{i}}$ of $X_{i}$.
+	
+	\item[$\omega_{ij}$]: $j$-th configuration of $\prod_{X_{i}}$ $(1 \leq j \leq q_{i})$.
+	
+	\item[$N_{ijk}$]: Number of instances in the data $T$ where the variable $X_{i}$ takes its $k$-th value $x_{ik}$ and the variables in $\prod_{X_{i}}$ take their $j$-th configuration $\omega_{ij}$.
+	
+	\item[$N_{ij}=\sum_{k=1}^{r_{i}}N_{ijk}$]: Number of instances in the data $T$ where the variables in $\prod_{X_{i}}$ take their $j$-th configuration $\omega_{ij}$.
+	
+	\item[$N_{ik}=\sum_{j=1}^{q_{i}}N_{ijk}$]: Number of instances in the data $T$ where the variable $X_{i}$ takes its $k$-th value $x_{ik}$.
+	
+	\item[N]: Total number of instances in the data $T$.
+	
+	\item[$\Theta_{G}=\{\Theta_{i}\}_{i=1,\cdots,n}$]: Encodes parameters of a BN \textbf{$B$} with underlying DAG $G$
+	
+	\item[$\Theta_{i}=\{\Theta_{ij}\}_{j=1,\cdots,q_{i}}$]: Encodes parameters concerning only the variable $X_{i}$ of $X$ in $B$
+
+	\item[$\Theta_{ij}=\{\Theta_{ijk}\}_{k=1,\cdots,r_{i}}$]: Encodes parameters for variable $X_{i}$ of $X$ in $B$ given that its parents take their $j$-th configuration
+
+\end{description}
