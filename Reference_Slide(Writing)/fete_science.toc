@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {english}
+\beamer@sectionintoc {1}{서론}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{목표}{3}{0}{1}
+\beamer@sectionintoc {2}{비교 기준}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{비교 기준}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{어떻게 비교할 것인가?}{6}{0}{2}
+\beamer@subsectionintoc {2}{3}{전제}{7}{0}{2}
+\beamer@sectionintoc {3}{Real Data를 이용한 구조 학습 결과 비교}{8}{0}{3}
+\beamer@subsectionintoc {3}{1}{Asia DataSet by Lauritzen and Spiegelhalter}{9}{0}{3}
+\beamer@subsectionintoc {3}{2}{Insurance Evaluation Network DataSet}{12}{0}{3}
+\beamer@subsectionintoc {3}{3}{ALARM Monitoring System DataSet}{15}{0}{3}
+\beamer@subsectionintoc {3}{4}{The HailFinder Weather Forecast System DataSet}{18}{0}{3}
+\beamer@sectionintoc {4}{Data Generator 성능 평가}{22}{0}{4}
+\beamer@sectionintoc {5}{Topology에 따른 비교}{32}{0}{5}
+\beamer@sectionintoc {6}{결론}{58}{0}{6}
+\beamer@subsectionintoc {6}{1}{결론}{58}{0}{6}
+\beamer@subsectionintoc {6}{2}{Discussion}{61}{0}{6}

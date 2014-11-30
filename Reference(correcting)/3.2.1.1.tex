@@ -1,0 +1,17 @@
+~~~~D. Heckerman \emph{et al.} (1995) proposed the Bayesian Dirichlet (BDe) score.
+
+Given a directed acyclic graph (DAG) $G$ such that $P(G)>0$ then $\varTheta_{ij}$ is Dirichlet for all $\varTheta_{ij}$ in $\varTheta_{G}$. And given a Bayesian network $B$, data $T$ can be seen as a multinomial sample of the joint space $D$ with parameters
+$$\Theta_{D}=\{\theta_{x_{1},\cdots,x_{n}}\}_{x_{i}=1,\cdots,r_{i},i\in1,\cdots,n}$$
+
+where $\theta_{x_{1}, \cdots, x_{n}} = \prod_{i=1}^{n}\theta_{x_{I}|\prod_{x_{i}}}$.
+
+For any complete $G$, we have that $P(G) > 0$. Then $\rho(\varTheta_{G}|G)=\prod_{i=1}^{n}\rho(\varTheta_{i}|G)$ (global parameter independence) and $\rho(\varTheta_{i}|G)=\prod_{i=1}^{q_{i}}\rho(\varTheta_{ij}|G)$ for all $i=1,\cdots,n$ (local parameter independence).
+
+Given two DAGs $G$ and $G'$, such that $P(G)>0$ and $P(G')>0$, if $X_{i}$ has the same parents in $G$ and $G_{0}$, then $\rho(\varTheta_{ij}|G)=\rho(\varTheta_{ij}|G')$ for all $j=1,\cdots,q_{i}$.
+
+Suppose that $\rho(\Theta_{D}|G)$ is Dirichlet with equivalent sample size $N'$ for some complete $G$ in $D$. Then, for any Bayesian network $B$ in $D$,
+$$BDe(B,T) = P(B,T)=P(B)\times\prod_{i=1}^{n}\prod_{j=1}^{q_{i}}(\frac{\Gamma(N'_{ij})}{\Gamma(N_{ij}+N'_{ij})}\times\prod_{k=1}^{r_{i}}\frac{\Gamma(N_{ijk}+N'_{ijk})}{\Gamma(N'_{ijk})})$$
+
+where $N'_{ijk} = N' \times P(X_{i} = x_{ik}, \prod_{X_{i}} = \omega_{ij}|G)$.
+
+The equivalent sample size $N'$ expresses the strength of out belief in the prior distribution.

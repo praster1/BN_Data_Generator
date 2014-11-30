@@ -1,0 +1,35 @@
+~~~~Based on the Incremental Association Markov blanket (IAMB) algorithm (Tsamardinos I. \emph{et al.} 2003), which is based on a two-phase selection scheme (a forward selection followed by an attempt to remove false positives).
+
+\begin{center}\rule[0.5ex]{0.9\columnwidth}{1pt}\end{center}
+
+\textbf{Algorithm.} \underline{The IAMB Algorithm}
+
+\begin{enumerate}
+	\item (Forward phase)
+	
+	~~~~$S \leftarrow NULL$
+	
+	~~~~\textbf{While} $S$ has changed
+	
+	~~~~~~~~\textbf{Find} the feature $X$ in $V-S-\{T\}$ that maximizes $f(X ; T|S)$
+	
+	~~~~~~~~\textbf{If} not $I(X ; T|S)$
+	
+	~~~~~~~~~~~~\textbf{Add} $X$ to $S$
+	
+	~~~~~~~~\textbf{End If}
+	
+	~~~~\textbf{End While}
+	
+	\item (Backward phase)
+
+	~~~~\textbf{Remove} from $S$ all variables $X$, for which $I(X ; T|S-\{X\})$
+	
+	\item \textbf{Return} $S$
+\end{enumerate}
+
+\begin{center}\rule[0.5ex]{0.9\columnwidth}{1pt}\end{center}
+
+IAMB consists of two phases, a forward and a backward one.
+
+The Markov blanket of a variable of interest $T$, will be denotes as $MB(T)$. An estimate of the $MB(T)$ is kept in the set $S$. In the forward phase all variables that belong in $MB(T)$ and possibly more (false positives) enter $S$ while in the backward phase the false positives are identified and removed so that $S = MB(T)$ in the end.

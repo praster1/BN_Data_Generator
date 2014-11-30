@@ -1,0 +1,29 @@
+% ~~~~Topology에 따른 알고리즘별 성능을 비교해본 결과, score 기준으로는 TABU search가 대부분 가장 좋은 것으로 나타났다. 하지만 목표 네트워크와 학습 네트워크를 직접 비교해본 결과 "C가 무엇이 가장 많은가"를 기준으로 하였을 때는 Hill-climbing이 성능이 좋은 것으로 나타날 때가 많았다. 오히려 TABU search는 WO와 WC, 즉 arc의 방향이 반대로 되었거나, arc가 없어야 하는데 있는 경우가 많은 것으로 나타났다.
+~~~~Result of comparing the performance of each algorithm according to the Topology, TABU search has been found most best thing in score criteria. However, as a result of comparing the target network and learning network directly, when a reference to "C is what is most" is, Hill-climbing is was often appears that the performance is good. Rather TABU search is, WO and WC, that is either the direction of arc is reversed, it was found that often it is in order to ensure that there is no arc.
+
+% Score-based 알고리즘에 비해 Hybrid 알고리즘이 arc를 더 보수적으로 그려주는 것으로 나타났다. 이에 따라 C가 적고 missing arcs가 많지만, WO, WC가 매우 적게 나타나기 때문에, WO, WC가 그려지는 것이 치명적일 경우 이 알고리즘을 사용할 수 있을 것으로 보인다. 특히 Diamond 형태에 대해서는 MMHC가, Rhombus 형테에 대해서는 RSMAX2가 유리한 것으로 보인다.
+Hybrid algorithm compared to Score-based algorithm is found to be that will draw the arc more conservative. This, although C is often less missing arcs, WO, since WC is displayed very small, WO, if it is a fatal that WC is drawn, it is believed that it is possible to use this algorithm. Especially MMHC for Diamond form, RSMAX2. for Rhombus seems to be advantageous.
+
+% Line, Star 형태는 다른 topology에 비해 상대적으로 알고리즘별 성능 차이가 크지 않았다.
+Line, Star form, not larger difference in performance for each relatively algorithm is compared to other topology.
+
+% 대부분의 topology에서, node의 개수가 작을 때에는 알고리즘별 성능 차이가 크지 않았지만, node의 개수가 많아질수록 알고리즘별 성능 차이가 두드러지는 현상이 나타났다. 또, Sample size가 커질수록 M, WO, WC의 빈도가 작아지는 현상이 나타났다.
+In most of the topology, but the difference in the performance of each algorithm was not large when the number of node is small, the greater the number of node increases, a phenomenon that differences in performance of each algorithm stand out appeared. In addition, Sample size is larger the M, WO, a phenomenon that the frequency of WC is smaller appeared.
+
+% 이들을 바탕으로, 베이지안 네트워크 구조 학습을 진행하는 연구자는, 자신의 목표 네트워크가 어떠한 형태인가에 따라 어떠한 알고리즘을 선택할지 고려해볼 수 있을 것이다.
+On the basis of these researchers to advance the structure learning of Bayesian network, will be able to try to consider whether to choose what algorithms depending on whether their target network is any way.
+
+% 또한 학습 네트워크에 M, WO, WC가 많으면 치명적일 경우, Hybrid 알고리즘 선택을 고려해볼 수 있을 것이다.
+Also, the more M, WO, WC is the learning network and fatal, it will be able to try to consider the selection of Hybrid algorithm.
+
+% 이 연구는 앞으로 topology의 node 개수를 증가시키거나, sample size를 더 적게 하여, 혹은 cardinality를 증가시켜 추가 실험을 할 수 있다. 또 다른 algorithm을 적용해보거나, 두 개 이상의 topology를 서로 결합하여 비교 분석할 수도 있다.
+In this study, it can be the future or to increase the number of node topology, and with less sample size, or additional experiments to increase the cardinality. Or by applying a different algorithm, it is possible to compare analyzed by combining two or more mutually topology.
+
+% 확률 관계를 정의할 때 확률값을 U(0,1) 사이의 값에서 임의로 주었는데, 이 확률값을 "순차적"으로 준 것과의 관계를 알아볼 수도 있다.
+The probability when defining the relationship between the probability gave arbitrarily value between $U(0,1)$, it is possible to confirm the relationship between those given this probability "sequential".
+
+% 그렇지만 무엇보다도 Bayesian Network Data Generator의 R 패키징을 완성하여야 할 것이다.
+It is desirable to complete the R package of Bayesian network data generator more than anything else.
+
+% 이외에도 continuous data를 이용한 분석, BN을 이용한 missing value를 컨트롤할 수 있을 것이다. 이 때 Bayesian Network Data Generator를 적극적으로 활용할 수 있을 것이다.
+In addition, analysis using the continuous data, will be able to control the missing value of using BN. In this case it is possible to actively utilize Bayesian network data generator.
