@@ -33,3 +33,9 @@
 IAMB consists of two phases, a forward and a backward one.
 
 The Markov blanket of a variable of interest $T$, will be denotes as $MB(T)$. An estimate of the $MB(T)$ is kept in the set $S$. In the forward phase all variables that belong in $MB(T)$ and possibly more (false positives) enter $S$ while in the backward phase the false positives are identified and removed so that $S = MB(T)$ in the end.
+
+The heuristic used in IAMB to identify potential Markov blanket members in 'forward phase' is the following:
+
+Start with an empty candidate set for the $S$ and admit into it (in the next iteration) the variable that maximizes a heuristic function $f(X ; T|S)$. Function $f$ should return a non-zero value for every variable that is a member of the Markov blanket for the algorithm to be sound, and is typically a measure of association between $X$ and $T$ given $S$. In our experiments we used $f$ as the Mutual Information similar to what was suggested in Margaritis D. and Thrun S. (1999), J. Cheng \emph{et al.} (2002): $f(X; T|S)$ is the Mutual Information between $S$ and $T$ given $S$. It is important that $f$ is an informative and effective heuristic so that the set of candidate variables after 'forward phase' is as small as possible for two reasons: one is time efficiency (i.e. do not spend time considering irrelevant variables) and another is sample efficiency (do not require sample larger than what is absolutely necessary to perform conditional tests of independence).
+
+In backward conditioning we remove features that do not belong to the $MB(T)$ one-by-one by testing whether a feature $X$ from $S$ is independent of $T$ given the remaining $S$.

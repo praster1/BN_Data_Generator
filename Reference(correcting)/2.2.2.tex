@@ -18,6 +18,6 @@ A variant of Hill-climbing called TABU search has gained popularity (Fred W. G. 
 
 \begin{center}\rule[0.5ex]{0.9\columnwidth}{1pt}\end{center}
 
-TABU search begins in the same way as ordinary local or neighborhood search, proceeding iteratively from one point solution to another until a chosen termination criterion is satisfied. Each $x \in X$ has an associated neighborhood $N(x) \subset X$, and each solution $x' \in N(x)$ is reached from x by an operation called 'move'.
+TABU search begins in the same way as ordinary local or neighborhood search, proceeding iteratively from one point solution to another until a chosen termination criterion is satisfied. Each $x \in X$ has an associated neighborhood $N(x) \subset X$, and each solution $x' \in N(x)$ is reached from $x$ by an operation called 'move'.
 
 As an initial point of departure, we may contrast TABU search with a simple descent method where the goal is to $\min f(x)$ (or a corresponding ascent method where the goal is to $\max f(x)$). Such method only permits moves to neighbor solutions that improve the current objective function value and ends when no improving solutions can be found. A pseudo-code of a generic descent method is presented in 'Algorithm'. The final $x$ obtained by a descent method is called a local optimum, since it is at least as good or better than all solutions in its neighborhood. The evident shortcoming of a descent method is that such a local optimum in most cases will not be a global optimum, i.e., it usually will not minimize $f(x)$ over all $x \in X$.
