@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Goal}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Bayesian Network}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Bayesian Network Structure Learning}{5}{0}{1}
+\beamer@sectionintoc {2}{Structure Learning Algorithms in bnlearn}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Available Constraint-based Learning Algorithms}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Available Score-based Learning Algorithms}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Available Hybrid Learning Algorithms}{8}{0}{2}
+\beamer@sectionintoc {3}{The Comparison Methodology}{9}{0}{3}
+\beamer@subsectionintoc {3}{1}{The Number of Graphical Errors in the Learnt Structure}{9}{0}{3}
+\beamer@subsectionintoc {3}{2}{Network Scores}{10}{0}{3}
+\beamer@sectionintoc {4}{Data Generation with BN$\_$Data$\_$Generator in R}{11}{0}{4}
+\beamer@sectionintoc {5}{Simulation}{14}{0}{5}
+\beamer@subsectionintoc {5}{1}{Real Datasets}{15}{0}{5}
+\beamer@subsectionintoc {5}{2}{Synthetic Data According to Topologies}{24}{0}{5}
+\beamer@sectionintoc {6}{Discussion}{49}{0}{6}

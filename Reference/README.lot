@@ -1,0 +1,39 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Argunemts of BN$\_$Data$\_$Generator}}{20}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Comparison of scores and correct arcs via Asia data set}}{26}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Comparison of scores and correct arcs via Insurance data set}}{28}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Comparison of scores and correct arcs via ALARM data set}}{30}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Comparison of scores and correct arcs via Hailfinder data set}}{32}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Comparison via Collapse (Num of Nodes = 3)}}{58}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Comparison via Collapse (Num of Nodes = 4)}}{59}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Comparison via Collapse (Num of Nodes = 6)}}{59}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Comparison via Collapse (Num of Nodes = 8)}}{60}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Comparison via Collapse (Num of Nodes = 10)}}{60}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Comparison via Line (Num of Nodes = 3)}}{61}
+\contentsline {table}{\numberline {6.7}{\ignorespaces Comparison via Line (Num of Nodes = 4)}}{62}
+\contentsline {table}{\numberline {6.8}{\ignorespaces Comparison via Line (Num of Nodes = 6)}}{62}
+\contentsline {table}{\numberline {6.9}{\ignorespaces Comparison via Line (Num of Nodes = 8)}}{63}
+\contentsline {table}{\numberline {6.10}{\ignorespaces Comparison via Line (Num of Nodes = 10)}}{63}
+\contentsline {table}{\numberline {6.11}{\ignorespaces Comparison via Star (Num of Nodes = 3)}}{64}
+\contentsline {table}{\numberline {6.12}{\ignorespaces Comparison via Star (Num of Nodes = 4)}}{65}
+\contentsline {table}{\numberline {6.13}{\ignorespaces Comparison via Star (Num of Nodes = 6)}}{65}
+\contentsline {table}{\numberline {6.14}{\ignorespaces Comparison via Star (Num of Nodes = 8)}}{66}
+\contentsline {table}{\numberline {6.15}{\ignorespaces Comparison via Star (Num of Nodes = 10)}}{66}
+\contentsline {table}{\numberline {6.16}{\ignorespaces Comparison via Pseudo Loop (Num of Nodes = 3)}}{67}
+\contentsline {table}{\numberline {6.17}{\ignorespaces Comparison via Pseudo Loop (Num of Nodes = 4)}}{68}
+\contentsline {table}{\numberline {6.18}{\ignorespaces Comparison via Pseudo Loop (Num of Nodes = 6)}}{68}
+\contentsline {table}{\numberline {6.19}{\ignorespaces Comparison via Pseudo Loop (Num of Nodes = 8)}}{69}
+\contentsline {table}{\numberline {6.20}{\ignorespaces Comparison via Pseudo Loop (Num of Nodes = 10)}}{69}
+\contentsline {table}{\numberline {6.21}{\ignorespaces Comparison via Diamond (Num of Nodes = 4)}}{70}
+\contentsline {table}{\numberline {6.22}{\ignorespaces Comparison via Diamond (Num of Nodes = 6)}}{71}
+\contentsline {table}{\numberline {6.23}{\ignorespaces Comparison via Diamond (Num of Nodes = 8)}}{71}
+\contentsline {table}{\numberline {6.24}{\ignorespaces Comparison via Diamond (Num of Nodes = 10)}}{72}
+\contentsline {table}{\numberline {6.25}{\ignorespaces Comparison via Rhombus (Num of Nodes = 4)}}{72}
+\contentsline {table}{\numberline {6.26}{\ignorespaces Comparison via Rhombus (Num of Nodes = 6)}}{73}
+\contentsline {table}{\numberline {6.27}{\ignorespaces Comparison via Rhombus (Num of Nodes = 8)}}{73}
+\contentsline {table}{\numberline {6.28}{\ignorespaces Comparison via Rhombus (Num of Nodes = 10)}}{74}

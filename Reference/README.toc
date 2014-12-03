@@ -1,0 +1,49 @@
+\contentsline {chapter}{Notations}{1}
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {1.1}Bayesian Network}{3}
+\contentsline {section}{\numberline {1.2}Bayesian Network Structure Learning}{4}
+\contentsline {chapter}{\numberline {2}Bayesian Network Structure Learning Algorithms in bnlearn Package}{7}
+\contentsline {section}{\numberline {2.1}Constraint-based Algorithms}{7}
+\contentsline {subsection}{\numberline {2.1.1}Grow-Shrink (GS) Markov Blanket Algorithm}{7}
+\contentsline {subsection}{\numberline {2.1.2}Incremental Association (IAMB) Algorithm}{9}
+\contentsline {section}{\numberline {2.2}Score-Based Algorithms}{11}
+\contentsline {subsection}{\numberline {2.2.1}Hill-Climbing (HC) Algorithm}{11}
+\contentsline {subsection}{\numberline {2.2.2}TABU Search Algorithm}{12}
+\contentsline {section}{\numberline {2.3}Hybrid Algorithms}{13}
+\contentsline {subsection}{\numberline {2.3.1}Max-Min Hill-Climbing (MMHC) Algorithm}{13}
+\contentsline {subsection}{\numberline {2.3.2}More general 2-phase Restricted Maximization (RSMAX2)}{14}
+\contentsline {chapter}{\numberline {3}The Comparison Methodology}{15}
+\contentsline {section}{\numberline {3.1}The Number of Graphical Errors in the Learnt Structure}{15}
+\contentsline {section}{\numberline {3.2}Network Scores}{16}
+\contentsline {subsection}{\numberline {3.2.1}Bayesian Scoring Functions}{16}
+\contentsline {subsubsection}{BDe}{16}
+\contentsline {subsection}{\numberline {3.2.2}Information-theoretic Scoring Functions}{17}
+\contentsline {subsubsection}{$\qopname \relax o{log}$-likelihood (LL)}{17}
+\contentsline {subsubsection}{AIC and BIC}{18}
+\contentsline {chapter}{\numberline {4}Data Generation with BN$\_$Data$\_$Generator in R}{19}
+\contentsline {section}{\numberline {4.1}BN$\_$Data$\_$Generator Function in R}{20}
+\contentsline {section}{\numberline {4.2}A Simple Example}{20}
+\contentsline {chapter}{\numberline {5}Simulation}{24}
+\contentsline {section}{\numberline {5.1}Real Data}{25}
+\contentsline {subsection}{\numberline {5.1.1}Asia Data Set by Lauritzen and Spiegelhalter}{25}
+\contentsline {subsection}{\numberline {5.1.2}Insurance Evaluation Network Data Set}{27}
+\contentsline {subsection}{\numberline {5.1.3}ALARM Monitoring System Data Set}{29}
+\contentsline {subsection}{\numberline {5.1.4}The HaliFinder Weather Forecast System Data Set}{31}
+\contentsline {subsection}{\numberline {5.1.5}Summary}{33}
+\contentsline {section}{\numberline {5.2}Synthetic Data According to Topologies}{35}
+\contentsline {subsection}{\numberline {5.2.1}Bayesian Network Topologies}{35}
+\contentsline {subsection}{\numberline {5.2.2}Collapse}{36}
+\contentsline {subsection}{\numberline {5.2.3}Line}{39}
+\contentsline {subsection}{\numberline {5.2.4}Star}{42}
+\contentsline {subsection}{\numberline {5.2.5}Pseudo Loop}{46}
+\contentsline {subsection}{\numberline {5.2.6}Diamond}{50}
+\contentsline {subsection}{\numberline {5.2.7}Rhombus}{53}
+\contentsline {chapter}{\numberline {6}Discussion}{56}
+\contentsline {chapter}{Appendix}{58}
+\contentsline {section}{A.1 Table for Collapse}{58}
+\contentsline {section}{A.2 Table for Line}{61}
+\contentsline {section}{A.3 Table for Star}{64}
+\contentsline {section}{A.4 Table for PseudoLoop}{67}
+\contentsline {section}{A.5 Table for Diamond}{70}
+\contentsline {section}{A.6 Table for Rhombus}{72}
+\contentsline {chapter}{Bibliography}{75}
