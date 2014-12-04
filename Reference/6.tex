@@ -1,11 +1,11 @@
 % ~~~~Topology에 따른 알고리즘별 성능을 비교해본 결과, score 기준으로는 TABU search가 대부분 가장 좋은 것으로 나타났다. 하지만 목표 네트워크와 학습 네트워크를 직접 비교해본 결과 "C가 무엇이 가장 많은가"를 기준으로 하였을 때는 Hill-climbing이 성능이 좋은 것으로 나타날 때가 많았다. 오히려 TABU search는 WO와 WC가 많은 것으로 나타났다.
-~~~~Result of comparing the performance of each algorithm according to the Topology, TABU search has been found most best thing by score criteria. However, as a result of comparing between the target network and learning network directly, when a reference to "C is what is most" is, Hill-climbing was often appears that the performance is good. Rather TABU search has a lot of WO and WC.
+~~~~Result of comparing the performance of each algorithm according to the Topology, TABU search has been found most best thing by score criteria. However, as a result of comparing between the target network and learning network directly, when a reference to "What C is a lot?" is, Hill-climbing was often appears that the performance is good. Rather TABU search has a lot of WO and WC.
 
 % Score-based 알고리즘에 비해 Hybrid 알고리즘이 arc를 더 보수적으로 그려주는 것으로 나타났다. 이에 따라 C가 적고 missing arcs가 많지만, WO, WC가 매우 적게 나타나기 때문에, WO, WC가 그려지는 것이 치명적일 경우 이 알고리즘을 사용할 수 있을 것으로 보인다. 특히 Diamond 형태에 대해서는 MMHC가, Rhombus 형테에 대해서는 RSMAX2가 유리한 것으로 보인다.
 Hybrid algorithm compared to Score-based algorithm is found to be that draw the arc more conservative. This makes not only C is often less missing arcs, but also WO and WC is drawn very small. It seems to use when WO and WC are fatal. Especially MMHC for Diamond form, RSMAX2 for Rhombus seems to be advantageous.
 
 % Line과 Star 형태는 다른 topology에 비해 상대적으로 알고리즘에 따른 성능 차이가 나지 않았다.
-About Line and Star form, the performance difference due to relatively algorithm was not out compared to other topology.
+About Line and Star form, the performance difference due to relatively algorithm was not large compared to other topology.
 
 % 대부분의 topology에서, node의 개수가 작을 때에는 알고리즘별 성능 차이가 나지 않았지만, node의 개수가 많아질수록 알고리즘별 성능 차이가 두드러지는 현상이 나타났다. 또, Sample size가 커질수록 M, WO, WC의 빈도가 작아지는 현상이 나타났다.
 In most of the topology, when the sample size is small, the number of C has not been improved. However, I shows how the number of C when sample size is larger, then greatly improved. In addition, Sample size is larger, then the M, WO and WC is decreases.
