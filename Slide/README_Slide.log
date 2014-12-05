@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.15)  5 DEC 2014 00:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.15)  5 DEC 2014 23:00
 entering extended mode
 **README_Slide.tex
 (D:\Dropbox\__GitHub\BN_Data_Generator\Slide\README_Slide.tex
@@ -1741,536 +1741,543 @@ Package pdftex.def Info: frise_blue.pdf used on input line 309.
 ]
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 333.
+Package pdftex.def Info: frise_blue.pdf used on input line 328.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [15
 
 ]
-<images/Model_Real_Asia.jpg, id=349, 1056.94875pt x 947.54pt>
+File: frise_blue.pdf Graphic file (type pdf)
+ <use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 350.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+
+[16
+
+] <images/Model_Real_Asia.jpg, id=362, 1056.94875pt x 947.54pt>
 File: images/Model_Real_Asia.jpg Graphic file (type jpg)
 
 <use images/Model_Real_Asia.jpg>
-Package pdftex.def Info: images/Model_Real_Asia.jpg used on input line 343.
+Package pdftex.def Info: images/Model_Real_Asia.jpg used on input line 360.
 (pdftex.def)             Requested size: 189.62971pt x 170.0pt.
 
-Overfull \vbox (14.12689pt too high) detected at line 343
+Overfull \vbox (14.12689pt too high) detected at line 360
  []
 
 File: frise_blue.pdf Graphic file (type pdf)
 <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 343.
+Package pdftex.def Info: frise_blue.pdf used on input line 360.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [16
+ [17
 
  <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Model_Real_Asia.jpg>]
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 366.
+Package pdftex.def Info: frise_blue.pdf used on input line 383.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [17
+ [18
 
 ]
-<images/Model_Real_Insurance.jpg, id=376, 1003.75pt x 1003.75pt>
+<images/Model_Real_Insurance.jpg, id=389, 1003.75pt x 1003.75pt>
 File: images/Model_Real_Insurance.jpg Graphic file (type jpg)
 
 <use images/Model_Real_Insurance.jpg>
-Package pdftex.def Info: images/Model_Real_Insurance.jpg used on input line 377
+Package pdftex.def Info: images/Model_Real_Insurance.jpg used on input line 394
 .
 (pdftex.def)             Requested size: 169.99197pt x 170.0pt.
 
-Overfull \vbox (14.12689pt too high) detected at line 377
+Overfull \vbox (14.12689pt too high) detected at line 394
  []
 
 File: frise_blue.pdf Graphic file (type pdf)
 <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 377.
+Package pdftex.def Info: frise_blue.pdf used on input line 394.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [18
+ [19
 
  <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Model_Real_Insurance.jpg>]
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 400.
+Package pdftex.def Info: frise_blue.pdf used on input line 417.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [19
+ [20
 
 ]
-<images/Model_Real_ALARM.jpg, id=404, 1003.75pt x 1003.75pt>
+<images/Model_Real_ALARM.jpg, id=417, 1003.75pt x 1003.75pt>
 File: images/Model_Real_ALARM.jpg Graphic file (type jpg)
 
 <use images/Model_Real_ALARM.jpg>
-Package pdftex.def Info: images/Model_Real_ALARM.jpg used on input line 410.
+Package pdftex.def Info: images/Model_Real_ALARM.jpg used on input line 427.
 (pdftex.def)             Requested size: 169.99197pt x 170.0pt.
 
-Overfull \vbox (14.12689pt too high) detected at line 410
+Overfull \vbox (14.12689pt too high) detected at line 427
  []
 
 File: frise_blue.pdf Graphic file (type pdf)
 <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 410.
+Package pdftex.def Info: frise_blue.pdf used on input line 427.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [20
+ [21
 
  <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Model_Real_ALARM.jpg>]
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 433.
-(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [21
-
-]
-<images/Model_Real_Hailfinder.jpg, id=431, 1003.75pt x 1003.75pt>
-File: images/Model_Real_Hailfinder.jpg Graphic file (type jpg)
-
-<use images/Model_Real_Hailfinder.jpg>
-Package pdftex.def Info: images/Model_Real_Hailfinder.jpg used on input line 44
-3.
-(pdftex.def)             Requested size: 169.99197pt x 170.0pt.
-
-Overfull \vbox (14.12689pt too high) detected at line 443
- []
-
-File: frise_blue.pdf Graphic file (type pdf)
-<use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 443.
+Package pdftex.def Info: frise_blue.pdf used on input line 450.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [22
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Model_Real_Hailfinder.jpg>
 ]
-<images/Real_Result.jpg, id=445, 2007.5pt x 842.14626pt>
-File: images/Real_Result.jpg Graphic file (type jpg)
+<images/Model_Real_Hailfinder.jpg, id=444, 1003.75pt x 1003.75pt>
+File: images/Model_Real_Hailfinder.jpg Graphic file (type jpg)
 
-<use images/Real_Result.jpg>
-Package pdftex.def Info: images/Real_Result.jpg used on input line 454.
-(pdftex.def)             Requested size: 309.87274pt x 130.0pt.
-File: frise_blue.pdf Graphic file (type pdf)
- <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 454.
-(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [23
+<use images/Model_Real_Hailfinder.jpg>
+Package pdftex.def Info: images/Model_Real_Hailfinder.jpg used on input line 46
+0.
+(pdftex.def)             Requested size: 169.99197pt x 170.0pt.
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Real_Result.jpg>]
-<images/image21.jpg, id=459, 854.19125pt x 629.35126pt>
-File: images/image21.jpg Graphic file (type jpg)
-
-<use images/image21.jpg>
-Package pdftex.def Info: images/image21.jpg used on input line 472.
-(pdftex.def)             Requested size: 203.58939pt x 150.0pt.
-
-Overfull \vbox (16.29355pt too high) detected at line 472
+Overfull \vbox (14.12689pt too high) detected at line 460
  []
 
 File: frise_blue.pdf Graphic file (type pdf)
 <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 472.
+Package pdftex.def Info: frise_blue.pdf used on input line 460.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+ [23
+
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Model_Real_Hailfinder.jpg>
+]
+<images/Real_Result.jpg, id=458, 2007.5pt x 842.14626pt>
+File: images/Real_Result.jpg Graphic file (type jpg)
+
+<use images/Real_Result.jpg>
+Package pdftex.def Info: images/Real_Result.jpg used on input line 471.
+(pdftex.def)             Requested size: 309.87274pt x 130.0pt.
+File: frise_blue.pdf Graphic file (type pdf)
+ <use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 471.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [24
+
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Real_Result.jpg>]
+<images/image21.jpg, id=472, 854.19125pt x 629.35126pt>
+File: images/image21.jpg Graphic file (type jpg)
+
+<use images/image21.jpg>
+Package pdftex.def Info: images/image21.jpg used on input line 489.
+(pdftex.def)             Requested size: 203.58939pt x 150.0pt.
+
+Overfull \vbox (16.29355pt too high) detected at line 489
+ []
+
+File: frise_blue.pdf Graphic file (type pdf)
+<use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 489.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+ [25
 
  <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/image21.jpg>]
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 495.
-(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [25
-
-]
-<images/Topologies_Collapse.jpg, id=486, 849.1725pt x 132.495pt>
-File: images/Topologies_Collapse.jpg Graphic file (type jpg)
-
-<use images/Topologies_Collapse.jpg>
-Package pdftex.def Info: images/Topologies_Collapse.jpg used on input line 505.
-
-(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
-File: frise_blue.pdf Graphic file (type pdf)
- <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 505.
+Package pdftex.def Info: frise_blue.pdf used on input line 512.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [26
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Collapse.jpg>]
-<images/01_Collapse_Score.jpeg, id=500, 1505.625pt x 1816.7875pt>
-File: images/01_Collapse_Score.jpeg Graphic file (type jpg)
+]
+<images/Topologies_Collapse.jpg, id=499, 849.1725pt x 132.495pt>
+File: images/Topologies_Collapse.jpg Graphic file (type jpg)
 
-<use images/01_Collapse_Score.jpeg>
-Package pdftex.def Info: images/01_Collapse_Score.jpeg used on input line 516.
-(pdftex.def)             Requested size: 140.87631pt x 170.0pt.
+<use images/Topologies_Collapse.jpg>
+Package pdftex.def Info: images/Topologies_Collapse.jpg used on input line 522.
 
-Overfull \vbox (14.12689pt too high) detected at line 516
- []
-
+(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
 File: frise_blue.pdf Graphic file (type pdf)
-<use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 516.
+ <use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 522.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [27
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/01_Collapse_Score.jpeg>]
-<images/01_Collapse_Arcs.jpeg, id=514, 1505.625pt x 1823.81375pt>
-File: images/01_Collapse_Arcs.jpeg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Collapse.jpg>]
+<images/01_Collapse_Score.jpeg, id=513, 1505.625pt x 1816.7875pt>
+File: images/01_Collapse_Score.jpeg Graphic file (type jpg)
 
-<use images/01_Collapse_Arcs.jpeg>
-Package pdftex.def Info: images/01_Collapse_Arcs.jpeg used on input line 526.
-(pdftex.def)             Requested size: 140.32494pt x 170.0pt.
+<use images/01_Collapse_Score.jpeg>
+Package pdftex.def Info: images/01_Collapse_Score.jpeg used on input line 533.
+(pdftex.def)             Requested size: 140.87631pt x 170.0pt.
 
-Overfull \vbox (14.12689pt too high) detected at line 526
+Overfull \vbox (14.12689pt too high) detected at line 533
  []
 
 File: frise_blue.pdf Graphic file (type pdf)
 <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 526.
+Package pdftex.def Info: frise_blue.pdf used on input line 533.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [28
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/01_Collapse_Arcs.jpeg>]
-<images/Result_Collapse.jpg, id=528, 2007.5pt x 961.5925pt>
-File: images/Result_Collapse.jpg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/01_Collapse_Score.jpeg>]
+<images/01_Collapse_Arcs.jpeg, id=527, 1505.625pt x 1823.81375pt>
+File: images/01_Collapse_Arcs.jpeg Graphic file (type jpg)
 
-<use images/Result_Collapse.jpg>
-Package pdftex.def Info: images/Result_Collapse.jpg used on input line 537.
-(pdftex.def)             Requested size: 271.39902pt x 130.0pt.
+<use images/01_Collapse_Arcs.jpeg>
+Package pdftex.def Info: images/01_Collapse_Arcs.jpeg used on input line 543.
+(pdftex.def)             Requested size: 140.32494pt x 170.0pt.
+
+Overfull \vbox (14.12689pt too high) detected at line 543
+ []
+
 File: frise_blue.pdf Graphic file (type pdf)
- <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 537.
+<use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 543.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [29
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_Collapse.jpg>]
-<images/Topologies_Line.jpg, id=542, 849.1725pt x 132.495pt>
-File: images/Topologies_Line.jpg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/01_Collapse_Arcs.jpeg>]
+<images/Result_Collapse.jpg, id=541, 2007.5pt x 961.5925pt>
+File: images/Result_Collapse.jpg Graphic file (type jpg)
 
-<use images/Topologies_Line.jpg>
-Package pdftex.def Info: images/Topologies_Line.jpg used on input line 548.
-(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
+<use images/Result_Collapse.jpg>
+Package pdftex.def Info: images/Result_Collapse.jpg used on input line 554.
+(pdftex.def)             Requested size: 271.39902pt x 130.0pt.
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 548.
+Package pdftex.def Info: frise_blue.pdf used on input line 554.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [30
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Line.jpg>]
-<images/02_Line_Score.jpeg, id=556, 1505.625pt x 1816.7875pt>
-File: images/02_Line_Score.jpeg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_Collapse.jpg>]
+<images/Topologies_Line.jpg, id=555, 849.1725pt x 132.495pt>
+File: images/Topologies_Line.jpg Graphic file (type jpg)
 
-<use images/02_Line_Score.jpeg>
-Package pdftex.def Info: images/02_Line_Score.jpeg used on input line 559.
-(pdftex.def)             Requested size: 140.87631pt x 170.0pt.
-
-Overfull \vbox (14.12689pt too high) detected at line 559
- []
-
+<use images/Topologies_Line.jpg>
+Package pdftex.def Info: images/Topologies_Line.jpg used on input line 565.
+(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
 File: frise_blue.pdf Graphic file (type pdf)
-<use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 559.
+ <use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 565.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [31
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/02_Line_Score.jpeg>]
-<images/02_Line_Arcs.jpeg, id=571, 1505.625pt x 1816.7875pt>
-File: images/02_Line_Arcs.jpeg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Line.jpg>]
+<images/02_Line_Score.jpeg, id=570, 1505.625pt x 1816.7875pt>
+File: images/02_Line_Score.jpeg Graphic file (type jpg)
 
-<use images/02_Line_Arcs.jpeg>
-Package pdftex.def Info: images/02_Line_Arcs.jpeg used on input line 569.
+<use images/02_Line_Score.jpeg>
+Package pdftex.def Info: images/02_Line_Score.jpeg used on input line 576.
 (pdftex.def)             Requested size: 140.87631pt x 170.0pt.
 
-Overfull \vbox (14.12689pt too high) detected at line 569
+Overfull \vbox (14.12689pt too high) detected at line 576
  []
 
 File: frise_blue.pdf Graphic file (type pdf)
 <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 569.
+Package pdftex.def Info: frise_blue.pdf used on input line 576.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [32
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/02_Line_Arcs.jpeg>] <image
-s/Result_Line.jpg, id=585, 2007.5pt x 961.5925pt>
-File: images/Result_Line.jpg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/02_Line_Score.jpeg>]
+<images/02_Line_Arcs.jpeg, id=584, 1505.625pt x 1816.7875pt>
+File: images/02_Line_Arcs.jpeg Graphic file (type jpg)
 
-<use images/Result_Line.jpg>
-Package pdftex.def Info: images/Result_Line.jpg used on input line 580.
-(pdftex.def)             Requested size: 271.39902pt x 130.0pt.
+<use images/02_Line_Arcs.jpeg>
+Package pdftex.def Info: images/02_Line_Arcs.jpeg used on input line 586.
+(pdftex.def)             Requested size: 140.87631pt x 170.0pt.
+
+Overfull \vbox (14.12689pt too high) detected at line 586
+ []
+
 File: frise_blue.pdf Graphic file (type pdf)
- <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 580.
+<use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 586.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [33
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_Line.jpg>]
-<images/Topologies_Star.jpg, id=599, 849.1725pt x 132.495pt>
-File: images/Topologies_Star.jpg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/02_Line_Arcs.jpeg>] <image
+s/Result_Line.jpg, id=598, 2007.5pt x 961.5925pt>
+File: images/Result_Line.jpg Graphic file (type jpg)
 
-<use images/Topologies_Star.jpg>
-Package pdftex.def Info: images/Topologies_Star.jpg used on input line 591.
-(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
+<use images/Result_Line.jpg>
+Package pdftex.def Info: images/Result_Line.jpg used on input line 597.
+(pdftex.def)             Requested size: 271.39902pt x 130.0pt.
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 591.
+Package pdftex.def Info: frise_blue.pdf used on input line 597.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [34
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Star.jpg>]
-<images/03_Star_Score.jpeg, id=613, 1505.625pt x 1816.7875pt>
-File: images/03_Star_Score.jpeg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_Line.jpg>]
+<images/Topologies_Star.jpg, id=612, 849.1725pt x 132.495pt>
+File: images/Topologies_Star.jpg Graphic file (type jpg)
 
-<use images/03_Star_Score.jpeg>
-Package pdftex.def Info: images/03_Star_Score.jpeg used on input line 602.
-(pdftex.def)             Requested size: 140.87631pt x 170.0pt.
-
-Overfull \vbox (14.12689pt too high) detected at line 602
- []
-
+<use images/Topologies_Star.jpg>
+Package pdftex.def Info: images/Topologies_Star.jpg used on input line 608.
+(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
 File: frise_blue.pdf Graphic file (type pdf)
-<use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 602.
+ <use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 608.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [35
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/03_Star_Score.jpeg>]
-<images/03_Star_Arcs.jpeg, id=627, 1505.625pt x 1815.78375pt>
-File: images/03_Star_Arcs.jpeg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Star.jpg>]
+<images/03_Star_Score.jpeg, id=626, 1505.625pt x 1816.7875pt>
+File: images/03_Star_Score.jpeg Graphic file (type jpg)
 
-<use images/03_Star_Arcs.jpeg>
-Package pdftex.def Info: images/03_Star_Arcs.jpeg used on input line 612.
-(pdftex.def)             Requested size: 140.94522pt x 170.0pt.
+<use images/03_Star_Score.jpeg>
+Package pdftex.def Info: images/03_Star_Score.jpeg used on input line 619.
+(pdftex.def)             Requested size: 140.87631pt x 170.0pt.
 
-Overfull \vbox (14.12689pt too high) detected at line 612
+Overfull \vbox (14.12689pt too high) detected at line 619
  []
 
 File: frise_blue.pdf Graphic file (type pdf)
 <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 612.
+Package pdftex.def Info: frise_blue.pdf used on input line 619.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [36
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/03_Star_Arcs.jpeg>] <image
-s/Result_Star.jpg, id=641, 2007.5pt x 961.5925pt>
-File: images/Result_Star.jpg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/03_Star_Score.jpeg>]
+<images/03_Star_Arcs.jpeg, id=640, 1505.625pt x 1815.78375pt>
+File: images/03_Star_Arcs.jpeg Graphic file (type jpg)
 
-<use images/Result_Star.jpg>
-Package pdftex.def Info: images/Result_Star.jpg used on input line 623.
-(pdftex.def)             Requested size: 271.39902pt x 130.0pt.
+<use images/03_Star_Arcs.jpeg>
+Package pdftex.def Info: images/03_Star_Arcs.jpeg used on input line 629.
+(pdftex.def)             Requested size: 140.94522pt x 170.0pt.
+
+Overfull \vbox (14.12689pt too high) detected at line 629
+ []
+
 File: frise_blue.pdf Graphic file (type pdf)
- <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 623.
+<use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 629.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [37
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_Star.jpg>]
-<images/Topologies_PseudoLoop.jpg, id=656, 849.1725pt x 132.495pt>
-File: images/Topologies_PseudoLoop.jpg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/03_Star_Arcs.jpeg>] <image
+s/Result_Star.jpg, id=655, 2007.5pt x 961.5925pt>
+File: images/Result_Star.jpg Graphic file (type jpg)
 
-<use images/Topologies_PseudoLoop.jpg>
-Package pdftex.def Info: images/Topologies_PseudoLoop.jpg used on input line 63
-4.
-(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
-File: frise_blue.pdf Graphic file (type pdf)
- <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 634.
-(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [38
-
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_PseudoLoop.jpg>
-]
-<images/04_PseudoLoop_Score.jpeg, id=670, 1505.625pt x 1815.78375pt>
-File: images/04_PseudoLoop_Score.jpeg Graphic file (type jpg)
-
-<use images/04_PseudoLoop_Score.jpeg>
-Package pdftex.def Info: images/04_PseudoLoop_Score.jpeg used on input line 645
-.
-(pdftex.def)             Requested size: 140.94522pt x 170.0pt.
-
-Overfull \vbox (14.12689pt too high) detected at line 645
- []
-
-File: frise_blue.pdf Graphic file (type pdf)
-<use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 645.
-(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [39
-
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/04_PseudoLoop_Score.jpeg>]
-
-<images/04_PseudoLoop_Arcs.jpeg, id=684, 1505.625pt x 1816.7875pt>
-File: images/04_PseudoLoop_Arcs.jpeg Graphic file (type jpg)
-
-<use images/04_PseudoLoop_Arcs.jpeg>
-Package pdftex.def Info: images/04_PseudoLoop_Arcs.jpeg used on input line 655.
-
-(pdftex.def)             Requested size: 140.87631pt x 170.0pt.
-
-Overfull \vbox (14.12689pt too high) detected at line 655
- []
-
-File: frise_blue.pdf Graphic file (type pdf)
-<use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 655.
-(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [40
-
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/04_PseudoLoop_Arcs.jpeg>]
-<images/Result_PseudoLoop.jpg, id=698, 2007.5pt x 961.5925pt>
-File: images/Result_PseudoLoop.jpg Graphic file (type jpg)
-
-<use images/Result_PseudoLoop.jpg>
-Package pdftex.def Info: images/Result_PseudoLoop.jpg used on input line 665.
+<use images/Result_Star.jpg>
+Package pdftex.def Info: images/Result_Star.jpg used on input line 640.
 (pdftex.def)             Requested size: 271.39902pt x 130.0pt.
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 665.
+Package pdftex.def Info: frise_blue.pdf used on input line 640.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+ [38
+
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_Star.jpg>]
+<images/Topologies_PseudoLoop.jpg, id=669, 849.1725pt x 132.495pt>
+File: images/Topologies_PseudoLoop.jpg Graphic file (type jpg)
+
+<use images/Topologies_PseudoLoop.jpg>
+Package pdftex.def Info: images/Topologies_PseudoLoop.jpg used on input line 65
+1.
+(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
+File: frise_blue.pdf Graphic file (type pdf)
+ <use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 651.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+ [39
+
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_PseudoLoop.jpg>
+]
+<images/04_PseudoLoop_Score.jpeg, id=683, 1505.625pt x 1815.78375pt>
+File: images/04_PseudoLoop_Score.jpeg Graphic file (type jpg)
+
+<use images/04_PseudoLoop_Score.jpeg>
+Package pdftex.def Info: images/04_PseudoLoop_Score.jpeg used on input line 662
+.
+(pdftex.def)             Requested size: 140.94522pt x 170.0pt.
+
+Overfull \vbox (14.12689pt too high) detected at line 662
+ []
+
+File: frise_blue.pdf Graphic file (type pdf)
+<use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 662.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+ [40
+
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/04_PseudoLoop_Score.jpeg>]
+
+<images/04_PseudoLoop_Arcs.jpeg, id=697, 1505.625pt x 1816.7875pt>
+File: images/04_PseudoLoop_Arcs.jpeg Graphic file (type jpg)
+
+<use images/04_PseudoLoop_Arcs.jpeg>
+Package pdftex.def Info: images/04_PseudoLoop_Arcs.jpeg used on input line 672.
+
+(pdftex.def)             Requested size: 140.87631pt x 170.0pt.
+
+Overfull \vbox (14.12689pt too high) detected at line 672
+ []
+
+File: frise_blue.pdf Graphic file (type pdf)
+<use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 672.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [41
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_PseudoLoop.jpg>]
-<images/Topologies_Diamond.jpg, id=712, 849.1725pt x 132.495pt>
-File: images/Topologies_Diamond.jpg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/04_PseudoLoop_Arcs.jpeg>]
+<images/Result_PseudoLoop.jpg, id=711, 2007.5pt x 961.5925pt>
+File: images/Result_PseudoLoop.jpg Graphic file (type jpg)
 
-<use images/Topologies_Diamond.jpg>
-Package pdftex.def Info: images/Topologies_Diamond.jpg used on input line 677.
-(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
+<use images/Result_PseudoLoop.jpg>
+Package pdftex.def Info: images/Result_PseudoLoop.jpg used on input line 682.
+(pdftex.def)             Requested size: 271.39902pt x 130.0pt.
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 677.
+Package pdftex.def Info: frise_blue.pdf used on input line 682.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [42
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Diamond.jpg>]
-<images/05_Diamond_Score.jpeg, id=726, 1505.625pt x 1815.78375pt>
-File: images/05_Diamond_Score.jpeg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_PseudoLoop.jpg>]
+<images/Topologies_Diamond.jpg, id=725, 849.1725pt x 132.495pt>
+File: images/Topologies_Diamond.jpg Graphic file (type jpg)
 
-<use images/05_Diamond_Score.jpeg>
-Package pdftex.def Info: images/05_Diamond_Score.jpeg used on input line 688.
-(pdftex.def)             Requested size: 140.94522pt x 170.0pt.
-
-Overfull \vbox (14.12689pt too high) detected at line 688
- []
-
-File: frise_blue.pdf Graphic file (type pdf)
-<use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 688.
-(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [43
-
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/05_Diamond_Score.jpeg>]
-<images/05_Diamond_Arcs.jpeg, id=741, 1505.625pt x 1815.78375pt>
-File: images/05_Diamond_Arcs.jpeg Graphic file (type jpg)
-
-<use images/05_Diamond_Arcs.jpeg>
-Package pdftex.def Info: images/05_Diamond_Arcs.jpeg used on input line 698.
-(pdftex.def)             Requested size: 140.94522pt x 170.0pt.
-
-Overfull \vbox (14.12689pt too high) detected at line 698
- []
-
-File: frise_blue.pdf Graphic file (type pdf)
-<use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 698.
-(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [44
-
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/05_Diamond_Arcs.jpeg>]
-<images/Result_Diamond.jpg, id=755, 2007.5pt x 842.14626pt>
-File: images/Result_Diamond.jpg Graphic file (type jpg)
-
-<use images/Result_Diamond.jpg>
-Package pdftex.def Info: images/Result_Diamond.jpg used on input line 708.
-(pdftex.def)             Requested size: 309.87274pt x 130.0pt.
-File: frise_blue.pdf Graphic file (type pdf)
- <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 708.
-(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [45
-
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_Diamond.jpg>]
-<images/Topologies_Rhombus.jpg, id=769, 849.1725pt x 132.495pt>
-File: images/Topologies_Rhombus.jpg Graphic file (type jpg)
-
-<use images/Topologies_Rhombus.jpg>
-Package pdftex.def Info: images/Topologies_Rhombus.jpg used on input line 718.
+<use images/Topologies_Diamond.jpg>
+Package pdftex.def Info: images/Topologies_Diamond.jpg used on input line 694.
 (pdftex.def)             Requested size: 320.46024pt x 50.0pt.
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 718.
+Package pdftex.def Info: frise_blue.pdf used on input line 694.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [46
+ [43
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Rhombus.jpg>]
-<images/06_Rhombus_Score.jpeg, id=783, 1505.625pt x 1814.78pt>
-File: images/06_Rhombus_Score.jpeg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Diamond.jpg>]
+<images/05_Diamond_Score.jpeg, id=740, 1505.625pt x 1815.78375pt>
+File: images/05_Diamond_Score.jpeg Graphic file (type jpg)
 
-<use images/06_Rhombus_Score.jpeg>
-Package pdftex.def Info: images/06_Rhombus_Score.jpeg used on input line 729.
-(pdftex.def)             Requested size: 141.03712pt x 170.0pt.
+<use images/05_Diamond_Score.jpeg>
+Package pdftex.def Info: images/05_Diamond_Score.jpeg used on input line 705.
+(pdftex.def)             Requested size: 140.94522pt x 170.0pt.
 
-Overfull \vbox (14.12689pt too high) detected at line 729
+Overfull \vbox (14.12689pt too high) detected at line 705
  []
 
 File: frise_blue.pdf Graphic file (type pdf)
 <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 729.
+Package pdftex.def Info: frise_blue.pdf used on input line 705.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [47
+ [44
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/06_Rhombus_Score.jpeg>]
-<images/06_Rhombus_Arcs.jpeg, id=797, 1506.62875pt x 1815.78375pt>
-File: images/06_Rhombus_Arcs.jpeg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/05_Diamond_Score.jpeg>]
+<images/05_Diamond_Arcs.jpeg, id=754, 1505.625pt x 1815.78375pt>
+File: images/05_Diamond_Arcs.jpeg Graphic file (type jpg)
 
-<use images/06_Rhombus_Arcs.jpeg>
-Package pdftex.def Info: images/06_Rhombus_Arcs.jpeg used on input line 739.
-(pdftex.def)             Requested size: 141.03918pt x 170.0pt.
+<use images/05_Diamond_Arcs.jpeg>
+Package pdftex.def Info: images/05_Diamond_Arcs.jpeg used on input line 715.
+(pdftex.def)             Requested size: 140.94522pt x 170.0pt.
 
-Overfull \vbox (14.12689pt too high) detected at line 739
+Overfull \vbox (14.12689pt too high) detected at line 715
  []
 
 File: frise_blue.pdf Graphic file (type pdf)
 <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 739.
+Package pdftex.def Info: frise_blue.pdf used on input line 715.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
- [48
+ [45
 
- <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/06_Rhombus_Arcs.jpeg>]
-<images/Result_Rhombus.jpg, id=811, 2007.5pt x 842.14626pt>
-File: images/Result_Rhombus.jpg Graphic file (type jpg)
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/05_Diamond_Arcs.jpeg>]
+<images/Result_Diamond.jpg, id=768, 2007.5pt x 842.14626pt>
+File: images/Result_Diamond.jpg Graphic file (type jpg)
 
-<use images/Result_Rhombus.jpg>
-Package pdftex.def Info: images/Result_Rhombus.jpg used on input line 750.
+<use images/Result_Diamond.jpg>
+Package pdftex.def Info: images/Result_Diamond.jpg used on input line 725.
 (pdftex.def)             Requested size: 309.87274pt x 130.0pt.
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 750.
+Package pdftex.def Info: frise_blue.pdf used on input line 725.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+ [46
+
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_Diamond.jpg>]
+<images/Topologies_Rhombus.jpg, id=782, 849.1725pt x 132.495pt>
+File: images/Topologies_Rhombus.jpg Graphic file (type jpg)
+
+<use images/Topologies_Rhombus.jpg>
+Package pdftex.def Info: images/Topologies_Rhombus.jpg used on input line 735.
+(pdftex.def)             Requested size: 320.46024pt x 50.0pt.
+File: frise_blue.pdf Graphic file (type pdf)
+ <use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 735.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+ [47
+
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Topologies_Rhombus.jpg>]
+<images/06_Rhombus_Score.jpeg, id=796, 1505.625pt x 1814.78pt>
+File: images/06_Rhombus_Score.jpeg Graphic file (type jpg)
+
+<use images/06_Rhombus_Score.jpeg>
+Package pdftex.def Info: images/06_Rhombus_Score.jpeg used on input line 746.
+(pdftex.def)             Requested size: 141.03712pt x 170.0pt.
+
+Overfull \vbox (14.12689pt too high) detected at line 746
+ []
+
+File: frise_blue.pdf Graphic file (type pdf)
+<use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 746.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+ [48
+
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/06_Rhombus_Score.jpeg>]
+<images/06_Rhombus_Arcs.jpeg, id=810, 1506.62875pt x 1815.78375pt>
+File: images/06_Rhombus_Arcs.jpeg Graphic file (type jpg)
+
+<use images/06_Rhombus_Arcs.jpeg>
+Package pdftex.def Info: images/06_Rhombus_Arcs.jpeg used on input line 756.
+(pdftex.def)             Requested size: 141.03918pt x 170.0pt.
+
+Overfull \vbox (14.12689pt too high) detected at line 756
+ []
+
+File: frise_blue.pdf Graphic file (type pdf)
+<use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 756.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
  [49
+
+ <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/06_Rhombus_Arcs.jpeg>]
+<images/Result_Rhombus.jpg, id=825, 2007.5pt x 842.14626pt>
+File: images/Result_Rhombus.jpg Graphic file (type jpg)
+
+<use images/Result_Rhombus.jpg>
+Package pdftex.def Info: images/Result_Rhombus.jpg used on input line 767.
+(pdftex.def)             Requested size: 309.87274pt x 130.0pt.
+File: frise_blue.pdf Graphic file (type pdf)
+ <use frise_blue.pdf>
+Package pdftex.def Info: frise_blue.pdf used on input line 767.
+(pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
+ [50
 
  <D:/Dropbox/__GitHub/BN_Data_Generator/Slide/images/Result_Rhombus.jpg>]
 File: frise_blue.pdf Graphic file (type pdf)
  <use frise_blue.pdf>
-Package pdftex.def Info: frise_blue.pdf used on input line 780.
+Package pdftex.def Info: frise_blue.pdf used on input line 797.
 (pdftex.def)             Requested size: 364.19536pt x 33.33612pt.
 
-[50
+[51
 
 ]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 781.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 781.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 798.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 798.
  (D:\Dropbox\__GitHub\BN_Data_Generator\Slide\README_Slide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 781.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 781.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 798.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 798.
 Package rerunfilecheck Info: File `README_Slide.out' has not changed.
-(rerunfilecheck)             Checksum: AC1BEEDE3C5893DB777F1189BE748840;1170.
+(rerunfilecheck)             Checksum: C9FD439B23917CE930AC45969F94ACEA;1170.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 781.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 798.
  ) 
 Here is how much of TeX's memory you used:
- 25214 strings out of 493889
- 487268 string characters out of 3146781
- 553124 words of memory out of 3000000
- 27832 multiletter control sequences out of 15000+200000
+ 25218 strings out of 493889
+ 487305 string characters out of 3146781
+ 553126 words of memory out of 3000000
+ 27834 multiletter control sequences out of 15000+200000
  24630 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  57i,25n,63p,10422b,746s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2282,9 +2289,9 @@ onts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/mathpazo/fplmr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mathpazo/f
 plmri.pfb>
-Output written on README_Slide.pdf (50 pages, 18529557 bytes).
+Output written on README_Slide.pdf (51 pages, 18532670 bytes).
 PDF statistics:
- 891 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
+ 904 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
  411 words of extra memory for PDF output out of 10000 (max. 10000000)
 

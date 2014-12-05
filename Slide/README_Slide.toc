@@ -14,5 +14,5 @@
 \beamer@sectionintoc {4}{Data Generation with BN$\_$Data$\_$Generator in R}{11}{0}{4}
 \beamer@sectionintoc {5}{Simulation}{14}{0}{5}
 \beamer@subsectionintoc {5}{1}{Real Datasets}{15}{0}{5}
-\beamer@subsectionintoc {5}{2}{Synthetic Data According to Topologies}{24}{0}{5}
-\beamer@sectionintoc {6}{Discussion}{50}{0}{6}
+\beamer@subsectionintoc {5}{2}{Synthetic Data According to Topologies}{25}{0}{5}
+\beamer@sectionintoc {6}{Discussion}{51}{0}{6}
