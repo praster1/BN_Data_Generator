@@ -1,7 +1,7 @@
 # Written by Jae-seong Yoo 20141101
 
 rm(list = ls())
-setwd("D:/Dropbox/__베이지안 네트워크/Scores/R")
+setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
 
 source("tosscoin.R")						# tosscoin = function (times, makespace = FALSE)
 source("BN_Data_Generator.R")		# BN_Data_Generator = function (arcs, input_Probs, n, node_names)
@@ -11,6 +11,8 @@ source("make_Star.R")					# make_Star = function(nodes)
 source("make_PseudoLoop.R")		# make_PseudoLoop = function(nodes)
 source("make_Diamond.R")			# make_Diamond = function(nodes)
 source("make_Rhombus.R")			# make_Rhombus = function(nodes)
+
+source("C_M_WO_WC.R")
 
 
 
@@ -168,116 +170,29 @@ C_M_WO_WC_mat = matrix(0, 4, 4)
 dimnames(C_M_WO_WC_mat)[[1]] = c("HC", "TABU", "MMHC", "RSMAX2")
 dimnames(C_M_WO_WC_mat)[[2]] = c("C", "M", "WO", "WC")
 
-for (i in 1:nodes)
-{
-	# HC
-	C_M_WO_WC_mat[1,1] = C_M_WO_WC_mat[1,1] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_hc_arcs_mat[,i] == 1) &
-													(arcs[,i] == bn_hc_arcs_mat[,i])))
-				
-	C_M_WO_WC_mat[1,2] = C_M_WO_WC_mat[1,2] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_hc_arcs_mat[,i] == 0) &
-													(arcs[,i] != bn_hc_arcs_mat[,i])) -
-											sum((arcs[,i] == 1) &
-													(bn_hc_arcs_mat[i,] == 1) &
-													(arcs[,i] == bn_hc_arcs_mat[i,])))
-				
-	C_M_WO_WC_mat[1,3] = C_M_WO_WC_mat[1,3] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_hc_arcs_mat[i,] == 1) &
-													(arcs[,i] == bn_hc_arcs_mat[i,])))
-				
-	C_M_WO_WC_mat[1,4] = C_M_WO_WC_mat[1,4] + abs(
-											sum((arcs[,i] == 0) &
-													(bn_hc_arcs_mat[,i] == 1) &
-													(arcs[,i] != bn_hc_arcs_mat[,i])) -
-											sum((arcs[i,] == 0) &
-													(bn_hc_arcs_mat[i,] == 1) &
-													(arcs[i,] != bn_hc_arcs_mat[i,])))
+# HC
+C_M_WO_WC_mat[1,1] = C_M_WO_WC(arcs, bn_hc_arcs_mat)$C
+C_M_WO_WC_mat[1,2] = C_M_WO_WC(arcs, bn_hc_arcs_mat)$M
+C_M_WO_WC_mat[1,3] = C_M_WO_WC(arcs, bn_hc_arcs_mat)$WO
+C_M_WO_WC_mat[1,4] = C_M_WO_WC(arcs, bn_hc_arcs_mat)$WC
 
-	# TABU
-	C_M_WO_WC_mat[2,1] = C_M_WO_WC_mat[2,1] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_tabu_arcs_mat[,i] == 1) &
-													(arcs[,i] == bn_tabu_arcs_mat[,i])))
-				
-	C_M_WO_WC_mat[2,2] = C_M_WO_WC_mat[2,2] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_tabu_arcs_mat[,i] == 0) &
-													(arcs[,i] != bn_tabu_arcs_mat[,i])) -
-											sum((arcs[,i] == 1) &
-													(bn_tabu_arcs_mat[i,] == 1) &
-													(arcs[,i] == bn_tabu_arcs_mat[i,])))
-				
-	C_M_WO_WC_mat[2,3] = C_M_WO_WC_mat[2,3] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_tabu_arcs_mat[i,] == 1) &
-													(arcs[,i] == bn_tabu_arcs_mat[i,])))
-				
-	C_M_WO_WC_mat[2,4] = C_M_WO_WC_mat[2,4] + abs(
-											sum((arcs[,i] == 0) &
-													(bn_tabu_arcs_mat[,i] == 1) &
-													(arcs[,i] != bn_tabu_arcs_mat[,i])) -
-											sum((arcs[i,] == 0) &
-													(bn_tabu_arcs_mat[i,] == 1) &
-													(arcs[i,] != bn_tabu_arcs_mat[i,])))
+# TABU
+C_M_WO_WC_mat[2,1] = C_M_WO_WC(arcs, bn_tabu_arcs_mat)$C
+C_M_WO_WC_mat[2,2] = C_M_WO_WC(arcs, bn_tabu_arcs_mat)$M
+C_M_WO_WC_mat[2,3] = C_M_WO_WC(arcs, bn_tabu_arcs_mat)$WO
+C_M_WO_WC_mat[2,4] = C_M_WO_WC(arcs, bn_tabu_arcs_mat)$WC
 
-	# MMHC
-	C_M_WO_WC_mat[3,1] = C_M_WO_WC_mat[3,1] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_mmhc_arcs_mat[,i] == 1) &
-													(arcs[,i] == bn_mmhc_arcs_mat[,i])))
-				
-	C_M_WO_WC_mat[3,2] = C_M_WO_WC_mat[3,2] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_mmhc_arcs_mat[,i] == 0) &
-													(arcs[,i] != bn_mmhc_arcs_mat[,i])) -
-											sum((arcs[,i] == 1) &
-													(bn_mmhc_arcs_mat[i,] == 1) &
-													(arcs[,i] == bn_mmhc_arcs_mat[i,])))
-
-	C_M_WO_WC_mat[3,3] = C_M_WO_WC_mat[3,3] + abs(
-											abs(sum((arcs[,i] == 1) &
-													(bn_mmhc_arcs_mat[i,] == 1) &
-													(arcs[,i] == bn_mmhc_arcs_mat[i,]))))
-				
-	C_M_WO_WC_mat[3,4] = C_M_WO_WC_mat[3,4] + abs(
-											sum((arcs[,i] == 0) &
-													(bn_mmhc_arcs_mat[,i] == 1) &
-													(arcs[,i] != bn_mmhc_arcs_mat[,i])) -
-											sum((arcs[i,] == 0) &
-													(bn_mmhc_arcs_mat[i,] == 1) &
-													(arcs[i,] != bn_mmhc_arcs_mat[i,])))
-													
-	# RSMAX2
-	C_M_WO_WC_mat[4,1] = C_M_WO_WC_mat[4,1] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_rsmax2_arcs_mat[,i] == 1) &
-													(arcs[,i] == bn_rsmax2_arcs_mat[,i])))
-				
-	C_M_WO_WC_mat[4,2] = C_M_WO_WC_mat[4,2] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_rsmax2_arcs_mat[,i] == 0) &
-													(arcs[,i] != bn_rsmax2_arcs_mat[,i])) -
-											sum((arcs[,i] == 1) &
-													(bn_rsmax2_arcs_mat[i,] == 1) &
-													(arcs[,i] == bn_rsmax2_arcs_mat[i,])))
-				
-	C_M_WO_WC_mat[4,3] = C_M_WO_WC_mat[4,3] + abs(
-											sum((arcs[,i] == 1) &
-													(bn_rsmax2_arcs_mat[i,] == 1) &
-													(arcs[,i] == bn_rsmax2_arcs_mat[i,])))
-				
-	C_M_WO_WC_mat[4,4] = C_M_WO_WC_mat[4,4] + abs(
-											sum((arcs[,i] == 0) &
-													(bn_rsmax2_arcs_mat[,i] == 1) &
-													(arcs[,i] != bn_rsmax2_arcs_mat[,i])) -
-											sum((arcs[i,] == 0) &
-													(bn_rsmax2_arcs_mat[i,] == 1) &
-													(arcs[i,] != bn_rsmax2_arcs_mat[i,])))
-}
+# MMHC
+C_M_WO_WC_mat[3,1] = C_M_WO_WC(arcs, bn_mmhc_arcs_mat)$C
+C_M_WO_WC_mat[3,2] = C_M_WO_WC(arcs, bn_mmhc_arcs_mat)$M
+C_M_WO_WC_mat[3,3] = C_M_WO_WC(arcs, bn_mmhc_arcs_mat)$WO
+C_M_WO_WC_mat[3,4] = C_M_WO_WC(arcs, bn_mmhc_arcs_mat)$WC
+												
+# RSMAX2
+C_M_WO_WC_mat[4,1] = C_M_WO_WC(arcs, bn_rsmax2_arcs_mat)$C
+C_M_WO_WC_mat[4,2] = C_M_WO_WC(arcs, bn_rsmax2_arcs_mat)$M
+C_M_WO_WC_mat[4,3] = C_M_WO_WC(arcs, bn_rsmax2_arcs_mat)$WO
+C_M_WO_WC_mat[4,4] = C_M_WO_WC(arcs, bn_rsmax2_arcs_mat)$WC
 
 C_M_WO_WC_mat
 
