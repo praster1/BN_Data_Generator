@@ -1,3 +1,5 @@
+# Written by Jae-seong Yoo 20141101
+
 rm(list = ls())
 setwd("D:/Dropbox/__베이지안 네트워크/Scores/R")
 

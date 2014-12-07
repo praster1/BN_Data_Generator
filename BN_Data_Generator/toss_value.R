@@ -1,4 +1,8 @@
+# Written by Jae-seong Yoo 20141208
+# developed of tosscoin in prob package
+
 # Toss Value
+
 toss_value = function (times, num_of_values, makespace = FALSE) 
 {
 	mat_values = merge("val", c(1:num_of_values))

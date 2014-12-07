@@ -1,3 +1,5 @@
+# Brought on November 01 in prob package.
+
 # Toss Coin
 tosscoin = function (times, makespace = FALSE) 
 {

@@ -1,3 +1,5 @@
+# Written by Jae-seong Yoo 20141101
+
 require(bnlearn)
 data(hailfinder)
 data = hailfinder[sample(c(1:20000), n),]

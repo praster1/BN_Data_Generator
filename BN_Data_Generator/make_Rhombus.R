@@ -1,3 +1,5 @@
+# Written by Jae-seong Yoo 20141101
+
 make_Rhombus = function(nodes)
 {
 	if(nodes < 4)

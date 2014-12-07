@@ -1,3 +1,5 @@
+# Written by Jae-seong Yoo 20141101
+
 data(alarm)
 data = alarm[sample(c(1:20000), n),]
 

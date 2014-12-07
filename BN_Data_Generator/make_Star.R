@@ -1,3 +1,5 @@
+# Written by Jae-seong Yoo 20141101
+
 make_Star = function(nodes)
 {
 	if(nodes < 3)

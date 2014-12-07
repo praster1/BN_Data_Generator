@@ -1,3 +1,5 @@
+# Written by Jae-seong Yoo 20141101
+
 require(bnlearn)
 data(insurance)
 data = insurance[sample(c(1:20000), n),]

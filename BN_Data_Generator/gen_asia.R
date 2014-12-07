@@ -1,3 +1,5 @@
+# Written by Jae-seong Yoo 20141101
+
 # Asia
 arcs = rbind(
 		#	A	S	T	L	B	E	X	D
