@@ -1,12 +1,24 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.15)  5 DEC 2014 23:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.3.9)  7 DEC 2014 11:46
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **README.tex
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\README.tex
+(./README.tex
 LaTeX2e <2011/06/27>
-Babel <3.9l> and hyphenation patterns for 68 languages loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ piedmontese, polish, portuguese, romanian, romansh, russian, sanskrit, serbian
+, serbianc, slovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, u
+ppersorbian, welsh, loaded.
+(d:/usr/texlive/2012/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk12.clo"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/base/bk12.clo
 File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -22,31 +34,29 @@ File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\kotex-dist\texmf-dist\tex\latex\kotex\kotex.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/kotex/kotex.sty
 Package: kotex 2012/10/27 v0.1.1 Korean TeX (ko.TeX)
 
-("C:\Program Files\MiKTeX 2.9\kotex-dist\texmf-dist\tex\latex\kotex\kotex.cfg")
-
-("C:\Program Files\MiKTeX 2.9\kotex-dist\texmf-dist\tex\latex\kotex\utf\dhucs.s
-ty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/kotex/kotex.cfg)
+(d:/usr/texlive/2012/texmf-dist/tex/latex/kotex/utf/dhucs.sty
 Package: dhucs 2012/11/08 v5.3.2 typesetting UTF-8 Korean documents
 
-("C:\Program Files\MiKTeX 2.9\kotex-dist\texmf-dist\tex\latex\kotex\utf\kotexut
-f.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/kotex/utf/kotexutf.sty
 Package: kotexutf 2012/09/14 v1.4 typesetting UTF-8 Korean documents
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+
+(d:/usr/texlive/2012/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -196,7 +206,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -227,7 +237,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -251,16 +261,14 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files\MiKTeX 2.9\kotex-dist\texmf-dist\tex\plain\kotex\utf\kotexut
-f-core.tex"
+(d:/usr/texlive/2012/texmf-dist/tex/plain/kotex/utf/kotexutf-core.tex
 \unih@ngulpoint=\count88
 \dhucs@emph@raise=\dimen103
 )
 Now handling font encoding LUC ...
 ... processing UTF-8 mapping file for font encoding LUC
 
-("C:\Program Files\MiKTeX 2.9\kotex-dist\texmf-dist\tex\latex\kotex\utf\lucenc.
-dfu"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/kotex/utf/lucenc.dfu
 File: lucenc.dfu 2007/09/05 UTF-8 support for hangul-ucs
    defining Unicode char U+00B7 (decimal 183)
    defining Unicode char U+2018 (decimal 8216)
@@ -311,32 +319,32 @@ File: lucenc.dfu 2007/09/05 UTF-8 support for hangul-ucs
 \@josa=\count89
 \josatoks=\toks16
 
-("C:\Program Files\MiKTeX 2.9\kotex-dist\texmf-dist\tex\latex\kotex\utf\kolabel
-s-utf.tex")))) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/kotex/utf/kolabels-utf.tex))))
+(d:/usr/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(d:/usr/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count90
@@ -344,28 +352,28 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -374,11 +382,11 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -391,9 +399,13 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
-Package: amsthm 2009/07/02 v2.20.1
+
+(d:/usr/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(d:/usr/texlive/2012/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks18
 \thm@bodyfont=\toks19
 \thm@headfont=\toks20
@@ -404,41 +416,41 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@headsep=\skip45
 \dth@everypar=\toks23
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
+(d:/usr/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks24
 \ex@=\dimen106
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen107
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count91
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 211.
 \uproot@=\count92
 \leftroot@=\count93
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 307.
 \classnum@=\count94
 \DOTSCASE@=\count95
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen108
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \macc@depth=\count96
 \c@MaxMatrixCols=\count97
 \dotsspace@=\muskip10
@@ -459,16 +471,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip47
 \multlinetaggap=\skip48
 \mathdisplay@stack=\toks28
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen115
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -480,8 +492,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \c@defn=\count104
 \c@rem=\count105
 \c@exam=\count106
-
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\README.aux
+ (./README.aux
 
 LaTeX Warning: Label `ref1' multiply defined.
 
@@ -549,6 +560,8 @@ LaTeX Warning: Label `ref1' multiply defined.
 LaTeX Warning: Label `ref1' multiply defined.
 
 )
+\openout1 = `README.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
@@ -564,11 +577,10 @@ LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for LUC/utbt/m/n on input line 70.
 LaTeX Font Info:    Try loading font information for LUC+utbt on input line 70.
 
-
-("C:\Program Files\MiKTeX 2.9\kotex-dist\texmf-dist\tex\latex\kotex-base\utf\lu
-cutbt.fd")
+ (d:/usr/texlive/2012/texmf-dist/tex/latex/kotex-base/utf/lucutbt.fd)
 LaTeX Font Info:    ... okay on input line 70.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+(d:/usr/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
 \scratchdimen=\dimen116
@@ -583,44 +595,46 @@ LaTeX Font Info:    ... okay on input line 70.
 \everyMPtoPDFconversion=\toks30
 ) [1
 
-{C:/Users/JaeseongYoo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{d:/usr/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
 LaTeX Font Info:    Try loading font information for U+msa on input line 166.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ (d:/usr/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 166.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(d:/usr/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3]
 Abstract
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\abstract_Korean.tex) [1]
+(./abstract_Korean.tex) [1]
 Abstract
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\abstract_English.tex) [1]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\README.toc [2
+(./abstract_English.tex) [1] (./README.toc [2
 
 ] [3])
 \tf@toc=\write3
- [4]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\README.lot [5
+\openout3 = `README.toc'.
+
+ [4] (./README.lot [5
 
 ])
 \tf@lot=\write4
- [6]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\README.lof [7
+\openout4 = `README.lot'.
+
+
+[6] (./README.lof [7
 
 ])
 \tf@lof=\write5
- [8]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\notations.tex [1
+\openout5 = `README.lof'.
+
+ [8] (./notations.tex [1
 
 ]) [2]
 Chapter 1.
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\1.1.tex
+(./1.1.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ (d:/usr/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -634,69 +648,58 @@ n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 X[]; []  ; X[]\OMS/cmsy/m/n/12 g$
 
 [3
 
-] <image01.jpg, id=123, 1003.75pt x 1379.1525pt>
+] <image01.jpg, id=124, 1003.75pt x 1379.1525pt>
 File: image01.jpg Graphic file (type jpg)
  <use image01.jpg>
 Package pdftex.def Info: image01.jpg used on input line 19.
 (pdftex.def)             Requested size: 109.15692pt x 150.0pt.
 )
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\1.2.tex [4 <D:/Dropbox/__GitHu
-b/BN_Data_Generator/Reference/image01.jpg>] [5]
-<DAG_Operators.jpg, id=130, 743.77875pt x 254.9525pt>
+(./1.2.tex [4 <./image01.jpg>] [5]
+<DAG_Operators.jpg, id=131, 743.77875pt x 254.9525pt>
 File: DAG_Operators.jpg Graphic file (type jpg)
  <use DAG_Operators.jpg>
 Package pdftex.def Info: DAG_Operators.jpg used on input line 20.
 (pdftex.def)             Requested size: 291.72952pt x 100.0pt.
 )
-[6 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/DAG_Operators.jpg>]
+[6 <./DAG_Operators.jpg>]
 Chapter 2.
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\2.tex)
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\2.1.1.tex [7
+(./2.tex) (./2.1.1.tex [7
 
-]) [8]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\2.1.2.tex [9]) [10]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\2.2.1.tex) [11]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\2.2.2.tex [12])
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\2.3.1.tex) [13]
+]) [8] (./2.1.2.tex [9]) [10] (./2.2.1.tex) [11]
+(./2.2.2.tex [12]) (./2.3.1.tex) [13]
 Overfull \hbox (13.89105pt too wide) in paragraph at lines 255--255
 []\OT1/cmr/bx/n/14.4 More gen-eral 2-phase Re-stricted Max-i-miza-tion (RS-
  []
 
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\2.3.2.tex) [14]
+(./2.3.2.tex) [14]
 Chapter 3.
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\3.1.tex [15
+(./3.1.tex [15
 
-])
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\3.2.tex)
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\3.2.1.tex)
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\3.2.1.1.tex [16]
+]) (./3.2.tex) (./3.2.1.tex) (./3.2.1.1.tex [16]
 Overfull \hbox (1.31177pt too wide) in paragraph at lines 8--9
 []\OT1/cmr/m/n/12 For any com-plete $\OML/cmm/m/it/12 G$\OT1/cmr/m/n/12 , we ha
 ve that $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )
- \OML/cmm/m/it/12 > \OT1/cmr/m/n/12 0$. Then $\OML/cmm/m/it/12 \OT1/cmr/m/n/12
- (\OML/cmm/m/it/12 []\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 ) = [
-][] \OML/cmm/m/it/12 \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 []\OMS/cmsy/m/n/12 j\O
-ML/cmm/m/it/12 G\OT1/cmr/m/n/12 )$
+ \OML/cmm/m/it/12 > \OT1/cmr/m/n/12 0$. Then $\OML/cmm/m/it/12 ^^Z\OT1/cmr/m/n/
+12 (\OML/cmm/m/it/12 ^^B[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )
+ = [][] \OML/cmm/m/it/12 ^^Z\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^B[]\OMS/cmsy/m/
+n/12 j\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )$
  []
 
-) (D:\Dropbox\__GitHub\BN_Data_Generator\Reference\3.2.2.1.tex [17])
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\3.2.2.2.tex) [18]
+) (./3.2.2.1.tex [17]) (./3.2.2.2.tex) [18]
 Chapter 4.
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\4.tex)
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\4.1.tex [19
+(./4.tex) (./4.1.tex [19
 
-])
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\4.2.tex
-<Real_Asia.jpg, id=178, 1056.94875pt x 947.54pt>
+]) (./4.2.tex
+<Real_Asia.jpg, id=179, 1056.94875pt x 947.54pt>
 File: Real_Asia.jpg Graphic file (type jpg)
  <use Real_Asia.jpg>
 Package pdftex.def Info: Real_Asia.jpg used on input line 5.
 (pdftex.def)             Requested size: 278.86438pt x 250.0pt.
  [20]
-[21 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Real_Asia.jpg>] [22]
-<image23.jpg, id=188, 1445.4pt x 873.2625pt>
+[21 <./Real_Asia.jpg>] [22] <image23.jpg, id=189, 1445.4pt x 873.2625pt>
 File: image23.jpg Graphic file (type jpg)
- <use image23.jpg>
+
+<use image23.jpg>
 Package pdftex.def Info: image23.jpg used on input line 91.
 (pdftex.def)             Requested size: 413.7959pt x 250.0pt.
 
@@ -704,17 +707,16 @@ Overfull \hbox (15.45732pt too wide) in paragraph at lines 91--92
  [][] 
  []
 
-) [23 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/image23.jpg>]
+) [23 <./image23.jpg>]
 Chapter 5.
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.tex)
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.1.1.tex [24
+(./5.tex) (./5.1.1.tex [24
 
 ]
 Overfull \hbox (16.31424pt too wide) in paragraph at lines 18--49
  [][] 
  []
 
-<Real_1_Asia.jpeg, id=195, 1285.80376pt x 667.49374pt>
+<Real_1_Asia.jpeg, id=196, 1285.80376pt x 667.49374pt>
 File: Real_1_Asia.jpeg Graphic file (type jpg)
  <use Real_1_Asia.jpeg>
 Package pdftex.def Info: Real_1_Asia.jpeg used on input line 53.
@@ -724,9 +726,8 @@ Overfull \hbox (25.44824pt too wide) in paragraph at lines 53--54
  [][] 
  []
 
-) [25] [26 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Real_1_Asia.jpeg>]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.1.2.tex
-<Real_Insurance.jpg, id=203, 1003.75pt x 1003.75pt>
+) [25] [26 <./Real_1_Asia.jpeg>] (./5.1.2.tex
+<Real_Insurance.jpg, id=204, 1003.75pt x 1003.75pt>
 File: Real_Insurance.jpg Graphic file (type jpg)
  <use Real_Insurance.jpg>
 Package pdftex.def Info: Real_Insurance.jpg used on input line 3.
@@ -736,7 +737,7 @@ Overfull \hbox (23.64746pt too wide) in paragraph at lines 22--53
  [][] 
  []
 
-<Real_2_Insurance.jpeg, id=204, 1285.80376pt x 669.50125pt>
+<Real_2_Insurance.jpeg, id=205, 1285.80376pt x 669.50125pt>
 File: Real_2_Insurance.jpeg Graphic file (type jpg)
 
 <use Real_2_Insurance.jpeg>
@@ -747,10 +748,8 @@ Overfull \hbox (24.17296pt too wide) in paragraph at lines 57--58
  [][] 
  []
 
-) [27 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Real_Insurance.jpg>]
-[28 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Real_2_Insurance.jpeg>]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.1.3.tex
-<Real_Alarm.jpg, id=211, 1003.75pt x 1003.75pt>
+) [27 <./Real_Insurance.jpg>] [28 <./Real_2_Insurance.jpeg>] (./5.1.3.tex
+<Real_Alarm.jpg, id=212, 1003.75pt x 1003.75pt>
 File: Real_Alarm.jpg Graphic file (type jpg)
  <use Real_Alarm.jpg>
 Package pdftex.def Info: Real_Alarm.jpg used on input line 3.
@@ -760,7 +759,7 @@ Overfull \hbox (23.64746pt too wide) in paragraph at lines 23--54
  [][] 
  []
 
-<Real_3_Alarm.jpeg, id=212, 1288.815pt x 667.49374pt>
+<Real_3_Alarm.jpeg, id=213, 1288.815pt x 667.49374pt>
 File: Real_3_Alarm.jpeg Graphic file (type jpg)
  <use Real_3_Alarm.jpeg>
 Package pdftex.def Info: Real_3_Alarm.jpeg used on input line 58.
@@ -770,10 +769,8 @@ Overfull \hbox (26.44072pt too wide) in paragraph at lines 58--59
  [][] 
  []
 
-) [29 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Real_Alarm.jpg>]
-[30 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Real_3_Alarm.jpeg>]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.1.4.tex
-<Real_Halifinder.jpg, id=219, 1003.75pt x 1003.75pt>
+) [29 <./Real_Alarm.jpg>] [30 <./Real_3_Alarm.jpeg>] (./5.1.4.tex
+<Real_Halifinder.jpg, id=220, 1003.75pt x 1003.75pt>
 File: Real_Halifinder.jpg Graphic file (type jpg)
  <use Real_Halifinder.jpg>
 Package pdftex.def Info: Real_Halifinder.jpg used on input line 3.
@@ -783,7 +780,7 @@ Overfull \hbox (30.98068pt too wide) in paragraph at lines 23--54
  [][] 
  []
 
-<Real_4_Halifinder.jpeg, id=220, 1289.81876pt x 668.4975pt>
+<Real_4_Halifinder.jpeg, id=221, 1289.81876pt x 668.4975pt>
 File: Real_4_Halifinder.jpeg Graphic file (type jpg)
 
 <use Real_4_Halifinder.jpeg>
@@ -794,10 +791,8 @@ Overfull \hbox (26.14175pt too wide) in paragraph at lines 58--59
  [][] 
  []
 
-) [31 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Real_Halifinder.jpg>]
-[32 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Real_4_Halifinder.jpeg>]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.1.5.tex
-<Real_Result.jpg, id=228, 2007.5pt x 842.14626pt>
+) [31 <./Real_Halifinder.jpg>] [32 <./Real_4_Halifinder.jpeg>] (./5.1.5.tex
+<Real_Result.jpg, id=229, 2007.5pt x 842.14626pt>
 File: Real_Result.jpg Graphic file (type jpg)
  <use Real_Result.jpg>
 Package pdftex.def Info: Real_Result.jpg used on input line 3.
@@ -807,30 +802,28 @@ Overfull \hbox (6.8914pt too wide) in paragraph at lines 3--4
  [][] 
  []
 
-[33 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Real_Result.jpg>])
-[34] (D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.2.1.tex
-<Topologies.jpg, id=235, 1003.75pt x 755.82375pt>
+[33 <./Real_Result.jpg>]) [34] (./5.2.1.tex
+<Topologies.jpg, id=236, 1003.75pt x 755.82375pt>
 File: Topologies.jpg Graphic file (type jpg)
  <use Topologies.jpg>
 Package pdftex.def Info: Topologies.jpg used on input line 3.
 (pdftex.def)             Requested size: 239.03638pt x 180.0pt.
 )
-[35 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Topologies.jpg>]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.2.2.tex
-<Topologies_Collapse.jpg, id=239, 849.1725pt x 132.495pt>
+[35 <./Topologies.jpg>] (./5.2.2.tex
+<Topologies_Collapse.jpg, id=240, 849.1725pt x 132.495pt>
 File: Topologies_Collapse.jpg Graphic file (type jpg)
 
 <use Topologies_Collapse.jpg>
 Package pdftex.def Info: Topologies_Collapse.jpg used on input line 3.
 (pdftex.def)             Requested size: 320.46024pt x 50.0pt.
 
-<Result_Collapse.jpg, id=240, 2007.5pt x 961.5925pt>
+<Result_Collapse.jpg, id=241, 2007.5pt x 961.5925pt>
 File: Result_Collapse.jpg Graphic file (type jpg)
  <use Result_Collapse.jpg>
 Package pdftex.def Info: Result_Collapse.jpg used on input line 12.
 (pdftex.def)             Requested size: 323.56522pt x 155.0pt.
 
-<01_Collapse_Score.jpeg, id=241, 1505.625pt x 1816.7875pt>
+<01_Collapse_Score.jpeg, id=242, 1505.625pt x 1816.7875pt>
 File: 01_Collapse_Score.jpeg Graphic file (type jpg)
 
 <use 01_Collapse_Score.jpeg>
@@ -841,7 +834,7 @@ Overfull \hbox (16.01973pt too wide) in paragraph at lines 30--31
  [][] 
  []
 
-<01_Collapse_Arcs.jpeg, id=242, 1505.625pt x 1823.81375pt>
+<01_Collapse_Arcs.jpeg, id=243, 1505.625pt x 1823.81375pt>
 File: 01_Collapse_Arcs.jpeg Graphic file (type jpg)
 
 <use 01_Collapse_Arcs.jpeg>
@@ -852,24 +845,21 @@ Overfull \hbox (14.43452pt too wide) in paragraph at lines 36--37
  [][] 
  []
 
-[36 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Topologies_Collapse.jpg> <
-D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Result_Collapse.jpg>] [37 <D:/D
-ropbox/__GitHub/BN_Data_Generator/Reference/01_Collapse_Score.jpeg>] [38 <D:/Dr
-opbox/__GitHub/BN_Data_Generator/Reference/01_Collapse_Arcs.jpeg>])
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.2.3.tex
-<Topologies_Line.jpg, id=253, 849.1725pt x 132.495pt>
+[36 <./Topologies_Collapse.jpg> <./Result_Collapse.jpg>] [37 <./01_Collapse_Sco
+re.jpeg>] [38 <./01_Collapse_Arcs.jpeg>]) (./5.2.3.tex
+<Topologies_Line.jpg, id=254, 849.1725pt x 132.495pt>
 File: Topologies_Line.jpg Graphic file (type jpg)
 
 <use Topologies_Line.jpg>
 Package pdftex.def Info: Topologies_Line.jpg used on input line 3.
 (pdftex.def)             Requested size: 320.46024pt x 50.0pt.
- <Result_Line.jpg, id=254, 2007.5pt x 961.5925pt>
+ <Result_Line.jpg, id=255, 2007.5pt x 961.5925pt>
 File: Result_Line.jpg Graphic file (type jpg)
 
 <use Result_Line.jpg>
 Package pdftex.def Info: Result_Line.jpg used on input line 12.
 (pdftex.def)             Requested size: 323.56522pt x 155.0pt.
- <02_Line_Score.jpeg, id=255, 1505.625pt x 1816.7875pt>
+ <02_Line_Score.jpeg, id=256, 1505.625pt x 1816.7875pt>
 File: 02_Line_Score.jpeg Graphic file (type jpg)
 
 <use 02_Line_Score.jpeg>
@@ -880,7 +870,7 @@ Overfull \hbox (16.01973pt too wide) in paragraph at lines 27--28
  [][] 
  []
 
-<02_Line_Arcs.jpeg, id=256, 1505.625pt x 1816.7875pt>
+<02_Line_Arcs.jpeg, id=257, 1505.625pt x 1816.7875pt>
 File: 02_Line_Arcs.jpeg Graphic file (type jpg)
  <use 02_Line_Arcs.jpeg>
 Package pdftex.def Info: 02_Line_Arcs.jpeg used on input line 33.
@@ -890,26 +880,22 @@ Overfull \hbox (16.01973pt too wide) in paragraph at lines 33--34
  [][] 
  []
 
-) [39 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Topologies_Line.jpg> <D:
-/Dropbox/__GitHub/BN_Data_Generator/Reference/Result_Line.jpg>] [40 <D:/Dropbox
-/__GitHub/BN_Data_Generator/Reference/02_Line_Score.jpeg>] [41 <D:/Dropbox/__Gi
-tHub/BN_Data_Generator/Reference/02_Line_Arcs.jpeg>]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.2.4.tex
-<Topologies_Star.jpg, id=266, 849.1725pt x 132.495pt>
+) [39 <./Topologies_Line.jpg> <./Result_Line.jpg>] [40 <./02_Line_Score.jpeg>]
+[41 <./02_Line_Arcs.jpeg>] (./5.2.4.tex
+<Topologies_Star.jpg, id=268, 849.1725pt x 132.495pt>
 File: Topologies_Star.jpg Graphic file (type jpg)
 
 <use Topologies_Star.jpg>
 Package pdftex.def Info: Topologies_Star.jpg used on input line 3.
 (pdftex.def)             Requested size: 320.46024pt x 50.0pt.
- <Result_Star.jpg, id=267, 2007.5pt x 961.5925pt>
+ <Result_Star.jpg, id=269, 2007.5pt x 961.5925pt>
 File: Result_Star.jpg Graphic file (type jpg)
 
 <use Result_Star.jpg>
 Package pdftex.def Info: Result_Star.jpg used on input line 12.
 (pdftex.def)             Requested size: 323.56522pt x 155.0pt.
- [42 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Topologies_Star.jpg> <D:/
-Dropbox/__GitHub/BN_Data_Generator/Reference/Result_Star.jpg>] <03_Star_Score.j
-peg, id=271, 1505.625pt x 1816.7875pt>
+ [42 <./Topologies_Star.jpg> <./Result_Star.jpg>]
+<03_Star_Score.jpeg, id=273, 1505.625pt x 1816.7875pt>
 File: 03_Star_Score.jpeg Graphic file (type jpg)
 
 <use 03_Star_Score.jpeg>
@@ -920,7 +906,7 @@ Overfull \hbox (16.01973pt too wide) in paragraph at lines 33--34
  [][] 
  []
 
-<03_Star_Arcs.jpeg, id=272, 1505.625pt x 1815.78375pt>
+<03_Star_Arcs.jpeg, id=274, 1505.625pt x 1815.78375pt>
 File: 03_Star_Arcs.jpeg Graphic file (type jpg)
  <use 03_Star_Arcs.jpeg>
 Package pdftex.def Info: 03_Star_Arcs.jpeg used on input line 39.
@@ -930,25 +916,22 @@ Overfull \hbox (16.24947pt too wide) in paragraph at lines 39--40
  [][] 
  []
 
-) [43] [44 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/03_Star_Score.jpeg>
-] [45 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/03_Star_Arcs.jpeg>]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.2.5.tex
-<Topologies_PseudoLoop.jpg, id=283, 849.1725pt x 132.495pt>
+) [43] [44 <./03_Star_Score.jpeg>] [45 <./03_Star_Arcs.jpeg>] (./5.2.5.tex
+<Topologies_PseudoLoop.jpg, id=285, 849.1725pt x 132.495pt>
 File: Topologies_PseudoLoop.jpg Graphic file (type jpg)
 
 <use Topologies_PseudoLoop.jpg>
 Package pdftex.def Info: Topologies_PseudoLoop.jpg used on input line 3.
 (pdftex.def)             Requested size: 320.46024pt x 50.0pt.
 
-<Result_PseudoLoop.jpg, id=284, 2007.5pt x 961.5925pt>
+<Result_PseudoLoop.jpg, id=286, 2007.5pt x 961.5925pt>
 File: Result_PseudoLoop.jpg Graphic file (type jpg)
 
 <use Result_PseudoLoop.jpg>
 Package pdftex.def Info: Result_PseudoLoop.jpg used on input line 12.
 (pdftex.def)             Requested size: 323.56522pt x 155.0pt.
- [46 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Topologies_PseudoLoop.jpg
-> <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Result_PseudoLoop.jpg>]
-<04_PseudoLoop_Score.jpeg, id=288, 1505.625pt x 1815.78375pt>
+ [46 <./Topologies_PseudoLoop.jpg> <./Result_PseudoLoop.jpg>] <04_PseudoLoop_Sc
+ore.jpeg, id=290, 1505.625pt x 1815.78375pt>
 File: 04_PseudoLoop_Score.jpeg Graphic file (type jpg)
 
 <use 04_PseudoLoop_Score.jpeg>
@@ -959,7 +942,7 @@ Overfull \hbox (16.24947pt too wide) in paragraph at lines 27--28
  [][] 
  []
 
-<04_PseudoLoop_Arcs.jpeg, id=289, 1505.625pt x 1816.7875pt>
+<04_PseudoLoop_Arcs.jpeg, id=291, 1505.625pt x 1816.7875pt>
 File: 04_PseudoLoop_Arcs.jpeg Graphic file (type jpg)
 
 <use 04_PseudoLoop_Arcs.jpeg>
@@ -970,23 +953,21 @@ Overfull \hbox (16.01973pt too wide) in paragraph at lines 33--34
  [][] 
  []
 
-) [47] [48 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/04_PseudoLoop_Score
-.jpeg>] [49 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/04_PseudoLoop_Arcs
-.jpeg>] (D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.2.6.tex
-<Topologies_Diamond.jpg, id=300, 849.1725pt x 132.495pt>
+) [47] [48 <./04_PseudoLoop_Score.jpeg>] [49 <./04_PseudoLoop_Arcs.jpeg>]
+(./5.2.6.tex <Topologies_Diamond.jpg, id=302, 849.1725pt x 132.495pt>
 File: Topologies_Diamond.jpg Graphic file (type jpg)
 
 <use Topologies_Diamond.jpg>
 Package pdftex.def Info: Topologies_Diamond.jpg used on input line 3.
 (pdftex.def)             Requested size: 320.46024pt x 50.0pt.
 
-<Result_Diamond.jpg, id=301, 2007.5pt x 842.14626pt>
+<Result_Diamond.jpg, id=303, 2007.5pt x 842.14626pt>
 File: Result_Diamond.jpg Graphic file (type jpg)
  <use Result_Diamond.jpg>
 Package pdftex.def Info: Result_Diamond.jpg used on input line 12.
 (pdftex.def)             Requested size: 369.48251pt x 155.0pt.
 
-<05_Diamond_Score.jpeg, id=302, 1505.625pt x 1815.78375pt>
+<05_Diamond_Score.jpeg, id=304, 1505.625pt x 1815.78375pt>
 File: 05_Diamond_Score.jpeg Graphic file (type jpg)
 
 <use 05_Diamond_Score.jpeg>
@@ -997,7 +978,7 @@ Overfull \hbox (16.24947pt too wide) in paragraph at lines 27--28
  [][] 
  []
 
-<05_Diamond_Arcs.jpeg, id=303, 1505.625pt x 1815.78375pt>
+<05_Diamond_Arcs.jpeg, id=305, 1505.625pt x 1815.78375pt>
 File: 05_Diamond_Arcs.jpeg Graphic file (type jpg)
 
 <use 05_Diamond_Arcs.jpeg>
@@ -1008,25 +989,22 @@ Overfull \hbox (16.24947pt too wide) in paragraph at lines 33--34
  [][] 
  []
 
-) [50 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Topologies_Diamond.jpg> 
-<D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Result_Diamond.jpg>] [51 <D:/D
-ropbox/__GitHub/BN_Data_Generator/Reference/05_Diamond_Score.jpeg>] [52 <D:/Dro
-pbox/__GitHub/BN_Data_Generator/Reference/05_Diamond_Arcs.jpeg>]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\5.2.7.tex
-<Topologies_Rhombus.jpg, id=313, 849.1725pt x 132.495pt>
+) [50 <./Topologies_Diamond.jpg> <./Result_Diamond.jpg>] [51 <./05_Diamond_Scor
+e.jpeg>] [52 <./05_Diamond_Arcs.jpeg>] (./5.2.7.tex
+<Topologies_Rhombus.jpg, id=315, 849.1725pt x 132.495pt>
 File: Topologies_Rhombus.jpg Graphic file (type jpg)
 
 <use Topologies_Rhombus.jpg>
 Package pdftex.def Info: Topologies_Rhombus.jpg used on input line 3.
 (pdftex.def)             Requested size: 320.46024pt x 50.0pt.
 
-<Result_Rhombus.jpg, id=314, 2007.5pt x 842.14626pt>
+<Result_Rhombus.jpg, id=316, 2007.5pt x 842.14626pt>
 File: Result_Rhombus.jpg Graphic file (type jpg)
  <use Result_Rhombus.jpg>
 Package pdftex.def Info: Result_Rhombus.jpg used on input line 12.
 (pdftex.def)             Requested size: 369.48251pt x 155.0pt.
 
-<06_Rhombus_Score.jpeg, id=315, 1505.625pt x 1814.78pt>
+<06_Rhombus_Score.jpeg, id=317, 1505.625pt x 1814.78pt>
 File: 06_Rhombus_Score.jpeg Graphic file (type jpg)
 
 <use 06_Rhombus_Score.jpeg>
@@ -1037,7 +1015,7 @@ Overfull \hbox (16.4792pt too wide) in paragraph at lines 27--28
  [][] 
  []
 
-<06_Rhombus_Arcs.jpeg, id=316, 1506.62875pt x 1815.78375pt>
+<06_Rhombus_Arcs.jpeg, id=318, 1506.62875pt x 1815.78375pt>
 File: 06_Rhombus_Arcs.jpeg Graphic file (type jpg)
 
 <use 06_Rhombus_Arcs.jpeg>
@@ -1048,15 +1026,12 @@ Overfull \hbox (16.52586pt too wide) in paragraph at lines 33--34
  [][] 
  []
 
-) [53 <D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Topologies_Rhombus.jpg> 
-<D:/Dropbox/__GitHub/BN_Data_Generator/Reference/Result_Rhombus.jpg>] [54 <D:/D
-ropbox/__GitHub/BN_Data_Generator/Reference/06_Rhombus_Score.jpeg>] [55 <D:/Dro
-pbox/__GitHub/BN_Data_Generator/Reference/06_Rhombus_Arcs.jpeg>]
+) [53 <./Topologies_Rhombus.jpg> <./Result_Rhombus.jpg>] [54 <./06_Rhombus_Scor
+e.jpeg>] [55 <./06_Rhombus_Arcs.jpeg>]
 Chapter 6.
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\6.tex [56
+(./6.tex [56
 
-]) [57]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\appendix01_Collapse.tex
+]) [57] (./appendix01_Collapse.tex
 Overfull \hbox (12.64763pt too wide) in paragraph at lines 4--35
  [][] 
  []
@@ -1083,8 +1058,7 @@ Overfull \hbox (16.31424pt too wide) in paragraph at lines 152--183
 
 ) [58
 
-] [59] [60]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\appendix02_Line.tex
+] [59] [60] (./appendix02_Line.tex
 Overfull \hbox (12.64763pt too wide) in paragraph at lines 4--35
  [][] 
  []
@@ -1109,8 +1083,7 @@ Overfull \hbox (16.31424pt too wide) in paragraph at lines 153--184
  [][] 
  []
 
-) [61] [62] [63]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\appendix03_Star.tex
+) [61] [62] [63] (./appendix03_Star.tex
 Overfull \hbox (12.64763pt too wide) in paragraph at lines 4--35
  [][] 
  []
@@ -1135,8 +1108,7 @@ Overfull \hbox (16.31424pt too wide) in paragraph at lines 152--183
  [][] 
  []
 
-) [64] [65] [66]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\appendix04_PseudoLoop.tex
+) [64] [65] [66] (./appendix04_PseudoLoop.tex
 Overfull \hbox (12.64763pt too wide) in paragraph at lines 4--35
  [][] 
  []
@@ -1161,8 +1133,7 @@ Overfull \hbox (16.31424pt too wide) in paragraph at lines 152--183
  [][] 
  []
 
-) [67] [68] [69]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\appendix05_Diamond.tex
+) [67] [68] [69] (./appendix05_Diamond.tex
 Overfull \hbox (12.64763pt too wide) in paragraph at lines 4--35
  [][] 
  []
@@ -1182,8 +1153,7 @@ Overfull \hbox (16.31424pt too wide) in paragraph at lines 116--147
  [][] 
  []
 
-) [70] [71]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\appendix06_Rhombus.tex
+) [70] [71] (./appendix06_Rhombus.tex
 Overfull \hbox (12.64763pt too wide) in paragraph at lines 4--35
  [][] 
  []
@@ -1206,8 +1176,7 @@ Overfull \hbox (16.31424pt too wide) in paragraph at lines 115--146
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [72] [73] [74]
-(D:\Dropbox\__GitHub\BN_Data_Generator\Reference\references.tex
+) [72] [73] [74] (./references.tex
 No file README.bbl.
 [75
 
@@ -1217,110 +1186,97 @@ Overfull \hbox (4.38507pt too wide) in paragraph at lines 19--20
 rn-ing Bayesian
  []
 
-[76] [77]) [78] (D:\Dropbox\__GitHub\BN_Data_Generator\Reference\README.aux)
+[76] [77]) [78] (./README.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3605 strings out of 493889
- 53201 string characters out of 3146781
- 178600 words of memory out of 3000000
- 6605 multiletter control sequences out of 15000+200000
+ 3609 strings out of 493481
+ 48832 string characters out of 3134960
+ 175969 words of memory out of 3000000
+ 6592 multiletter control sequences out of 15000+200000
  40905 words of font info for 147 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
+ 957 hyphenation exceptions out of 8191
  44i,9n,26p,1022b,235s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dis
-t/fonts/type1/kotex-base/myoungjo/outbtm4e.pfb><C:/Program Files/MiKTeX 2.9/kot
-ex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm4f.pfb><C:/Program Fil
-es/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm51.pf
-b><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myo
-ungjo/outbtm53.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/typ
-e1/kotex-base/myoungjo/outbtm54.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/tex
-mf-dist/fonts/type1/kotex-base/myoungjo/outbtm57.pfb><C:/Program Files/MiKTeX 2
-.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm58.pfb><C:/Progr
-am Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbt
-m59.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-ba
-se/myoungjo/outbtm5b.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fon
-ts/type1/kotex-base/myoungjo/outbtm5c.pfb><C:/Program Files/MiKTeX 2.9/kotex-di
-st/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm5d.pfb><C:/Program Files/Mi
-KTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm5e.pfb><C:
-/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo
-/outbtm62.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/ko
-tex-base/myoungjo/outbtm63.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-di
-st/fonts/type1/kotex-base/myoungjo/outbtm65.pfb><C:/Program Files/MiKTeX 2.9/ko
-tex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm67.pfb><C:/Program Fi
-les/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm68.p
-fb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/my
-oungjo/outbtm78.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/ty
-pe1/kotex-base/myoungjo/outbtm79.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/te
-xmf-dist/fonts/type1/kotex-base/myoungjo/outbtm7d.pfb><C:/Program Files/MiKTeX 
-2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm8a.pfb><C:/Prog
-ram Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outb
-tm90.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-b
-ase/myoungjo/outbtm95.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fo
-nts/type1/kotex-base/myoungjo/outbtm96.pfb><C:/Program Files/MiKTeX 2.9/kotex-d
-ist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm9a.pfb><C:/Program Files/M
-iKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm9e.pfb><C
-:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungj
-o/outbtmac.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/k
-otex-base/myoungjo/outbtmad.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-d
-ist/fonts/type1/kotex-base/myoungjo/outbtmae.pfb><C:/Program Files/MiKTeX 2.9/k
-otex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmb0.pfb><C:/Program F
-iles/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmb1.
-pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/m
-youngjo/outbtmb2.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/t
-ype1/kotex-base/myoungjo/outbtmb3.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/t
-exmf-dist/fonts/type1/kotex-base/myoungjo/outbtmb4.pfb><C:/Program Files/MiKTeX
- 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmb5.pfb><C:/Pro
-gram Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/out
-btmb7.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-
-base/myoungjo/outbtmb8.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/f
-onts/type1/kotex-base/myoungjo/outbtmb9.pfb><C:/Program Files/MiKTeX 2.9/kotex-
-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmba.pfb><C:/Program Files/
-MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmbb.pfb><
-C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoung
-jo/outbtmbc.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/
-kotex-base/myoungjo/outbtmbd.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-
-dist/fonts/type1/kotex-base/myoungjo/outbtmbe.pfb><C:/Program Files/MiKTeX 2.9/
-kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc0.pfb><C:/Program 
-Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc1
-.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/
-myoungjo/outbtmc2.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/
-type1/kotex-base/myoungjo/outbtmc5.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/
-texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc6.pfb><C:/Program Files/MiKTe
-X 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc7.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/ou
-tbtmc8.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex
--base/myoungjo/outbtmc9.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/
-fonts/type1/kotex-base/myoungjo/outbtmcd.pfb><C:/Program Files/MiKTeX 2.9/kotex
--dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmd0.pfb><C:/Program Files
-/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmd1.pfb>
-<C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoun
-gjo/outbtmd2.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1
-/kotex-base/myoungjo/outbtmd3.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf
--dist/fonts/type1/kotex-base/myoungjo/outbtmd4.pfb><C:/Program Files/MiKTeX 2.9
-/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmd5.pfb><C:/Program
- Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmd
-6.pfb><C:/Program Files/MiKTeX 2.9/kotex-dist/texmf-dist/fonts/type1/kotex-base
-/myoungjo/outbtmf9.pfb>
-Output written on README.pdf (90 pages, 19716173 bytes).
+<d:/usr/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:
+/usr/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/usr/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/usr/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><d:/usr/texliv
+e/2012/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><d:/usr/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/usr/texlive/2012
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/usr/texlive/2012/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/usr/texlive/2012/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/usr/texlive/2012/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><
+d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm4e.pfb><d:
+/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm4f.pfb><d:/u
+sr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm51.pfb><d:/usr
+/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm53.pfb><d:/usr/t
+exlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm54.pfb><d:/usr/tex
+live/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm57.pfb><d:/usr/texli
+ve/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm58.pfb><d:/usr/texlive
+/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm59.pfb><d:/usr/texlive/2
+012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm5b.pfb><d:/usr/texlive/201
+2/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm5c.pfb><d:/usr/texlive/2012/
+texmf-dist/fonts/type1/kotex-base/myoungjo/outbtm5d.pfb><d:/usr/texlive/2012/te
+xmf-dist/fonts/type1/kotex-base/myoungjo/outbtm5e.pfb><d:/usr/texlive/2012/texm
+f-dist/fonts/type1/kotex-base/myoungjo/outbtm62.pfb><d:/usr/texlive/2012/texmf-
+dist/fonts/type1/kotex-base/myoungjo/outbtm63.pfb><d:/usr/texlive/2012/texmf-di
+st/fonts/type1/kotex-base/myoungjo/outbtm65.pfb><d:/usr/texlive/2012/texmf-dist
+/fonts/type1/kotex-base/myoungjo/outbtm67.pfb><d:/usr/texlive/2012/texmf-dist/f
+onts/type1/kotex-base/myoungjo/outbtm68.pfb><d:/usr/texlive/2012/texmf-dist/fon
+ts/type1/kotex-base/myoungjo/outbtm78.pfb><d:/usr/texlive/2012/texmf-dist/fonts
+/type1/kotex-base/myoungjo/outbtm79.pfb><d:/usr/texlive/2012/texmf-dist/fonts/t
+ype1/kotex-base/myoungjo/outbtm7d.pfb><d:/usr/texlive/2012/texmf-dist/fonts/typ
+e1/kotex-base/myoungjo/outbtm8a.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1
+/kotex-base/myoungjo/outbtm90.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/k
+otex-base/myoungjo/outbtm95.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kot
+ex-base/myoungjo/outbtm96.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex
+-base/myoungjo/outbtm9a.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-b
+ase/myoungjo/outbtm9e.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-bas
+e/myoungjo/outbtmac.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/
+myoungjo/outbtmad.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/my
+oungjo/outbtmae.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myou
+ngjo/outbtmb0.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoung
+jo/outbtmb1.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo
+/outbtmb2.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/o
+utbtmb3.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/out
+btmb4.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbt
+mb5.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmb
+7.pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmb8.
+pfb><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmb9.pf
+b><d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmba.pfb>
+<d:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmbb.pfb><d
+:/usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmbc.pfb><d:/
+usr/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmbd.pfb><d:/us
+r/texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmbe.pfb><d:/usr/
+texlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc0.pfb><d:/usr/te
+xlive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc1.pfb><d:/usr/texl
+ive/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc2.pfb><d:/usr/texliv
+e/2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc5.pfb><d:/usr/texlive/
+2012/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc6.pfb><d:/usr/texlive/20
+12/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc7.pfb><d:/usr/texlive/2012
+/texmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc8.pfb><d:/usr/texlive/2012/t
+exmf-dist/fonts/type1/kotex-base/myoungjo/outbtmc9.pfb><d:/usr/texlive/2012/tex
+mf-dist/fonts/type1/kotex-base/myoungjo/outbtmcd.pfb><d:/usr/texlive/2012/texmf
+-dist/fonts/type1/kotex-base/myoungjo/outbtmd0.pfb><d:/usr/texlive/2012/texmf-d
+ist/fonts/type1/kotex-base/myoungjo/outbtmd1.pfb><d:/usr/texlive/2012/texmf-dis
+t/fonts/type1/kotex-base/myoungjo/outbtmd2.pfb><d:/usr/texlive/2012/texmf-dist/
+fonts/type1/kotex-base/myoungjo/outbtmd3.pfb><d:/usr/texlive/2012/texmf-dist/fo
+nts/type1/kotex-base/myoungjo/outbtmd4.pfb><d:/usr/texlive/2012/texmf-dist/font
+s/type1/kotex-base/myoungjo/outbtmd5.pfb><d:/usr/texlive/2012/texmf-dist/fonts/
+type1/kotex-base/myoungjo/outbtmd6.pfb><d:/usr/texlive/2012/texmf-dist/fonts/ty
+pe1/kotex-base/myoungjo/outbtmf9.pfb>
+Output written on README.pdf (90 pages, 19638983 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
+ 638 PDF objects out of 1000 (max. 8388607)
+ 428 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

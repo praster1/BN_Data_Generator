@@ -28,7 +28,7 @@ n = 1000
 # res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$arc_name)
 # data = res$data
 
-# source("asia_by_Generator.R")
+# source("gen_asia.R")
 # res = BN_Data_Generator(arcs, Probs, n, arc_name)
 # data = res$data
 
