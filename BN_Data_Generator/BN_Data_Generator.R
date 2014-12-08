@@ -101,7 +101,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 	# 이를 보완하기 위한 부분.
 	if (n < 1000)
 	{
-		data = sample(data, n)
+		result_mat = result_mat[sample(c(1:1000), size=n), ]
 	}
 	
 	res = list(	data = data.frame(result_mat),
