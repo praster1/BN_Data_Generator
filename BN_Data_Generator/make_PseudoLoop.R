@@ -16,9 +16,9 @@ make_PseudoLoop = function(nodes)
 	}
 	
 	
-	arc_name = letters[1:nodes]
-	dimnames(arcs)[[1]] = arc_name
-	dimnames(arcs)[[2]] = arc_name
+	node_names = letters[1:nodes]
+	dimnames(arcs)[[1]] = node_names
+	dimnames(arcs)[[2]] = node_names
 	
 	Probs = list()
 	
@@ -30,9 +30,9 @@ make_PseudoLoop = function(nodes)
 	Probs[[nodes]] = runif(4)
 		
 	
-	result = list(	arcs = arcs,
+	result = list(	arcs_mat = arcs,
 						Probs = Probs,
-						arc_name = arc_name,
+						node_names = node_names,
 						num_of_nodes = nodes
 					)
 	return(result)
