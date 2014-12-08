@@ -7,6 +7,8 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 	if (n < 1000)
 	{
 		temp_n = 1000;
+	} else {
+		temp_n = n;
 	}
 	
 	# Node 개수
