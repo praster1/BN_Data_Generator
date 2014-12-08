@@ -16,7 +16,7 @@ source("make_Diamond.R", encoding="utf8")				# make_Diamond = function(nodes)
 source("make_Rhombus.R", encoding="utf8")			# make_Rhombus = function(nodes)
 
 source("C_M_WO_WC.R", encoding="utf8")				# C_M_WO_WC = function(target_arcs_mat, learnt_arcs_mat)
-source("from_to_mat.R", encoding="utf8")					# from_to_mat = function(input_arcs, node_names)
+source("fromto_to_mat.R", encoding="utf8")					# fromto_to_mat = function(input_arcs, node_names)
 
 
 
@@ -46,7 +46,7 @@ data = res$data
 # source("real_hailfinder.R", encoding="utf8")
 # nodes = dim(data)[2]
 # node_names = names(data)
-# target_arcs_mat = from_to_mat(res$arcs, node_names)
+# target_arcs_mat = fromto_to_mat(res$arcs, node_names)
 
 
 
@@ -105,10 +105,10 @@ round(score(bn_rsmax2, data, type = "aic"), 2)
 round(score(bn_rsmax2, data, type = "bic"), 2)
 
 
-bn_hc_arcs_mat = from_to_mat(bn_hc$arcs, node_names)
-bn_tabu_arcs_mat = from_to_mat(bn_tabu$arcs, node_names)
-bn_mmhc_arcs_mat = from_to_mat(bn_mmhc$arcs, node_names)
-bn_rsmax2_arcs_mat = from_to_mat(bn_rsmax2$arcs, node_names)
+bn_hc_arcs_mat = fromto_to_mat(bn_hc$arcs, node_names)
+bn_tabu_arcs_mat = fromto_to_mat(bn_tabu$arcs, node_names)
+bn_mmhc_arcs_mat = fromto_to_mat(bn_mmhc$arcs, node_names)
+bn_rsmax2_arcs_mat = fromto_to_mat(bn_rsmax2$arcs, node_names)
 
 
 ## C		# Correct Edges : 실제 네트워크 = 결과 네트워크, 방향 일치

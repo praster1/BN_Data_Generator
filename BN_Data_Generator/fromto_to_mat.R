@@ -1,4 +1,4 @@
-from_to_mat = function(input_arcs, node_names)
+fromto_to_mat = function(input_arcs, node_names)
 {
 	num_of_nodes = length(node_names)
 	arcs_mat = matrix(0, num_of_nodes, num_of_nodes)
