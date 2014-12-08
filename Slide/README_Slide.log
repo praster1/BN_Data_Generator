@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.15)  8 DEC 2014 22:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.15)  9 DEC 2014 02:58
 entering extended mode
 **README_Slide.tex
 (D:\Dropbox\__GitHub\BN_Data_Generator\Slide\README_Slide.tex
@@ -2276,7 +2276,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 798.
 Here is how much of TeX's memory you used:
  25218 strings out of 493889
  487305 string characters out of 3146781
- 553126 words of memory out of 3000000
+ 553131 words of memory out of 3000000
  27834 multiletter control sequences out of 15000+200000
  24630 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2289,7 +2289,7 @@ onts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/mathpazo/fplmr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mathpazo/f
 plmri.pfb>
-Output written on README_Slide.pdf (51 pages, 18532670 bytes).
+Output written on README_Slide.pdf (51 pages, 18532672 bytes).
 PDF statistics:
  904 PDF objects out of 1000 (max. 8388607)
  119 named destinations out of 1000 (max. 500000)
