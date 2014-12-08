@@ -4,7 +4,7 @@ make_Diamond = function(nodes)
 {
 	if(nodes < 4)
 	{
-		print("More Nodes!");
+		print("Need More Nodes!");
 		return(break);
 	}
 	

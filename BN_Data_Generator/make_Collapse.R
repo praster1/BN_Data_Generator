@@ -4,7 +4,7 @@ make_Collapse = function (nodes)
 {
 	if(nodes < 3)
 	{
-		print("More Nodes!");
+		print("Need More Nodes!");
 		return(break);
 	}
 
