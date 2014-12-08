@@ -2,6 +2,11 @@
 
 BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 {
+	if (n < 1000)
+	{
+		temp_n = 1000;
+	}
+	
 	# Node 개수
 	num_of_nodes = dim(arcs)[1];
 
@@ -23,7 +28,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 	root_nodes = sum(num_of_parent_nodes == 0);
 
 	# 결과는 여기에 저장이 된다.
-	result_mat = matrix(0, n, num_of_nodes);
+	result_mat = matrix(0, temp_n, num_of_nodes);
 	dimnames(result_mat)[[2]] = node_names;
 	# result_mat
 	
@@ -51,7 +56,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 	for(i in 1:root_nodes)
 	{
 		p = input_Probs[[i]][1];
-		result_mat[,i] = sample(c("Y", "N"), n, prob=c(p, 1-p), rep=T);
+		result_mat[,i] = sample(c("Y", "N"), temp_n, prob=c(p, 1-p), rep=T);
 	}
 
 
@@ -70,7 +75,6 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 	mat = NULL
 	for (i in init:num_of_nodes)
 	{
-		
 		for (j in 1:num_of_probs[i])
 		{
 			p = input_Probs[[i]][j];
@@ -87,6 +91,11 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 				result_mat[mat, i] = sample(c("Y", "N"), len, prob=c(p, 1-p), rep=T);
 			}
 		}
+	}
+	
+	if (n < 1000)
+	{
+		data = sample(data, n)
 	}
 	
 	res = list(	data = data.frame(result_mat),
