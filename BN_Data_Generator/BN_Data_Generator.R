@@ -2,6 +2,8 @@
 
 BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 {
+	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
+	# 이를 보완하기 위한 부분.
 	if (n < 1000)
 	{
 		temp_n = 1000;
@@ -93,6 +95,8 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 		}
 	}
 	
+	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
+	# 이를 보완하기 위한 부분.
 	if (n < 1000)
 	{
 		data = sample(data, n)
