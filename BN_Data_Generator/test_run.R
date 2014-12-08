@@ -14,8 +14,8 @@ source("make_PseudoLoop.R", encoding="utf8")		# make_PseudoLoop = function(nodes
 source("make_Diamond.R", encoding="utf8")				# make_Diamond = function(nodes)
 source("make_Rhombus.R", encoding="utf8")			# make_Rhombus = function(nodes)
 
-source("C_M_WO_WC.R", encoding="utf8")
-source("from_to_mat.R", encoding="utf8")
+source("C_M_WO_WC.R", encoding="utf8")				# C_M_WO_WC = function(target_arcs_mat, learnt_arcs_mat)
+source("from_to_mat.R", encoding="utf8")					# from_to_mat = function(input_arcs, node_names)
 
 
 
