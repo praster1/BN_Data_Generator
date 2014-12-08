@@ -7,6 +7,7 @@ require(bnlearn)
 
 source("tosscoin.R", encoding="utf8")						# tosscoin = function (times, makespace = FALSE)
 source("BN_Data_Generator.R", encoding="utf8")		# BN_Data_Generator = function (arcs, input_Probs, n, node_names)
+
 source("make_Collapse.R", encoding="utf8")				# make_Collapse = function(nodes)
 source("make_Line.R", encoding="utf8")					# make_Line = function(nodes)
 source("make_Star.R", encoding="utf8")					# make_Star = function(nodes)
