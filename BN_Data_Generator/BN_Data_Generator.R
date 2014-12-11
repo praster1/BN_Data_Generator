@@ -3,21 +3,19 @@
 BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
 {
 	# Check DAG using gRbase
-	check_dag_arcs = as.matrix(arcs)
-	if (is.DAG(check_dag_arcs) == FALSE)
-	{
-		print("arcs must a DAG")
-		return(NULL);
-	}
+	# check_dag_arcs = as.matrix(arcs)
+	# if (is.DAG(check_dag_arcs) == FALSE)
+	# {
+		# print("arcs must a DAG")
+		# return(NULL);
+	# }
 	
 	# Check Sample Size
 	if (n <= 0)
 	{
-		print("Sample size 'n' must greater than 0")
+		print("Sample size 'n' must be greater than 0.")
 		return(NULL);
 	}
-
-	
 
 
 
@@ -39,6 +37,16 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	if (is.null(node_names))
 	{
 		node_names = big_letters(num_of_nodes)
+	}
+	
+	# Cardinality가 NULL이면 모두 2로 설정한다.
+	# Cardinality는 모두 2보다 커야 한다.
+	if (is.null(cardinalities))
+	{
+		cardinalities = rep(2, num_of_nodes)
+	} else if (sum(cardinalities < 2)) {
+		print("All cardinality must be at least 2.")
+		return(NULL);
 	}
 	
 	
@@ -91,7 +99,9 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	for(i in 1:root_nodes)
 	{
 		p = input_Probs[[i]][1];
-		result_mat[,i] = sample(c("Value1", "Value2"), temp_n, prob=c(p, 1-p), rep=T);
+		# result_mat[,i] = sample(c("Value1", "Value2"), temp_n, prob=c(p, 1-p), rep=T);
+		mat_values = merge("Value", c(1:cardinalities[i]))
+		result_mat[,i] = sample(paste(mat_values[,1], mat_values[,2], sep=""), temp_n, prob=c(p, 1-p), rep=T);
 	}
 
 

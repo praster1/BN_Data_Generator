@@ -37,10 +37,10 @@ require(bnlearn)
 n = 1000
 
 nodes = 10
-temp = make_Diamond(nodes)
+temp = make_Collapse(nodes)
 target_arcs_mat = temp$arcs_mat
-node_names = temp$node_names
-res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
+res = BN_Data_Generator(temp$arcs, temp$Probs, n)
+node_names = res$node_names
 data = res$data
 
 
@@ -150,7 +150,7 @@ dimnames(C_M_WO_WC_mat)[[1]] = c("HC", "TABU", "MMHC", "RSMAX2")
 dimnames(C_M_WO_WC_mat)[[2]] = c("C", "M", "WO", "WC")
 C_M_WO_WC_mat
 
-
+# big_letters(num_of_nodes)
 			
 par(mfrow = c(2, 3))
 

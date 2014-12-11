@@ -34,5 +34,5 @@ real_hailfinder = function(n)
 
 	result = list(	data = data, res = res)
 						
-	return(res)
+	return(result)
 }

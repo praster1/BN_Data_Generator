@@ -17,5 +17,5 @@ real_asia = function(n)
 
 	result = list(	data = data, res = res)
 						
-	return(res)
+	return(result)
 }
