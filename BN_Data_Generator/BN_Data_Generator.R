@@ -98,7 +98,10 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 		p = input_Probs[[i]][1];
 		# result_mat[,i] = sample(c("Value1", "Value2"), temp_n, prob=c(p, 1-p), rep=T);
 		mat_values = merge("Value", c(1:cardinalities[i]))
-		result_mat[,i] = sample(paste(mat_values[,1], mat_values[,2], sep=""), temp_n, prob=c(p, 1-p), rep=T);
+		result_mat[,i] = sample(
+										paste(mat_values[,1], mat_values[,2], sep=""), temp_n, prob=c(p, 1-p),
+										rep=T
+								);
 	}
 
 
@@ -122,8 +125,8 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 			p = input_Probs[[i]][j];
 			
 			mat = 	t(t(
-						as.matrix(result_mat[,list_parent_nodes[[i]]])) ==
-						as.matrix(toss_value(as.numeric(num_of_parent_nodes[i]), 2))[j,]
+							as.matrix(result_mat[,list_parent_nodes[[i]]])) ==
+							as.matrix(toss_value(as.numeric(num_of_parent_nodes[i]), 2))[j,]
 						);
 			mat = (apply(mat, 1, sum) == as.numeric(num_of_parent_nodes[i]));
 			
