@@ -37,7 +37,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	# Cardinality는 모두 2보다 커야 한다.
 	if (is.null(cardinalities)) {
 		cardinalities = rep(2, num_of_nodes)
-	} else if (sum(cardinalities < 2)) {
+	} else if (sum(cardinalities < 2) > 0) {
 		stop("All cardinality must be at least 2.")
 	} else if (num_of_nodes != length(cardinalities)) {
 		stop("Wrong length of cardinalities")
