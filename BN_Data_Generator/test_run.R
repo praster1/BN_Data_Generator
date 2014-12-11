@@ -3,7 +3,15 @@
 rm(list = ls())
 setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
 
-require(bnlearn)
+
+
+packages <- c("bnlearn", "gRbase")
+if (length(setdiff(packages, rownames(installed.packages()))) > 0)
+{
+  install.packages(setdiff(packages, rownames(installed.packages())))  
+}
+
+
 
 source("toss_value.R", encoding="utf8")						# tosscoin = function (times, makespace = FALSE)
 source("BN_Data_Generator.R", encoding="utf8")		# BN_Data_Generator = function (arcs, input_Probs, n, node_names)
