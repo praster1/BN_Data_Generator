@@ -16,7 +16,7 @@ source("make_Diamond.R", encoding="utf8")				# make_Diamond = function(nodes)
 source("make_Rhombus.R", encoding="utf8")			# make_Rhombus = function(nodes)
 
 source("C_M_WO_WC.R", encoding="utf8")				# C_M_WO_WC = function(target_arcs_mat, learnt_arcs_mat)
-source("fromto_to_mat.R", encoding="utf8")					# fromto_to_mat = function(input_arcs, node_names)
+source("fromto_to_mat.R", encoding="utf8")				# fromto_to_mat = function(input_arcs, node_names)
 
 
 
@@ -35,15 +35,33 @@ res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
 data = res$data
 
 
+
 # source("gen_asia.R")
 # res = BN_Data_Generator(arcs, Probs, n, node_names)
 # data = res$data
 
 
-# source("real_asia.R", encoding="utf8")
+
+source("real_asia.R", encoding="utf8")
+temp = real_asia(n)
+data = temp$data
+res = temp$res
+
 # source("real_insurance.R", encoding="utf8")
+# temp = real_insurance(n)
+# data = temp$data
+# res = temp$res
+
 # source("real_alarm.R", encoding="utf8")
+# temp = real_alarm(n)
+# data = temp$data
+# res = temp$res
+
 # source("real_hailfinder.R", encoding="utf8")
+# temp = real_hailfinder(n)
+# data = temp$data
+# res = temp$res
+
 # nodes = dim(data)[2]
 # node_names = names(data)
 # target_arcs_mat = fromto_to_mat(res$arcs, node_names)
