@@ -5,7 +5,7 @@ make_Diamond = function(nodes)
 	if(nodes < 4)
 	{
 		print("Need More Nodes!");
-		return(break);
+		return(NULL);
 	}
 	
 	arcs = matrix(0, nodes, nodes)

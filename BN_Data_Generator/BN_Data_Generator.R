@@ -10,6 +10,12 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 		return(NULL);
 	}
 	
+	if (n <= 0)
+	{
+		print("Sample size 'n' must greater than 0")
+		return(NULL);
+	}
+
 	
 	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 	# 이를 보완하기 위한 부분.
@@ -71,7 +77,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 		if (length(input_Probs[[i]]) != num_of_probs[i])
 		{
 			cat("Error");
-			return(break);
+			return(NULL);
 		}
 	}
 	

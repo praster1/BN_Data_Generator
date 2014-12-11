@@ -5,7 +5,7 @@ make_Star = function(nodes)
 	if(nodes < 3)
 	{
 		print("Need More Nodes!");
-		return(break);
+		return(NULL);
 	}
 
 	arcs = matrix(0, nodes, nodes)
