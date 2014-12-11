@@ -27,6 +27,7 @@ big_letters = function(size)
 	{
 		result = c(result, letters_list[[i]])
 	}
+	result = sort(result)
 	
 	return(result[1:size])
 }
