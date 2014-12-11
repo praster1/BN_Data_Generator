@@ -4,7 +4,6 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 {
 	# Check DAG using gRbase
 	check_dag_arcs = as.matrix(arcs)
-	check_dag_arcs[check_dag_arcs>=1] = 1
 	if (is.DAG(check_dag_arcs) == FALSE)
 	{
 		print("arcs must a DAG")
@@ -18,7 +17,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 		return(NULL);
 	}
 
-
+	
 
 
 
