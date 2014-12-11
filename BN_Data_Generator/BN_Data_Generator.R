@@ -1,8 +1,8 @@
 # Written by Jae-seong Yoo 20141101
 
-BN_Data_Generator = function (arcs, input_Probs, n, node_names)
+BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
 {
-	# Check DAG
+	# Check DAG using gRbase
 	check_dag_arcs = as.matrix(arcs)
 	if (is.DAG(check_dag_arcs) == FALSE)
 	{
@@ -20,9 +20,18 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 		temp_n = n;
 	}
 	
+	
 	# Node 개수
 	num_of_nodes = dim(arcs)[1];
-
+	
+	
+	# node_names가 NULL이면 임의로 node 이름을 부여한다.
+	if (is.null(node_names))
+	{
+		node_names = big_letters(num_of_nodes)
+	}
+	
+	
 	# 각 Node의 Parent Node 개수
 	num_of_parent_nodes = apply(arcs, 2, sum);
 	
@@ -37,13 +46,16 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 		}
 	}
 	
+	
 	# Root node의 개수
 	root_nodes = sum(num_of_parent_nodes == 0);
 
+	
 	# 결과는 여기에 저장이 된다.
 	result_mat = matrix(0, temp_n, num_of_nodes);
 	dimnames(result_mat)[[2]] = node_names;
 	# result_mat
+	
 	
 	# 지정해야할 조건부 확률 개수
 	num_of_probs = t(as.matrix(2^num_of_parent_nodes));
@@ -105,6 +117,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 			}
 		}
 	}
+	
 	
 	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 	# 이를 보완하기 위한 부분.
