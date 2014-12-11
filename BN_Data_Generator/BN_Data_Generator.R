@@ -4,19 +4,24 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 {
 	# Check DAG using gRbase
 	check_dag_arcs = as.matrix(arcs)
+	check_dag_arcs[check_dag_arcs>=1] = 1
 	if (is.DAG(check_dag_arcs) == FALSE)
 	{
 		print("arcs must a DAG")
 		return(NULL);
 	}
 	
+	# Check Sample Size
 	if (n <= 0)
 	{
 		print("Sample size 'n' must greater than 0")
 		return(NULL);
 	}
 
-	
+
+
+
+
 	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 	# 이를 보완하기 위한 부분.
 	if (n < 1000)
