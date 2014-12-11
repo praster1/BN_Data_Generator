@@ -5,13 +5,16 @@ setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
 
 
 
-packages <- c("bnlearn", "gRbase")
+packages = c("bnlearn")
 if (length(setdiff(packages, rownames(installed.packages()))) > 0)
 {
-  install.packages(setdiff(packages, rownames(installed.packages())))  
+	install.packages(setdiff(packages, rownames(installed.packages())))  
 }
 
 
+
+source("is.acyclic.R", encoding="utf8")					# is.acyclic = function (amat) 
+source("is.DAG.R", encoding="utf8")						# is.DAG = function (amat) 
 
 source("big_letters.R", encoding="utf8")				# big_letters = function(size)
 source("toss_value.R", encoding="utf8")				# tosscoin = function (times, makespace = FALSE)
@@ -142,10 +145,10 @@ bn_rsmax2_arcs_mat = fromto_to_mat(bn_rsmax2$arcs, node_names)
 ## M		# Missed Edges : 실제 네트워크 존재 O, 결과 네트워크 존재 X
 ## WO	# Wrongly Oriented Edges : 실제 네트워크 = 결과 네트워크, 방향 반대
 ## WC	# Wrongly Connected Edges : 실제 네트워크 존재 X, 결과 네트워크 존재 O
-C_M_WO_WC_mat = rbind(	C_M_WO_WC(target_arcs_mat, bn_hc_arcs_mat),				# HC
-										C_M_WO_WC(target_arcs_mat, bn_tabu_arcs_mat),			# TABU
+C_M_WO_WC_mat = rbind(	C_M_WO_WC(target_arcs_mat, bn_hc_arcs_mat),			# HC
+										C_M_WO_WC(target_arcs_mat, bn_tabu_arcs_mat),		# TABU
 										C_M_WO_WC(target_arcs_mat, bn_mmhc_arcs_mat),		# MMHC
-										C_M_WO_WC(target_arcs_mat, bn_rsmax2_arcs_mat))		# RSMAX2
+										C_M_WO_WC(target_arcs_mat, bn_rsmax2_arcs_mat))	# RSMAX2
 dimnames(C_M_WO_WC_mat)[[1]] = c("HC", "TABU", "MMHC", "RSMAX2")
 dimnames(C_M_WO_WC_mat)[[2]] = c("C", "M", "WO", "WC")
 C_M_WO_WC_mat

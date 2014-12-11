@@ -4,8 +4,7 @@ make_Rhombus = function(nodes)
 {
 	if(nodes < 4)
 	{
-		print("Need More Nodes!");
-		return(NULL);
+		stop("Need More Nodes!");
 	}
 
 	arcs = matrix(0, nodes, nodes)

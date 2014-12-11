@@ -2,19 +2,17 @@
 
 BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
 {
-	# Check DAG using gRbase
-	# check_dag_arcs = as.matrix(arcs)
-	# if (is.DAG(check_dag_arcs) == FALSE)
-	# {
-		# print("arcs must a DAG")
-		# return(NULL);
-	# }
+	# Check DAG
+	check_dag_arcs = as.matrix(arcs)
+	if (is.DAG(check_dag_arcs) == FALSE)
+	{
+		stop("arcs must a DAG")
+	}
 	
 	# Check Sample Size
 	if (n <= 0)
 	{
-		print("Sample size 'n' must be greater than 0.")
-		return(NULL);
+		stop("Sample size 'n' must be greater than 0.")
 	}
 
 
@@ -45,8 +43,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	{
 		cardinalities = rep(2, num_of_nodes)
 	} else if (sum(cardinalities < 2)) {
-		print("All cardinality must be at least 2.")
-		return(NULL);
+		stop("All cardinality must be at least 2.")
 	}
 	
 	

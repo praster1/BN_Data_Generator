@@ -2,8 +2,7 @@ fromto_to_mat = function(input_arcs, node_names)
 {
 	if(dim(input_arcs)[1] == 0)
 	{
-		print("It has not any arc");
-		return(NULL);
+		stop("It has not any arc");
 	}
 	
 	num_of_nodes = length(node_names)
