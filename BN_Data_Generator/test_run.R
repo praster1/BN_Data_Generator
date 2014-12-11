@@ -5,7 +5,7 @@ setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
 
 require(bnlearn)
 
-source("tosscoin.R", encoding="utf8")						# tosscoin = function (times, makespace = FALSE)
+source("toss_value.R", encoding="utf8")						# tosscoin = function (times, makespace = FALSE)
 source("BN_Data_Generator.R", encoding="utf8")		# BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 
 source("make_Collapse.R", encoding="utf8")				# make_Collapse = function(nodes)
@@ -42,10 +42,10 @@ data = res$data
 
 
 
-source("real_asia.R", encoding="utf8")
-temp = real_asia(n)
-data = temp$data
-res = temp$res
+# source("real_asia.R", encoding="utf8")
+# temp = real_asia(n)
+# data = temp$data
+# res = temp$res
 
 # source("real_insurance.R", encoding="utf8")
 # temp = real_insurance(n)

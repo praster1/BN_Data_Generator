@@ -2,6 +2,15 @@
 
 BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 {
+	# Check DAG
+	check_dag_arcs = as.matrix(arcs)
+	if (is.DAG(check_dag_arcs) == FALSE)
+	{
+		print("arcs must a DAG")
+		return(NULL);
+	}
+	
+	
 	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 	# 이를 보완하기 위한 부분.
 	if (n < 1000)
@@ -60,7 +69,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 	for(i in 1:root_nodes)
 	{
 		p = input_Probs[[i]][1];
-		result_mat[,i] = sample(c("Y", "N"), temp_n, prob=c(p, 1-p), rep=T);
+		result_mat[,i] = sample(c("Value1", "Value2"), temp_n, prob=c(p, 1-p), rep=T);
 	}
 
 
@@ -85,14 +94,14 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names)
 			
 			mat = 	t(t(
 						as.matrix(result_mat[,list_parent_nodes[[i]]])) ==
-						as.matrix(tosscoin(as.numeric(num_of_parent_nodes[i])))[j,]
+						as.matrix(toss_value(as.numeric(num_of_parent_nodes[i]), 2))[j,]
 						);
 			mat = (apply(mat, 1, sum) == as.numeric(num_of_parent_nodes[i]));
 			
 			if(sum(mat) > 0)
 			{
 				len = sum(mat);
-				result_mat[mat, i] = sample(c("Y", "N"), len, prob=c(p, 1-p), rep=T);
+				result_mat[mat, i] = sample(c("Value1", "Value2"), len, prob=c(p, 1-p), rep=T);
 			}
 		}
 	}

@@ -5,7 +5,7 @@
 
 toss_value = function (times, num_of_cases, makespace = FALSE) 
 {
-	mat_values = merge("val", c(1:num_of_cases))
+	mat_values = merge("Value", c(1:num_of_cases))
 	
 	temp <- list()
 	for (i in 1:times) {
