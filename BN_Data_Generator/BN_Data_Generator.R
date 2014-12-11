@@ -4,14 +4,12 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 {
 	# Check DAG
 	check_dag_arcs = as.matrix(arcs)
-	if (is.DAG(check_dag_arcs) == FALSE)
-	{
+	if (is.DAG(check_dag_arcs) == FALSE) {
 		stop("arcs must a DAG")
 	}
 	
 	# Check Sample Size
-	if (n <= 0)
-	{
+	if (n <= 0) {
 		stop("Sample size 'n' must be greater than 0.")
 	}
 
@@ -19,8 +17,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 
 	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 	# 이를 보완하기 위한 부분.
-	if (n < 1000)
-	{
+	if (n < 1000) {
 		temp_n = 1000;
 	} else {
 		temp_n = n;
@@ -32,18 +29,18 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	
 	
 	# node_names가 NULL이면 임의로 node 이름을 부여한다.
-	if (is.null(node_names))
-	{
+	if (is.null(node_names)) {
 		node_names = big_letters(num_of_nodes)
 	}
 	
 	# Cardinality가 NULL이면 모두 2로 설정한다.
 	# Cardinality는 모두 2보다 커야 한다.
-	if (is.null(cardinalities))
-	{
+	if (is.null(cardinalities)) {
 		cardinalities = rep(2, num_of_nodes)
 	} else if (sum(cardinalities < 2)) {
 		stop("All cardinality must be at least 2.")
+	} else if (num_of_nodes != length(cardinalities)) {
+		stop("Wrong length of cardinalities")
 	}
 	
 	
@@ -51,10 +48,8 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	num_of_parent_nodes = apply(arcs, 2, sum);
 	
 	list_parent_nodes = list();
-	for(i in 1:num_of_nodes)
-	{
-		if (length(which(arcs[,i]==1)) == 0)
-		{
+	for(i in 1:num_of_nodes) {
+		if (length(which(arcs[,i]==1)) == 0) {
 			list_parent_nodes[[i]] = NULL;
 		} else {
 			list_parent_nodes[[i]] = which(arcs[,i]==1);
@@ -81,10 +76,8 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	
 	# 지정해야할 조건부 확률 개수만큼 input이 맞는지 확인. 만일 false이면 프로그램 종료
 	input_prob_len = length(input_Probs);
-	for (i in 1:input_prob_len)
-	{
-		if (length(input_Probs[[i]]) != num_of_probs[i])
-		{
+	for (i in 1:input_prob_len) {
+		if (length(input_Probs[[i]]) != num_of_probs[i]) {
 			cat("Error");
 			return(NULL);
 		}
@@ -93,8 +86,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	
 	
 	# Root Node Initialization
-	for(i in 1:root_nodes)
-	{
+	for(i in 1:root_nodes) {
 		p = input_Probs[[i]][1];
 		# result_mat[,i] = sample(c("Value1", "Value2"), temp_n, prob=c(p, 1-p), rep=T);
 		mat_values = merge("Value", c(1:cardinalities[i]))
@@ -108,20 +100,16 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	
 	# Generator
 	init = 0
-	for (i in 1:length(list_parent_nodes))
-	{
-		if (!is.null(list_parent_nodes[[i]]))
-		{
+	for (i in 1:length(list_parent_nodes)) {
+		if (!is.null(list_parent_nodes[[i]])) {
 			init = i;
 			break;
 		}
 	}
 	
 	mat = NULL
-	for (i in init:num_of_nodes)
-	{
-		for (j in 1:num_of_probs[i])
-		{
+	for (i in init:num_of_nodes) {
+		for (j in 1:num_of_probs[i]) {
 			p = input_Probs[[i]][j];
 			
 			mat = 	t(t(
@@ -141,8 +129,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	
 	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 	# 이를 보완하기 위한 부분.
-	if (n < 1000)
-	{
+	if (n < 1000) {
 		result_mat = result_mat[sample(c(1:1000), size=n), ]
 	}
 	
