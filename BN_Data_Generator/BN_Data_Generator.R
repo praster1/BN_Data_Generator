@@ -78,8 +78,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	input_prob_len = length(input_Probs);
 	for (i in 1:input_prob_len) {
 		if (length(input_Probs[[i]]) != num_of_probs[i]) {
-			cat("Error");
-			return(NULL);
+			stop("Input Probs != num_of_probs!");
 		}
 	}
 	
