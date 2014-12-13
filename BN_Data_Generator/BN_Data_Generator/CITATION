@@ -1,0 +1,19 @@
+citHeader("To cite BN_Data_Generator in publications use:")
+
+citEntry(entry = "Article",
+  title        = "Learning Bayesian Networks with the {bnlearn} {R} Package",
+  author       = personList(as.person("Jae-seong Yoo")),
+  journal      = "M.S. thesis, Department of Statistics, Korea University, Seoul.",
+  year         = "2014",
+  volume       = "0",
+  number       = "0",
+  pages        = "0--00",
+  url          = "https://github.com/praster1/BN_Data_Generator",
+
+  textVersion  =
+  paste("Jae-seong Yoo (2014).",
+        "A Study on Comparison of Bayesian Network Structure Learning Algorithms for Selecting Appropriate Models.",
+        "M.S. thesis, Department of Statistics, Korea University, Seoul.",
+        "URL https://github.com/praster1/BN_Data_Generator")
+)
+

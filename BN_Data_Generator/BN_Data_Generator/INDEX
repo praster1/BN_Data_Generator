@@ -1,0 +1,76 @@
+alarm                   ALARM Monitoring System (synthetic) data set
+arc operations          Drop, add or set the direction of an arc or an
+                        edge
+arc.strength            Measure arc strength
+asia                    Asia (synthetic) data set by Lauritzen and
+                        Spiegelhalter
+bn class                The bn class structure
+bn.boot                 Parametric and nonparametric bootstrap of
+                        Bayesian networks
+bn.cv                   Cross-validation for Bayesian networks
+bn.fit                  Fit the parameters of a Bayesian network
+bn.fit class            The bn.fit class structure
+bn.fit plots            Plot fitted Bayesian networks
+bn.fit utilities        Utilities to manipulate fitted Bayesian
+                        networks
+bn.kcv class            The bn.kcv class structure
+bn.strength class       The bn.strength class structure
+bn.var                  Structure variability of Bayesian networks
+bnlearn-package         Bayesian network structure learning, parameter
+                        learning and inference.
+choose.direction        Try to infer the direction of an undirected arc
+ci.test                 Independence and Conditional Independence Tests
+compare                 Compare two different Bayesian networks
+constraint-based algorithms
+                        Constraint-based structure learning algorithms
+coronary                Coronary Heart Disease data set
+cpdag                   Equivalence classes, moral graphs and
+                        consistent extensions
+cpquery                 Perform conditional probability queries
+deal integration        bnlearn - deal package integration
+discretize              Pre-process data to better learn Bayesian
+                        networks
+dsep                    Test d-separation
+gRain integration       Import and export networks from the gRain
+                        package
+gaussian.test           Synthetic (continuous) data set to test
+                        learning algorithms
+graph generation utilities
+                        Generate empty or random graphs
+graph integration       Import and export networks from the graph
+                        package
+graph utilities         Utilities to manipulate graphs
+graphviz.plot           Advanced Bayesian network plots
+hailfinder              The HailFinder weather forecast system
+                        (synthetic) data set
+hybrid algorithms       Hybrid structure learning algorithms
+insurance               Insurance evaluation network (synthetic) data
+                        set
+learning.test           Synthetic (discrete) data set to test learning
+                        algorithms
+lizards                 Lizards' perching behaviour data set
+local discovery algorithms
+                        Local discovery structure learning algorithms
+marks                   Examination marks data set
+misc utilities          Miscellaneous utilities
+model string utilities
+                        Build a model string from a Bayesian network
+                        and vice versa
+naive.bayes             Naive Bayes classifiers
+node ordering utilities
+                        Utilities dealing with partial node orderings
+parallel integration    bnlearn - snow/parallel package integration
+plot.bn                 Plot a Bayesian network
+plot.bn.strength        Plot arc strengths derived from bootstrap
+rbn                     Simulate random data from a given Bayesian
+                        network
+read.bif                Read and write BIF, NET, DSC and DOT files
+relevant                Identify Relevant Nodes Without Learning the
+                        Bayesian network
+score                   Score of the Bayesian network
+score-based algorithms
+                        Score-based structure learning algorithms
+single-node local discovery
+                        Discover the structure around a single node
+strength.plot           Arc strength plot
+test.counter            Manipulating the test counter

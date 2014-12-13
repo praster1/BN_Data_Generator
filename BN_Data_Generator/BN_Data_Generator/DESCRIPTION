@@ -1,9 +1,9 @@
 Package: BN_Data_Generator
 Type: Package
-Title: What the package does (short line)
+Title: Bayesian Network Data Generator based on Model.
 Version: 1.0
 Date: 2014-12-13
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Author: Jae-seong Yoo
+Maintainer: Jae-seong Yoo <praster1@gmail.com>
 Description: More about what it does (maybe more than one line)
-License: What license is it under?
+License: GNU GPL v2.0
