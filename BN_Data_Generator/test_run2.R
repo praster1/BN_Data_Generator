@@ -5,23 +5,7 @@ setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
 
 
 
-packages = c("bnlearn")
-if (length(setdiff(packages, rownames(installed.packages()))) > 0)
-{
-	install.packages(setdiff(packages, rownames(installed.packages())))  
-}
-
-
-
-source("is.acyclic.R", encoding="utf8")					# is.acyclic = function (amat) 
-source("is.DAG.R", encoding="utf8")						# is.DAG = function (amat) 
-
-source("big_letters.R", encoding="utf8")				# big_letters = function(size)
-source("toss_value.R", encoding="utf8")				# tosscoin = function (times, makespace = FALSE)
-source("BN_Data_Generator.R", encoding="utf8")	# BN_Data_Generator = function (arcs, input_Probs, n, node_names)
-
-source("C_M_WO_WC.R", encoding="utf8")			# C_M_WO_WC = function(target_arcs_mat, learnt_arcs_mat)
-source("fromto_to_mat.R", encoding="utf8")			# fromto_to_mat = function(input_arcs, node_names)
+source("include_sources.R", encoding="utf8")
 
 
 
@@ -50,14 +34,14 @@ dimnames(arcs)[[1]] = node_names
 dimnames(arcs)[[2]] = node_names
 
 input_Probs = list(
-		c(0.01),						# P(A)
-		c(0.5), 						# P(S)
-		c(0.05, 0.01),				# P(T|A), P(T|~A)
+		c(0.01),					# P(A)
+		c(0.5), 					# P(S)
+		c(0.05, 0.01),			# P(T|A), P(T|~A)
 		c(0.1, 0.01),				# P(L|S), P(L|~S)
 		c(0.6, 0.3),				# P(B|S), P(B|~S)
-		c(1, 1, 1, 0),				# P(E|T,L), P(E|~T,L), P(E|T,~L), P(E|~T,~L)
-		c(0.98, 0.05),				# P(X|E), P(X|~E)
-		c(0.9, 0.7, 0.8, 0.1)		# P(D|B,E), P(D|~B,E), P(D|B,~E), P(D|~B,~E)
+		c(1, 1, 1, 0),			# P(E|T,L), P(E|~T,L), P(E|T,~L), P(E|~T,~L)
+		c(0.98, 0.05),			# P(X|E), P(X|~E)
+		c(0.9, 0.7, 0.8, 0.1)	# P(D|B,E), P(D|~B,E), P(D|B,~E), P(D|~B,~E)
 )
 
 cardinalities = NULL
@@ -83,6 +67,7 @@ if (n < 1000) {
 } else {
 	temp_n = n;
 }
+#####
 
 
 # Node 개수
@@ -192,10 +177,11 @@ for (i in init:num_of_nodes) {
 if (n < 1000) {
 	result_mat = result_mat[sample(c(1:1000), size=n), ]
 }
+#####
 
 res = list(	data = data.frame(result_mat),
 				node_names = node_names,
 				num_of_nodes = num_of_nodes,
 				num_of_parent_nodes = num_of_parent_nodes,
 				list_parent_nodes = list_parent_nodes);
-return(res);
+# res
