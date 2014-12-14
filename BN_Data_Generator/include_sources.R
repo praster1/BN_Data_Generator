@@ -18,3 +18,4 @@ source("make_Rhombus.R", encoding="utf8")		# make_Rhombus = function(nodes)
 
 source("C_M_WO_WC.R", encoding="utf8")			# C_M_WO_WC = function(target_arcs_mat, learnt_arcs_mat)
 source("fromto_to_mat.R", encoding="utf8")			# fromto_to_mat = function(input_arcs, node_names)
+source("mat_to_fromto.R", encoding="utf8")			# mat_to_fromto = function(arcs_mat)

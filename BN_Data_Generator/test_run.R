@@ -16,12 +16,12 @@ require(bnlearn)
 
 n = 1000
 
-nodes = 10
-temp = make_Collapse(nodes)
-target_arcs_mat = temp$arcs_mat
-res = BN_Data_Generator(temp$arcs, temp$Probs, n)
-node_names = res$node_names
-data = res$data
+# nodes = 10
+# temp = make_Collapse(nodes)
+# target_arcs_mat = temp$arcs_mat
+# res = BN_Data_Generator(temp$arcs, temp$Probs, n)
+# node_names = res$node_names
+# data = res$data
 
 
 
@@ -31,10 +31,10 @@ data = res$data
 
 
 
-# source("real_asia.R", encoding="utf8")
-# temp = real_asia(n)
-# data = temp$data
-# res = temp$res
+source("real_asia.R", encoding="utf8")
+temp = real_asia(n)
+data = temp$data
+res = temp$res
 
 # source("real_insurance.R", encoding="utf8")
 # temp = real_insurance(n)
