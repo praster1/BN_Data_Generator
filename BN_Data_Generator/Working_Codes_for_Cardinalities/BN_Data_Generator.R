@@ -70,7 +70,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	# 지정해야할 조건부 확률 개수
 	num_of_probs = t(as.matrix(2^num_of_parent_nodes));
 	dimnames(num_of_probs)[[2]] = node_names;
-	num_of_probs
+	# num_of_probs
 	
 	
 	
