@@ -1,7 +1,7 @@
 # Written by Jae-seong Yoo 20141101
 
 rm(list = ls())
-setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
+setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/Working_Codes_for_Cardinalities")
 
 
 
@@ -133,11 +133,9 @@ for (i in 1:input_prob_len) {
 # Root Node Initialization
 for(i in 1:root_nodes) {
 	p = input_Probs[[i]][1];
-	# result_mat[,i] = sample(c("Value1", "Value2"), temp_n, prob=c(p, 1-p), rep=T);
 	mat_values = merge("Value", c(1:cardinalities[i]))
 	result_mat[,i] = sample(
-									paste(mat_values[,1], mat_values[,2], sep=""), temp_n, prob=c(p, 1-p),
-									rep=T
+							paste(mat_values[,1], mat_values[,2], sep=""), temp_n, prob=c(p, 1-p), rep=T
 							);
 }
 

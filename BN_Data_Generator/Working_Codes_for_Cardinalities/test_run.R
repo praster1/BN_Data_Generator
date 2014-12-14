@@ -1,7 +1,7 @@
 # Written by Jae-seong Yoo 20141101
 
 rm(list = ls())
-setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
+setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/Working_Codes_for_Cardinalities")
 
 
 
@@ -31,10 +31,10 @@ n = 1000
 
 
 
-source("real_asia.R", encoding="utf8")
-temp = real_asia(n)
-data = temp$data
-res = temp$res
+# source("real_asia.R", encoding="utf8")
+# temp = real_asia(n)
+# data = temp$data
+# res = temp$res
 
 # source("real_insurance.R", encoding="utf8")
 # temp = real_insurance(n)
@@ -46,14 +46,14 @@ res = temp$res
 # data = temp$data
 # res = temp$res
 
-# source("real_hailfinder.R", encoding="utf8")
-# temp = real_hailfinder(n)
-# data = temp$data
-# res = temp$res
+source("real_hailfinder.R", encoding="utf8")
+temp = real_hailfinder(n)
+data = temp$data
+res = temp$res
 
-# nodes = dim(data)[2]
-# node_names = names(data)
-# target_arcs_mat = fromto_to_mat(res$arcs, node_names)
+nodes = dim(data)[2]
+node_names = names(data)
+target_arcs_mat = fromto_to_mat(res$arcs, node_names)
 
 
 
@@ -123,9 +123,9 @@ bn_rsmax2_arcs_mat = fromto_to_mat(bn_rsmax2$arcs, node_names)
 ## WO	# Wrongly Oriented Edges : 실제 네트워크 = 결과 네트워크, 방향 반대
 ## WC	# Wrongly Connected Edges : 실제 네트워크 존재 X, 결과 네트워크 존재 O
 C_M_WO_WC_mat = rbind(	C_M_WO_WC(target_arcs_mat, bn_hc_arcs_mat),			# HC
-										C_M_WO_WC(target_arcs_mat, bn_tabu_arcs_mat),		# TABU
+										C_M_WO_WC(target_arcs_mat, bn_tabu_arcs_mat),			# TABU
 										C_M_WO_WC(target_arcs_mat, bn_mmhc_arcs_mat),		# MMHC
-										C_M_WO_WC(target_arcs_mat, bn_rsmax2_arcs_mat))	# RSMAX2
+										C_M_WO_WC(target_arcs_mat, bn_rsmax2_arcs_mat))		# RSMAX2
 dimnames(C_M_WO_WC_mat)[[1]] = c("HC", "TABU", "MMHC", "RSMAX2")
 dimnames(C_M_WO_WC_mat)[[2]] = c("C", "M", "WO", "WC")
 C_M_WO_WC_mat
