@@ -34,17 +34,19 @@ dimnames(arcs)[[1]] = node_names
 dimnames(arcs)[[2]] = node_names
 
 input_Probs = list(
-		c(0.01),					# P(A)
-		c(0.5), 					# P(S)
-		c(0.05, 0.01),			# P(T|A), P(T|~A)
-		c(0.1, 0.01),				# P(L|S), P(L|~S)
-		c(0.6, 0.3),				# P(B|S), P(B|~S)
-		c(1, 1, 1, 0),			# P(E|T,L), P(E|~T,L), P(E|T,~L), P(E|~T,~L)
-		c(0.98, 0.05),			# P(X|E), P(X|~E)
-		c(0.9, 0.7, 0.8, 0.1)	# P(D|B,E), P(D|~B,E), P(D|B,~E), P(D|~B,~E)
+		c(0.1),									# P(A)
+		c(0.5, 0.01), 							# P(S)
+		c(0.05, 0.01),							# P(T|A), P(T|~A)
+		c(0.1, 0.01, 0.5),						# P(L|S), P(L|~S), P(L|^S)
+		c(	0.6, 0.3, 0.5,						# P(B|S), 		P(B|~S),		P(B|^S)
+			0.5, 0.1, 0.3),						# P(~B|S),	P(~B|~S),	P(~B|^S)
+		c(1, 1, 1, 0),							# P(E|T,L), P(E|~T,L), P(E|T,~L), P(E|~T,~L)
+		c(0.98, 0.05),							# P(X|E), P(X|~E)
+		c(0.9, 0.7, 0.8, 0.1, 0.5, 0.3)		# P(D|B,E), P(D|~B,E), P(D|B,~E), P(D|~B,~E)
 )
 
-cardinalities = NULL
+					#	A	S	T	L	B	E	X	D
+cardinalities = c(2,	3,	2,	2,	3,	2,	2,	2)
 
 
 # Check DAG
@@ -114,15 +116,17 @@ dimnames(result_mat)[[2]] = node_names;
 
 
 # 지정해야할 조건부 확률 개수
-num_of_probs = t(as.matrix(2^num_of_parent_nodes));
-dimnames(num_of_probs)[[2]] = node_names;
-num_of_probs
+# num_of_probs = t(as.matrix(2^num_of_parent_nodes));
+# dimnames(num_of_probs)[[2]] = node_names;
+# num_of_probs
 
 
 
 # 지정해야할 조건부 확률 개수만큼 input이 맞는지 확인. 만일 false이면 프로그램 종료
 input_prob_len = length(input_Probs);
+num_of_probs = NULL
 for (i in 1:input_prob_len) {
+	num_of_probs[i] = (cardinalities[i]-1) * prod(cardinalities[list_parent_nodes[[i]]])
 	if (length(input_Probs[[i]]) != num_of_probs[i]) {
 		stop("Input Probs != num_of_probs!");
 	}
@@ -132,40 +136,48 @@ for (i in 1:input_prob_len) {
 
 # Root Node Initialization
 for(i in 1:root_nodes) {
-	p = input_Probs[[i]][1];
+	p = input_Probs[[i]];
 	mat_values = merge("Value", c(1:cardinalities[i]))
+	mat_values = paste(mat_values[,1], mat_values[,2], sep="")
+
 	result_mat[,i] = sample(
-							paste(mat_values[,1], mat_values[,2], sep=""), temp_n, prob=c(p, 1-p), rep=T
-							);
+										mat_values, temp_n,
+										prob=c(p, 1-sum(p)), rep=T
+										);
 }
 
 
 
 # Generator
-init = 0
-for (i in 1:length(list_parent_nodes)) {
-	if (!is.null(list_parent_nodes[[i]])) {
-		init = i;
-		break;
-	}
-}
+init = root_nodes + 1;
 
 mat = NULL
 for (i in init:num_of_nodes) {
-	for (j in 1:num_of_probs[i]) {
-		p = input_Probs[[i]][j];
-		
-		mat = 	t(t(
-						as.matrix(result_mat[,list_parent_nodes[[i]]])) ==
-						as.matrix(toss_value(as.numeric(num_of_parent_nodes[i]), 2))[j,]
-					);
-		mat = (apply(mat, 1, sum) == as.numeric(num_of_parent_nodes[i]));
-		
-		if(sum(mat) > 0)
-		{
-			len = sum(mat);
-			result_mat[mat, i] = sample(c("Value1", "Value2"), len, prob=c(p, 1-p), rep=T);
-		}
+	p = input_Probs[[i]]
+	temp_npn = as.numeric(num_of_parent_nodes[i])
+
+	cases = as.matrix(toss_value(temp_npn, cardinalities[temp_npn+1]))
+	
+	mat = t(
+				t(
+					as.matrix(result_mat[,list_parent_nodes[[i]]])
+				) ==
+					cases
+			);
+	# mat = as.matrix(result_mat[,list_parent_nodes[[i]]]) == cases
+	
+	mat_values = merge("Value", c(1:cardinalities[i]))
+	mat_values = paste(mat_values[,1], mat_values[,2], sep="")
+	
+	stack = 1;
+	for (j in 1:dim(cases)[1])
+	{
+		temp_p = p[stack:(cardinalities[i]-1)]
+		len = length(which(mat==j))
+		result_mat[which(mat==j),i] = sample(
+														mat_values, len,
+														prob=c(temp_p, 1-sum(temp_p)), rep=T
+											);
 	}
 }
 
@@ -183,3 +195,6 @@ res = list(	data = data.frame(result_mat),
 				num_of_parent_nodes = num_of_parent_nodes,
 				list_parent_nodes = list_parent_nodes);
 # res
+head(res$data)
+apply(res$data, 2, unique)
+summary(apply(res$data, 2, factor))
