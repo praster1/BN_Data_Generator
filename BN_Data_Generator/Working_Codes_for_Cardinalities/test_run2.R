@@ -35,14 +35,14 @@ dimnames(arcs)[[2]] = node_names
 
 input_Probs = list(
 		c(0.1),									# P(A)
-		c(0.5, 0.01), 							# P(S)
-		c(0.05, 0.01),							# P(T|A), P(T|~A)
-		c(0.1, 0.01, 0.5),						# P(L|S), P(L|~S), P(L|^S)
+		c(0.5, 0.01), 							# P(S), 			P(~S)
+		c(0.05, 0.01),							# P(T|A), 		P(T|~A)
+		c(0.1, 0.01, 0.5),						# P(L|S), 		P(L|~S), 		P(L|^S)
 		c(	0.6, 0.3, 0.5,						# P(B|S), 		P(B|~S),		P(B|^S)
 			0.5, 0.1, 0.3),						# P(~B|S),	P(~B|~S),	P(~B|^S)
-		c(1, 1, 1, 0),							# P(E|T,L), P(E|~T,L), P(E|T,~L), P(E|~T,~L)
-		c(0.98, 0.05),							# P(X|E), P(X|~E)
-		c(0.9, 0.7, 0.8, 0.1, 0.5, 0.3)		# P(D|B,E), P(D|~B,E), P(D|B,~E), P(D|~B,~E)
+		c(1, 1, 1, 0),							# P(E|T,L), 	P(E|~T,L), 	P(E|T,~L), 	P(E|~T,~L)
+		c(0.98, 0.05),							# P(X|E), 		P(X|~E)
+		c(0.9, 0.7, 0.8, 0.1, 0.5, 0.3)		# P(D|B,E), 	P(D|~B,E), 	P(D|B,~E), 	P(D|~B,~E)
 )
 
 					#	A	S	T	L	B	E	X	D
@@ -156,31 +156,53 @@ for (i in init:num_of_nodes) {
 	p = input_Probs[[i]]
 	temp_npn = as.numeric(num_of_parent_nodes[i])
 
-	cases = as.matrix(toss_value(temp_npn, cardinalities[temp_npn+1]))
-	
-	mat = t(
-				t(
-					as.matrix(result_mat[,list_parent_nodes[[i]]])
-				) ==
-					cases
-			);
-	# mat = as.matrix(result_mat[,list_parent_nodes[[i]]]) == cases
+	cases = as.matrix(toss_value(temp_npn, cardinalities[temp_npn]))
 	
 	mat_values = merge("Value", c(1:cardinalities[i]))
 	mat_values = paste(mat_values[,1], mat_values[,2], sep="")
 	
-	stack = 1;
-	for (j in 1:dim(cases)[1])
-	{
-		temp_p = p[stack:(cardinalities[i]-1)]
-		len = length(which(mat==j))
-		result_mat[which(mat==j),i] = sample(
+	
+	stack = 1
+	for(j in 1:dim(cases)[1])
+	{	
+		mat = t(
+					t(
+						as.matrix(result_mat[,list_parent_nodes[[i]]])
+					) ==
+						cases[j,]
+				);
+		mat = (apply(mat, 1, sum) == dim(mat)[2])
+		
+		if (cardinalities[i] == 2)
+		{
+			temp_p = p[j]
+		} else {
+			temp_p = p[stack:(cardinalities[i]-1)]
+		}
+		
+		# for debug
+		print(c("p", p))
+		print(paste("stack", stack))
+		print(stack:(cardinalities[i]-1))
+		print(cardinalities[i]-1)
+		print(temp_p)
+		print("--------------------")
+		len = length(which(mat))
+		result_mat[which(mat),i] = sample(
 														mat_values, len,
 														prob=c(temp_p, 1-sum(temp_p)), rep=T
-											);
+													);
+		
+		stack = stack + (cardinalities[i]-1)
 	}
 }
+# for debug
+i
+j
 
+head(result_mat)
+apply(result_mat, 2, unique)
+summary(apply(result_mat, 2, factor))
 
 # 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 # 이를 보완하기 위한 부분.
