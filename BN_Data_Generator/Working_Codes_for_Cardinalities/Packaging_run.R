@@ -32,4 +32,5 @@ Rd = parse_Rd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_G
 
 
 ##### run at cmd
-R CMD Rd2pdf BN_Data_Generator-package.Rd
+setwd("~/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator/man")
+system("R CMD Rd2pdf --vanilla ,")
