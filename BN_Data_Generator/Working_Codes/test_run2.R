@@ -64,7 +64,7 @@ if (n <= 0) {
 
 # 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 # 이를 보완하기 위한 부분.
-if (n < 1000) {
+if (n < 10000) {
 	temp_n = 1000;
 } else {
 	temp_n = n;
@@ -154,13 +154,24 @@ init = root_nodes + 1;
 mat = NULL
 for (i in init:num_of_nodes) {
 	p = input_Probs[[i]]
-	temp_npn = as.numeric(num_of_parent_nodes[i])
+	num_of_c_cases = prod(cardinalities[list_parent_nodes[[i]]])
 
-	cases = as.matrix(toss_value(temp_npn, cardinalities[temp_npn]))
-	
+	temp_cases = list();
+	cases = NULL;
+	for (j in 1:length(list_parent_nodes[[i]]))
+	{
+		temp_cases[[j]] = toss_value(1, cardinalities[list_parent_nodes[[i]][j]])
+		if (is.null(cases)) {
+			cases = temp_cases[[j]]
+			names(cases) = 1;
+		} else {
+			cases = merge(cases, temp_cases[[j]])
+			names(cases) = c(1:dim(cases)[2])
+		}
+	}
+	cases = as.matrix(cases)
 	mat_values = merge("Value", c(1:cardinalities[i]))
-	mat_values = paste(mat_values[,1], mat_values[,2], sep="")
-	
+	mat_values = sort(paste(mat_values[,1], mat_values[,2], sep=""))
 	
 	stack = 1
 	for(j in 1:dim(cases)[1])
@@ -177,17 +188,24 @@ for (i in init:num_of_nodes) {
 		{
 			temp_p = p[j]
 		} else {
-			temp_p = p[stack:(cardinalities[i]-1)]
+			temp_p = p[stack:(stack + cardinalities[i]-2)]
 		}
+		len = length(which(mat))
 		
+		
+	
 		# for debug
 		print(c("p", p))
-		print(paste("stack", stack))
-		print(stack:(cardinalities[i]-1))
-		print(cardinalities[i]-1)
-		print(temp_p)
+		print(c("stack", stack))
+		print(c("stack:(stack + cardinalities[i]-1)", stack:(stack + cardinalities[i]-1)))
+		print(c("cardinalities[i]-1", cardinalities[i]-1))
+		print(c("mat_values", mat_values))
+		print(c("temp_p", temp_p))
+		print(c("length : ", length(which(mat))))
+		print(c("i : ", i, " / j : ", j))
 		print("--------------------")
-		len = length(which(mat))
+	
+		
 		result_mat[which(mat),i] = sample(
 														mat_values, len,
 														prob=c(temp_p, 1-sum(temp_p)), rep=T
@@ -196,13 +214,9 @@ for (i in init:num_of_nodes) {
 		stack = stack + (cardinalities[i]-1)
 	}
 }
-# for debug
-i
-j
 
-head(result_mat)
-apply(result_mat, 2, unique)
-summary(apply(result_mat, 2, factor))
+
+
 
 # 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 # 이를 보완하기 위한 부분.

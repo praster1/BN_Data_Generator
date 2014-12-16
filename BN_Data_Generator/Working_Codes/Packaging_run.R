@@ -26,6 +26,17 @@ package.skeleton(name="BN_Data_Generator",
 								))
 
 
+# Further steps are described in './BN_Data_Generator/Read-and-delete-me'
+
+# * Edit the help file skeletons in 'man', possibly combining help files for multiple functions.
+# * Edit the exports in 'NAMESPACE', and add necessary imports.
+# * Put any C/C++/Fortran code in 'src'.
+# * If you have compiled code, add a useDynLib() directive to 'NAMESPACE'. 
+# * Run R CMD build to build the package tarball.
+# * Run R CMD check to check the package tarball.
+
+# Read "Writing R Extensions" for more information.
+
 
 require(tools)
 Rd = parse_Rd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator/man/BN_Data_Generator-package.Rd", verbose=TRUE)
