@@ -128,6 +128,9 @@ num_of_probs = NULL
 for (i in 1:input_prob_len) {
 	num_of_probs[i] = (cardinalities[i]-1) * prod(cardinalities[list_parent_nodes[[i]]])
 	if (length(input_Probs[[i]]) != num_of_probs[i]) {
+		
+		# 여기에 어느 부분에 입력이 어떻게 잘못되었는지 출력하여주는 메시지를 넣도록 하자.
+		
 		stop("Input Probs != num_of_probs!");
 	}
 }
