@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-BN_Data_Generator(arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
+BN_Data_Generator(arcs, input_Probs, n, node_names = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -23,9 +23,6 @@ BN_Data_Generator(arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
 }
   \item{node_names}{
 %%     ~~Describe \code{node_names} here~~
-}
-  \item{cardinalities}{
-%%     ~~Describe \code{cardinalities} here~~
 }
 }
 \details{
@@ -59,7 +56,7 @@ BN_Data_Generator(arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL) 
+function (arcs, input_Probs, n, node_names = NULL) 
 {
     check_dag_arcs = as.matrix(arcs)
     if (is.DAG(check_dag_arcs) == FALSE) {
@@ -68,7 +65,7 @@ function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
     if (n <= 0) {
         stop("Sample size 'n' must be greater than 0.")
     }
-    if (n < 10000) {
+    if (n < 1000) {
         temp_n = 1000
     }
     else {
@@ -100,60 +97,41 @@ function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
     root_nodes = sum(num_of_parent_nodes == 0)
     result_mat = matrix(0, temp_n, num_of_nodes)
     dimnames(result_mat)[[2]] = node_names
+    num_of_probs = t(as.matrix(2^num_of_parent_nodes))
+    dimnames(num_of_probs)[[2]] = node_names
+    num_of_probs
     input_prob_len = length(input_Probs)
-    num_of_probs = NULL
     for (i in 1:input_prob_len) {
-        num_of_probs[i] = (cardinalities[i] - 1) * prod(cardinalities[list_parent_nodes[[i]]])
         if (length(input_Probs[[i]]) != num_of_probs[i]) {
             stop("Input Probs != num_of_probs!")
         }
     }
     for (i in 1:root_nodes) {
-        p = input_Probs[[i]]
+        p = input_Probs[[i]][1]
         mat_values = merge("Value", c(1:cardinalities[i]))
-        mat_values = paste(mat_values[, 1], mat_values[, 2], 
-            sep = "")
-        result_mat[, i] = sample(mat_values, temp_n, prob = c(p, 
-            1 - sum(p)), rep = T)
+        result_mat[, i] = sample(paste(mat_values[, 1], mat_values[, 
+            2], sep = ""), temp_n, prob = c(p, 1 - p), rep = T)
     }
-    init = root_nodes + 1
+    init = 0
+    for (i in 1:length(list_parent_nodes)) {
+        if (!is.null(list_parent_nodes[[i]])) {
+            init = i
+            break
+        }
+    }
     mat = NULL
     for (i in init:num_of_nodes) {
-        p = input_Probs[[i]]
-        num_of_c_cases = prod(cardinalities[list_parent_nodes[[i]]])
-        temp_cases = list()
-        cases = NULL
-        for (j in 1:length(list_parent_nodes[[i]])) {
-            temp_cases[[j]] = toss_value(1, cardinalities[list_parent_nodes[[i]][j]])
-            if (is.null(cases)) {
-                cases = temp_cases[[j]]
-                names(cases) = 1
-            }
-            else {
-                cases = merge(cases, temp_cases[[j]])
-                names(cases) = c(1:dim(cases)[2])
-            }
-        }
-        cases = as.matrix(cases)
-        mat_values = merge("Value", c(1:cardinalities[i]))
-        mat_values = sort(paste(mat_values[, 1], mat_values[, 
-            2], sep = ""))
-        stack = 1
-        for (j in 1:dim(cases)[1]) {
+        for (j in 1:num_of_probs[i]) {
+            p = input_Probs[[i]][j]
             mat = t(t(as.matrix(result_mat[, list_parent_nodes[[i]]])) == 
-                cases[j, ])
-            mat = (apply(mat, 1, sum) == dim(mat)[2])
-            if (cardinalities[i] == 2) {
-                temp_p = p[j]
+                as.matrix(toss_value(as.numeric(num_of_parent_nodes[i]), 
+                  2))[j, ])
+            mat = (apply(mat, 1, sum) == as.numeric(num_of_parent_nodes[i]))
+            if (sum(mat) > 0) {
+                len = sum(mat)
+                result_mat[mat, i] = sample(c("Value1", "Value2"), 
+                  len, prob = c(p, 1 - p), rep = T)
             }
-            else {
-                temp_p = p[stack:(stack + cardinalities[i] - 
-                  2)]
-            }
-            len = length(which(mat))
-            result_mat[which(mat), i] = sample(mat_values, len, 
-                prob = c(temp_p, 1 - sum(temp_p)), rep = T)
-            stack = stack + (cardinalities[i] - 1)
         }
     }
     if (n < 1000) {

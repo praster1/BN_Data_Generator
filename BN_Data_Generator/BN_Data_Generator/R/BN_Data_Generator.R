@@ -1,6 +1,6 @@
 # Written by Jae-seong Yoo 20141101
 
-BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL)
+BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
 {
 	# Check DAG
 	check_dag_arcs = as.matrix(arcs)
