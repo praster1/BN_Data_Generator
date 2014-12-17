@@ -8,6 +8,7 @@ source("is.DAG.R", encoding="utf8")						# is.DAG = function (amat)
 source("big_letters.R", encoding="utf8")				# big_letters = function(size)
 source("toss_value.R", encoding="utf8")				# tosscoin = function (times, makespace = FALSE)
 source("BN_Data_Generator.R", encoding="utf8")	# BN_Data_Generator = function (arcs, input_Probs, n, node_names)
+source("check_input_Probs.R", encoding="utf8")	# check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 
 source("make_Collapse.R", encoding="utf8")			# make_Collapse = function(nodes)
 source("make_Line.R", encoding="utf8")				# make_Line = function(nodes)

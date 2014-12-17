@@ -2,18 +2,10 @@
 
 BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
 {
-	# Check DAG
-	check_dag_arcs = as.matrix(arcs)
-	if (is.DAG(check_dag_arcs) == FALSE) {
-		stop("arcs must a DAG")
-	}
-
 	# Check Sample Size
 	if (n <= 0) {
 		stop("Sample size 'n' must be greater than 0.")
 	}
-
-
 
 	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 	# 이를 보완하기 위한 부분.
@@ -24,71 +16,43 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	}
 	#####
 
-
 	# Node 개수
 	num_of_nodes = dim(arcs)[1];
-
-
-	# node_names가 NULL이면 임의로 node 이름을 부여한다.
-	if (is.null(node_names)) {
-		node_names = big_letters(num_of_nodes)
-	}
-
-	# Cardinality가 NULL이면 모두 2로 설정한다.
-	# Cardinality는 모두 2보다 커야 한다.
-	if (is.null(cardinalities)) {
-		cardinalities = rep(2, num_of_nodes)
-	} else if (sum(cardinalities < 2) > 0) {
-		stop("All cardinality must be at least 2.")
-	} else if (num_of_nodes != length(cardinalities)) {
-		stop("Wrong length of cardinalities")
-	}
-
-
-	# 각 Node의 Parent Node 개수
-	num_of_parent_nodes = apply(arcs, 2, sum);
-
-	list_parent_nodes = list();
-	for(i in 1:num_of_nodes) {
-		if (length(which(arcs[,i]==1)) == 0) {
-			list_parent_nodes[[i]] = NULL;
-		} else {
-			list_parent_nodes[[i]] = which(arcs[,i]==1);
-		}
-	}
-
-
-	# Root node의 개수
-	root_nodes = sum(num_of_parent_nodes == 0);
-
-
+	
 	# 결과는 여기에 저장이 된다.
 	result_mat = matrix(0, temp_n, num_of_nodes);
 	dimnames(result_mat)[[2]] = node_names;
 	# result_mat
 
+	# Check Input Probs & Cardinalities
+	checker = check_input_Probs(arcs = arcs, node_names = node_names, cardinalities = cardinalities)
+	cardinalities = checker$cardinalities;
+	node_names = checker$node_names;
+	list_parent_nodes = checker$list_parent_nodes;
+	num_of_probs = checker$num_of_probs;
+	num_of_parent_nodes = checker$num_of_parent_nodes;
+	num_of_root_nodes = checker$num_of_root_nodes;
 
-	# 지정해야할 조건부 확률 개수
-	# num_of_probs = t(as.matrix(2^num_of_parent_nodes));
-	# dimnames(num_of_probs)[[2]] = node_names;
-	# num_of_probs
-
-
-
+	
 	# 지정해야할 조건부 확률 개수만큼 input이 맞는지 확인. 만일 false이면 프로그램 종료
 	input_prob_len = length(input_Probs);
-	num_of_probs = NULL
 	for (i in 1:input_prob_len) {
-		num_of_probs[i] = (cardinalities[i]-1) * prod(cardinalities[list_parent_nodes[[i]]])
-		if (length(input_Probs[[i]]) != num_of_probs[i]) {
+			print(c("i : ", i))
+			print(c("length_input_Probs: ", length(input_Probs[[i]])))
+			print(c("num_of_probs_list : ",num_of_probs))
+			print(c("num_of_probs : ",num_of_probs[i]))
+			print("--------------------")
+		if	(	as.numeric(length(input_Probs[[i]]))
+								!=
+				as.numeric(num_of_probs[i])
+			)
+		{
 			stop("Input Probs != num_of_probs!");
 		}
 	}
-
-
-
+	
 	# Root Node Initialization
-	for(i in 1:root_nodes) {
+	for(i in 1:num_of_root_nodes) {
 		p = input_Probs[[i]];
 		mat_values = merge("Value", c(1:cardinalities[i]))
 		mat_values = paste(mat_values[,1], mat_values[,2], sep="")
@@ -100,9 +64,8 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	}
 
 
-
 	# Generator
-	init = root_nodes + 1;
+	init = num_of_root_nodes + 1;
 
 	mat = NULL
 	for (i in init:num_of_nodes) {
@@ -145,20 +108,6 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 			}
 			len = length(which(mat))
 			
-			
-		
-			# for debug
-			# print(c("p", p))
-			# print(c("stack", stack))
-			# print(c("stack:(stack + cardinalities[i]-1)", stack:(stack + cardinalities[i]-1)))
-			# print(c("cardinalities[i]-1", cardinalities[i]-1))
-			# print(c("mat_values", mat_values))
-			# print(c("temp_p", temp_p))
-			# print(c("length : ", length(which(mat))))
-			# print(c("i : ", i, " / j : ", j))
-			# print("--------------------")
-		
-			
 			result_mat[which(mat),i] = sample(
 															mat_values, len,
 															prob=c(temp_p, 1-sum(temp_p)), rep=T
@@ -167,7 +116,6 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 			stack = stack + (cardinalities[i]-1)
 		}
 	}
-
 
 
 

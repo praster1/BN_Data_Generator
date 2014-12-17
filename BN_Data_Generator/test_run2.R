@@ -1,7 +1,7 @@
 # Written by Jae-seong Yoo 20141101
 
 rm(list = ls())
-setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/Working_Codes_for_Cardinalities")
+setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
 
 
 
@@ -45,8 +45,10 @@ input_Probs = list(
 		c(0.9, 0.7, 0.8, 0.1, 0.5, 0.3)		# P(D|B,E), 	P(D|~B,E), 	P(D|B,~E), 	P(D|~B,~E)
 )
 
+
 					#	A	S	T	L	B	E	X	D
 cardinalities = c(2,	3,	2,	2,	3,	2,	2,	2)
+
 
 
 # Check DAG
@@ -128,9 +130,6 @@ num_of_probs = NULL
 for (i in 1:input_prob_len) {
 	num_of_probs[i] = (cardinalities[i]-1) * prod(cardinalities[list_parent_nodes[[i]]])
 	if (length(input_Probs[[i]]) != num_of_probs[i]) {
-		
-		# 여기에 어느 부분에 입력이 어떻게 잘못되었는지 출력하여주는 메시지를 넣도록 하자.
-		
 		stop("Input Probs != num_of_probs!");
 	}
 }
