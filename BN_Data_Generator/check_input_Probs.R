@@ -49,10 +49,84 @@ check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 		num_of_probs[k] = (cardinalities[k]-1) * prod(cardinalities[list_parent_nodes[[k]]])
 	}
 	
+	text_of_probs = list();
+	for(i in 1:length(num_of_parent_nodes))
+	{
+		temp_text = NULL;
+		present_cardinality = as.matrix(toss_value(1, cardinalities[i]));
+		
+		if (is.null(list_parent_nodes[[i]])) {		# it is root node
+			for (j in 1:(cardinalities[i]-1))
+			{
+				temp_text = c(	temp_text,
+										paste(	"P(",
+													node_names[i], " = ", present_cardinality[j,1],
+													")",
+													sep=""
+												)
+									)
+			}
+		} else {		# it is not a root node
+			temp_list_of_pn = as.numeric(list_parent_nodes[[i]]);
+			
+			for (j in 1:(cardinalities[i]-1))
+			{
+				temp_cases = list();
+				cases = NULL;
+				
+				for (k in 1:length(temp_list_of_pn))
+				{
+					temp_cases[[k]] = toss_value(1, cardinalities[temp_list_of_pn[k]])
+					if (is.null(cases)) {
+						cases = temp_cases[[k]]
+						names(cases) = 1;
+					} else {
+						cases = merge(cases, temp_cases[[k]])
+						names(cases) = c(1:dim(cases)[2])
+					}
+				}
+				cases = as.matrix(cases)
+				
+				
+				for (k in 1:dim(cases)[1])
+				{
+					temp_text_conditional = NULL;
+					
+					for (m in 1:dim(cases)[2])
+					{
+						mmm = paste(	node_names[temp_list_of_pn[m]], " = ", 
+												cases[k, m], sep="" )
+						if (m == 1) {
+							temp_text_conditional = mmm
+						} else {
+							temp_text_conditional = c( temp_text_conditional, paste(", ", mmm) )
+						}
+					}
+					
+					temp_text = c(	temp_text,
+											paste(	"P(",
+														node_names[i], " = ", present_cardinality[j,1],
+														"|",
+														temp_text_conditional,
+														")",
+														sep=""
+													)
+										)
+				}
+			}
+		}
+
+		text_of_probs[[i]] = temp_text
+	}
+
 	res = list(	cardinalities = cardinalities,
 					node_names = node_names,
 					num_of_root_nodes = num_of_root_nodes,
-					list_parent_nodes = list_parent_nodes,
 					num_of_probs = num_of_probs,
-					num_of_parent_nodes = num_of_parent_nodes)
+					num_of_parent_nodes = num_of_parent_nodes,
+					list_parent_nodes = list_parent_nodes,
+					list_of_probs = text_of_probs
+				);
+
+	return(res);
 }

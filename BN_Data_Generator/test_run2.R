@@ -50,7 +50,6 @@ input_Probs = list(
 cardinalities = c(2,	3,	2,	2,	3,	2,	2,	2)
 
 
-
 # Check DAG
 check_dag_arcs = as.matrix(arcs)
 if (is.DAG(check_dag_arcs) == FALSE) {
@@ -115,12 +114,6 @@ root_nodes = sum(num_of_parent_nodes == 0);
 result_mat = matrix(0, temp_n, num_of_nodes);
 dimnames(result_mat)[[2]] = node_names;
 # result_mat
-
-
-# 지정해야할 조건부 확률 개수
-# num_of_probs = t(as.matrix(2^num_of_parent_nodes));
-# dimnames(num_of_probs)[[2]] = node_names;
-# num_of_probs
 
 
 
@@ -193,29 +186,16 @@ for (i in init:num_of_nodes) {
 			temp_p = p[stack:(stack + cardinalities[i]-2)]
 		}
 		len = length(which(mat))
-		
-		
-	
-		# for debug
-		print(c("p", p))
-		print(c("stack", stack))
-		print(c("stack:(stack + cardinalities[i]-1)", stack:(stack + cardinalities[i]-1)))
-		print(c("cardinalities[i]-1", cardinalities[i]-1))
-		print(c("mat_values", mat_values))
-		print(c("temp_p", temp_p))
-		print(c("length : ", length(which(mat))))
-		print(c("i : ", i, " / j : ", j))
-		print("--------------------")
-	
-		
+				
 		result_mat[which(mat),i] = sample(
-														mat_values, len,
-														prob=c(temp_p, 1-sum(temp_p)), rep=T
-													);
+															mat_values, len,
+															prob=c(temp_p, 1-sum(temp_p)), rep=T
+														);
 		
 		stack = stack + (cardinalities[i]-1)
 	}
 }
+
 
 
 
@@ -232,6 +212,7 @@ res = list(	data = data.frame(result_mat),
 				num_of_nodes = num_of_nodes,
 				num_of_parent_nodes = num_of_parent_nodes,
 				list_parent_nodes = list_parent_nodes);
+				
 # res
 head(res$data)
 apply(res$data, 2, unique)

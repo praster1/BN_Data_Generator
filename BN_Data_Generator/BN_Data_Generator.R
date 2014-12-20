@@ -70,13 +70,14 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	mat = NULL
 	for (i in init:num_of_nodes) {
 		p = input_Probs[[i]]
-		num_of_c_cases = prod(cardinalities[list_parent_nodes[[i]]])
+		temp_list_of_pn = as.numeric(list_parent_nodes[[i]]);
+		num_of_c_cases = prod(cardinalities[temp_list_of_pn])
 
 		temp_cases = list();
 		cases = NULL;
-		for (j in 1:length(list_parent_nodes[[i]]))
+		for (j in 1:length(temp_list_of_pn))
 		{
-			temp_cases[[j]] = toss_value(1, cardinalities[list_parent_nodes[[i]][j]])
+			temp_cases[[j]] = toss_value(1, cardinalities[temp_list_of_pn[j]])
 			if (is.null(cases)) {
 				cases = temp_cases[[j]]
 				names(cases) = 1;
@@ -94,7 +95,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 		{	
 			mat = t(
 						t(
-							as.matrix(result_mat[,list_parent_nodes[[i]]])
+							as.matrix(result_mat[,temp_list_of_pn])
 						) ==
 							cases[j,]
 					);
