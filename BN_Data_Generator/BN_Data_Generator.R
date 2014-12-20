@@ -37,11 +37,11 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	# 지정해야할 조건부 확률 개수만큼 input이 맞는지 확인. 만일 false이면 프로그램 종료
 	input_prob_len = length(input_Probs);
 	for (i in 1:input_prob_len) {
-			print(c("i : ", i))
-			print(c("length_input_Probs: ", length(input_Probs[[i]])))
-			print(c("num_of_probs_list : ",num_of_probs))
-			print(c("num_of_probs : ",num_of_probs[i]))
-			print("--------------------")
+			# print(c("i : ", i))
+			# print(c("length_input_Probs: ", length(input_Probs[[i]])))
+			# print(c("num_of_probs_list : ",num_of_probs))
+			# print(c("num_of_probs : ",num_of_probs[i]))
+			# print("--------------------")
 		if	(	as.numeric(length(input_Probs[[i]]))
 								!=
 				as.numeric(num_of_probs[i])
