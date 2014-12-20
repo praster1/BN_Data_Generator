@@ -35,7 +35,7 @@ input_Probs = list(
 			0.5, 0.1, 0.3),						# P(~B|S),	P(~B|~S),	P(~B|^S)
 		c(1, 1, 1, 0),							# P(E|T,L), 	P(E|~T,L), 	P(E|T,~L), 	P(E|~T,~L)
 		c(0.98, 0.05),							# P(X|E), 		P(X|~E)
-		c(0.9, 0.7, 0.8, 0.1, 0.5, 0.3)			# P(D|B,E), 	P(D|~B,E), 	P(D|B,~E), 	P(D|~B,~E)
+		c(0.9, 0.7, 0.8, 0.1, 0.5, 0.3)		# P(D|B,E), 	P(D|~B,E), 	P(D|B,~E), 	P(D|~B,~E)
 )
 
 					#	A	S	T	L	B	E	X	D
@@ -44,6 +44,9 @@ cardinalities = c(2,	3,	2,	2,	3,	2,	2,	2)
 # check_input_Probs
 res1 = check_input_Probs(arcs, node_names, cardinalities)
 res1
+
+
+
 
 res2 = BN_Data_Generator(arcs, input_Probs, n, node_names, cardinalities)
 res2

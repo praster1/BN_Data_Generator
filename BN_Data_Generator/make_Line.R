@@ -1,6 +1,6 @@
 # Written by Jae-seong Yoo 20141101
 
-make_Line = function(nodes)
+make_Line = function(nodes, input_Probs = NULL, cardinalities = NULL)
 {
 	if(nodes < 3)
 	{
@@ -14,17 +14,25 @@ make_Line = function(nodes)
 	}
 	
 	
-	Probs = list()
+	# Check Input Probs & Cardinalities
+	checker = check_input_Probs(arcs = arcs, cardinalities = cardinalities)
+	cardinalities = checker$cardinalities;
 	
-	Probs[[1]] = runif(1)
-	for (i in 2:nodes)
+	
+	if (is.NULL(input_Probs))
 	{
-		Probs[[i]] = runif(2)
+		input_Probs = list()
+		
+		input_Probs[[1]] = runif(1)
+		for (i in 2:nodes)
+		{
+			input_Probs[[i]] = runif(2)
+		}
 	}
 	
 	
 	result = list(	arcs_mat = arcs,
-						Probs = Probs,
+						Probs = input_Probs,
 						num_of_nodes = nodes
 					)
 	return(result)

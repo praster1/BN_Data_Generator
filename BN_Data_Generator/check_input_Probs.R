@@ -55,7 +55,7 @@ check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 		temp_text = NULL;
 		present_cardinality = as.matrix(toss_value(1, cardinalities[i]));
 		
-		if (is.null(list_parent_nodes[[i]])) {		# it is root node
+		if (num_of_parent_nodes[i] == 0) {		### it is root node
 			for (j in 1:(cardinalities[i]-1))
 			{
 				temp_text = c(	temp_text,
@@ -66,7 +66,7 @@ check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 												)
 									)
 			}
-		} else {		# it is not a root node
+		} else {		### it is not a root node
 			temp_list_of_pn = as.numeric(list_parent_nodes[[i]]);
 			
 			for (j in 1:(cardinalities[i]-1))
@@ -94,12 +94,16 @@ check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 					
 					for (m in 1:dim(cases)[2])
 					{
-						mmm = paste(	node_names[temp_list_of_pn[m]], " = ", 
-												cases[k, m], sep="" )
+						case_value = paste(	node_names[temp_list_of_pn[m]],
+														" = ", 
+														cases[k, m],
+														sep=""
+													)
+														
 						if (m == 1) {
-							temp_text_conditional = mmm
+							temp_text_conditional = case_value;
 						} else {
-							temp_text_conditional = c( temp_text_conditional, paste(", ", mmm) )
+							temp_text_conditional = paste( temp_text_conditional, paste(", ", case_value), sep="" );
 						}
 					}
 					
@@ -116,7 +120,7 @@ check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 			}
 		}
 
-		text_of_probs[[i]] = temp_text
+		text_of_probs[[i]] = temp_text;
 	}
 
 	res = list(	cardinalities = cardinalities,
