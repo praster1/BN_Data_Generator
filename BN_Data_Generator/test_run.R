@@ -14,10 +14,10 @@ source("include_sources.R", encoding="utf8")
 require(bnlearn)
 
 
-n = 10000
+n = 1000
 
 nodes = 10
-temp = make_Collapse(nodes)
+temp = make_PseudoLoop(nodes)
 target_arcs_mat = temp$arcs_mat
 res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
 node_names = res$node_names
@@ -115,7 +115,7 @@ bn_rsmax2_arcs_mat = fromto_to_mat(bn_rsmax2$arcs, node_names)
 ## M		# Missed Edges : 실제 네트워크 존재 O, 결과 네트워크 존재 X
 ## WO	# Wrongly Oriented Edges : 실제 네트워크 = 결과 네트워크, 방향 반대
 ## WC	# Wrongly Connected Edges : 실제 네트워크 존재 X, 결과 네트워크 존재 O
-C_M_WO_WC_mat = rbind(	C_M_WO_WC(target_arcs_mat, bn_hc_arcs_mat),			# HC
+C_M_WO_WC_mat = rbind(	C_M_WO_WC(target_arcs_mat, bn_hc_arcs_mat),				# HC
 										C_M_WO_WC(target_arcs_mat, bn_tabu_arcs_mat),			# TABU
 										C_M_WO_WC(target_arcs_mat, bn_mmhc_arcs_mat),		# MMHC
 										C_M_WO_WC(target_arcs_mat, bn_rsmax2_arcs_mat))		# RSMAX2
@@ -123,7 +123,7 @@ dimnames(C_M_WO_WC_mat)[[1]] = c("HC", "TABU", "MMHC", "RSMAX2")
 dimnames(C_M_WO_WC_mat)[[2]] = c("C", "M", "WO", "WC")
 C_M_WO_WC_mat
 
-# big_letters(num_of_nodes)
+
 			
 par(mfrow = c(2, 3))
 

@@ -61,10 +61,6 @@ BN_Data_Generator(arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
 ## The function is currently defined as
 function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL) 
 {
-    check_dag_arcs = as.matrix(arcs)
-    if (is.DAG(check_dag_arcs) == FALSE) {
-        stop("arcs must a DAG")
-    }
     if (n <= 0) {
         stop("Sample size 'n' must be greater than 0.")
     }
@@ -75,40 +71,23 @@ function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
         temp_n = n
     }
     num_of_nodes = dim(arcs)[1]
-    if (is.null(node_names)) {
-        node_names = big_letters(num_of_nodes)
-    }
-    if (is.null(cardinalities)) {
-        cardinalities = rep(2, num_of_nodes)
-    }
-    else if (sum(cardinalities < 2) > 0) {
-        stop("All cardinality must be at least 2.")
-    }
-    else if (num_of_nodes != length(cardinalities)) {
-        stop("Wrong length of cardinalities")
-    }
-    num_of_parent_nodes = apply(arcs, 2, sum)
-    list_parent_nodes = list()
-    for (i in 1:num_of_nodes) {
-        if (length(which(arcs[, i] == 1)) == 0) {
-            list_parent_nodes[[i]] = NULL
-        }
-        else {
-            list_parent_nodes[[i]] = which(arcs[, i] == 1)
-        }
-    }
-    root_nodes = sum(num_of_parent_nodes == 0)
     result_mat = matrix(0, temp_n, num_of_nodes)
     dimnames(result_mat)[[2]] = node_names
+    checker = check_input_Probs(arcs = arcs, node_names = node_names, 
+        cardinalities = cardinalities)
+    cardinalities = checker$cardinalities
+    node_names = checker$node_names
+    list_parent_nodes = checker$list_parent_nodes
+    num_of_probs = checker$num_of_probs
+    num_of_parent_nodes = checker$num_of_parent_nodes
+    num_of_root_nodes = checker$num_of_root_nodes
     input_prob_len = length(input_Probs)
-    num_of_probs = NULL
     for (i in 1:input_prob_len) {
-        num_of_probs[i] = (cardinalities[i] - 1) * prod(cardinalities[list_parent_nodes[[i]]])
-        if (length(input_Probs[[i]]) != num_of_probs[i]) {
+        if (as.numeric(length(input_Probs[[i]])) != as.numeric(num_of_probs[i])) {
             stop("Input Probs != num_of_probs!")
         }
     }
-    for (i in 1:root_nodes) {
+    for (i in 1:num_of_root_nodes) {
         p = input_Probs[[i]]
         mat_values = merge("Value", c(1:cardinalities[i]))
         mat_values = paste(mat_values[, 1], mat_values[, 2], 
@@ -116,15 +95,16 @@ function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
         result_mat[, i] = sample(mat_values, temp_n, prob = c(p, 
             1 - sum(p)), rep = T)
     }
-    init = root_nodes + 1
+    init = num_of_root_nodes + 1
     mat = NULL
     for (i in init:num_of_nodes) {
         p = input_Probs[[i]]
-        num_of_c_cases = prod(cardinalities[list_parent_nodes[[i]]])
+        temp_list_of_pn = as.numeric(list_parent_nodes[[i]])
+        num_of_c_cases = prod(cardinalities[temp_list_of_pn])
         temp_cases = list()
         cases = NULL
-        for (j in 1:length(list_parent_nodes[[i]])) {
-            temp_cases[[j]] = toss_value(1, cardinalities[list_parent_nodes[[i]][j]])
+        for (j in 1:length(temp_list_of_pn)) {
+            temp_cases[[j]] = toss_value(1, cardinalities[temp_list_of_pn[j]])
             if (is.null(cases)) {
                 cases = temp_cases[[j]]
                 names(cases) = 1
@@ -140,7 +120,7 @@ function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
             2], sep = ""))
         stack = 1
         for (j in 1:dim(cases)[1]) {
-            mat = t(t(as.matrix(result_mat[, list_parent_nodes[[i]]])) == 
+            mat = t(t(as.matrix(result_mat[, temp_list_of_pn])) == 
                 cases[j, ])
             mat = (apply(mat, 1, sum) == dim(mat)[2])
             if (cardinalities[i] == 2) {
