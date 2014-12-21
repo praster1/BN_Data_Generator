@@ -7,6 +7,7 @@ setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
 package.skeleton(name="BN_Data_Generator",
 								code_files=c(	"big_letters.R",
 													"BN_Data_Generator.R",
+													"check_cardinalities.R",
 													"C_M_WO_WC.R",
 													"fromto_to_mat.R",
 													"mat_to_fromto.R",

@@ -65,7 +65,7 @@ function (nodes, input_Probs = NULL, node_names = NULL, cardinalities = NULL)
     for (i in 1:(nodes - 1)) {
         arcs[i, (i + 1)] = 1
     }
-    checker = check_input_Probs(arcs = arcs, node_names = node_names, 
+    checker = check_cardinalities(arcs = arcs, node_names = node_names, 
         cardinalities = cardinalities)
     cardinalities = checker$cardinalities
     num_of_probs = checker$num_of_probs
@@ -84,7 +84,7 @@ function (nodes, input_Probs = NULL, node_names = NULL, cardinalities = NULL)
         }
     }
     result = list(arcs_mat = arcs, Probs = input_Probs, node_names = node_names, 
-        num_of_nodes = nodes)
+        cardinalities = cardinalities, num_of_nodes = nodes)
     return(result)
   }
 }

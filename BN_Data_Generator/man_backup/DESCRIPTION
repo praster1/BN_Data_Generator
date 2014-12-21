@@ -1,0 +1,9 @@
+Package: BN_Data_Generator
+Type: Package
+Title: BN_Data_Generator
+Version: 1.0
+Date: 2014-12-13
+Author: Jae-seong Yoo
+Maintainer: Jae-seong Yoo <praster1@gmail.com>
+Description: Data Generator based on Bayesian Network Model
+License: GNU GPL v2.0

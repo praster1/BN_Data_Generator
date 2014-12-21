@@ -1,6 +1,6 @@
 # Written by Jae-seong Yoo 20141217
 
-check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
+check_cardinalities = function (arcs, node_names = NULL, cardinalities = NULL)
 {
 	# Check DAG
 	check_dag_arcs = as.matrix(arcs)
@@ -8,14 +8,17 @@ check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 		stop("arcs must a DAG")
 	}
 	
+	
 	# Node 개수
 	num_of_nodes = dim(arcs)[1];
 
+	
 	# node_names가 NULL이면 임의로 node 이름을 부여한다.
 	if (is.null(node_names)) {
 		node_names = big_letters(num_of_nodes)
 	}
 
+	
 	# Cardinality가 NULL이면 모두 2로 설정한다.
 	# Cardinality는 모두 2보다 커야 한다.
 	if (is.null(cardinalities)) {
@@ -26,6 +29,7 @@ check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 		stop("Wrong length of cardinalities")
 	}
 
+	
 	# 각 Node의 Parent Node 개수
 	num_of_parent_nodes = apply(arcs, 2, sum);
 
@@ -48,6 +52,7 @@ check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 	for (k in 1:num_of_nodes) {
 		num_of_probs[k] = (cardinalities[k]-1) * prod(cardinalities[list_parent_nodes[[k]]])
 	}
+	
 	
 	text_of_probs = list();
 	for(i in 1:length(num_of_parent_nodes))
@@ -123,6 +128,7 @@ check_input_Probs = function (arcs, node_names = NULL, cardinalities = NULL)
 		text_of_probs[[i]] = temp_text;
 	}
 
+	
 	res = list(	cardinalities = cardinalities,
 					node_names = node_names,
 					num_of_root_nodes = num_of_root_nodes,

@@ -73,7 +73,7 @@ function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
     num_of_nodes = dim(arcs)[1]
     result_mat = matrix(0, temp_n, num_of_nodes)
     dimnames(result_mat)[[2]] = node_names
-    checker = check_input_Probs(arcs = arcs, node_names = node_names, 
+    checker = check_cardinalities(arcs = arcs, node_names = node_names, 
         cardinalities = cardinalities)
     cardinalities = checker$cardinalities
     node_names = checker$node_names

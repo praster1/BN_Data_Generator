@@ -41,8 +41,8 @@ input_Probs = list(
 					#	A	S	T	L	B	E	X	D
 cardinalities = c(2,	3,	2,	2,	3,	2,	2,	2)
 
-# check_input_Probs
-res1 = check_input_Probs(arcs, node_names, cardinalities)
+# check_cardinalities
+res1 = check_cardinalities(arcs, node_names, cardinalities)
 res1
 
 

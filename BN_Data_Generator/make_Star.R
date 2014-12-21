@@ -13,7 +13,7 @@ make_Star = function(nodes, input_Probs = NULL, node_names = NULL, cardinalities
 	
 	
 	# Check Input Probs & Cardinalities
-	checker = check_input_Probs(arcs = arcs, node_names = node_names, cardinalities = cardinalities)
+	checker = check_cardinalities(arcs = arcs, node_names = node_names, cardinalities = cardinalities)
 	cardinalities = checker$cardinalities;
 	num_of_probs = checker$num_of_probs;
 	node_names = checker$node_names;

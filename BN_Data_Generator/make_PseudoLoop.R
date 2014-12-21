@@ -16,7 +16,7 @@ make_PseudoLoop = function(nodes, input_Probs = NULL, node_names = NULL, cardina
 	
 	
 	# Check Input Probs & Cardinalities
-	checker = check_input_Probs(arcs = arcs)
+	checker = check_cardinalities(arcs = arcs)
 	cardinalities = checker$cardinalities;
 	num_of_probs = checker$num_of_probs;
 	node_names = checker$node_names;
