@@ -40,6 +40,7 @@ make_Collapse = function (nodes, input_Probs = NULL, node_names = NULL, cardinal
 	result = list(	arcs_mat = arcs,
 						Probs = input_Probs,
 						node_names = node_names,
+						cardinalities = cardinalities,
 						num_of_nodes = nodes
 					)
 	return(result)

@@ -38,8 +38,10 @@ package.skeleton(name="BN_Data_Generator",
 # Read "Writing R Extensions" for more information.
 
 
+
 require(tools)
 Rd = parse_Rd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator/man/BN_Data_Generator-package.Rd", verbose=TRUE)
+
 
 
 ##### run at cmd
