@@ -1,5 +1,5 @@
-\name{real_asia}
-\alias{real_asia}
+\name{gen_asia}
+\alias{gen_asia}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
@@ -8,17 +8,9 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-real_asia(n, rep = T)
+gen_asia()
 }
 %- maybe also 'usage' for other objects documented here.
-\arguments{
-  \item{n}{
-%%     ~~Describe \code{n} here~~
-}
-  \item{rep}{
-%%     ~~Describe \code{rep} here~~
-}
-}
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
@@ -50,20 +42,23 @@ real_asia(n, rep = T)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (n, rep = T) 
+function () 
 {
-    packages = c("bnlearn")
-    if (length(setdiff(packages, rownames(installed.packages()))) > 
-        0) {
-        install.packages(setdiff(packages, rownames(installed.packages())))
-    }
-    data(asia, package = "bnlearn")
-    data = asia[sample(c(1:5000), n, rep = rep), ]
-    res = empty.graph(names(asia))
-    modelstring(res) = "[A][S][T|A][L|S][B|S][D|B:E][E|T:L][X|E]"
-    arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
-    result = list(arcs_mat = arcs, node_names = dimnames(data)[[2]], 
-        data = data, res = res)
+    arcs = rbind(c(0, 0, 1, 0, 0, 0, 0, 0), c(0, 0, 0, 1, 1, 
+        0, 0, 0), c(0, 0, 0, 0, 0, 1, 0, 0), c(0, 0, 0, 0, 0, 
+        1, 0, 0), c(0, 0, 0, 0, 0, 0, 0, 1), c(0, 0, 0, 0, 0, 
+        0, 1, 1), c(0, 0, 0, 0, 0, 0, 0, 0), c(0, 0, 0, 0, 0, 
+        0, 0, 0))
+    node_names = c("A", "S", "T", "L", "B", "E", "X", "D")
+    dimnames(arcs)[[1]] = node_names
+    dimnames(arcs)[[2]] = node_names
+    input_Probs = list(c(0.01), c(0.5), c(0.05, 0.01), c(0.1, 
+        0.01), c(0.6, 0.3), c(1, 1, 1, 0), c(0.98, 0.05), c(0.9, 
+        0.7, 0.8, 0.1))
+    num_of_nodes = length(node_names)
+    cardinalities = rep(2, num_of_nodes)
+    result = list(arcs_mat = arcs, Probs = input_Probs, node_names = node_names, 
+        cardinalities = cardinalities, num_of_nodes = num_of_nodes)
     return(result)
   }
 }

@@ -1,15 +1,15 @@
 # Written by Jae-seong Yoo 20141101
 
-real_alarm = function(n)
+real_alarm = function(n, rep=T)
 {
-	data = data(alarm)
-
-	if (n >= 20000)
+	packages = c("bnlearn")
+	if (length(setdiff(packages, rownames(installed.packages()))) > 0)
 	{
-		data = alarm[sample(c(1:20000), n, rep=T),]
-	} else {
-		data = alarm[sample(c(1:20000), n),]
+		install.packages(setdiff(packages, rownames(installed.packages())))  
 	}
+	
+	data(alarm, package = "bnlearn")
+	data = alarm[sample(c(1:20000), n, rep=rep),]
 
 	res = empty.graph(names(alarm))
 	modelstring(res) = paste("[HIST|LVF][CVP|LVV][PCWP|LVV][HYP][LVV|HYP:LVF]",
@@ -20,7 +20,12 @@ real_alarm = function(n)
 			"[VTUB|DISC:VMCH][VLNG|INT:KINK:VTUB][VALV|INT:VLNG][ACO2|VALV]",
 			"[CCHL|ACO2:ANES:SAO2:TPR][HR|CCHL][CO|HR:STKV][BP|CO:TPR]", sep = "")
 	  
-	result = list(	data = data, res = res)
+	arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+	  
+	result = list(	arcs_mat = arcs,
+						node_names = dimnames(data)[[2]],
+						data = data,
+						res = res)
 						
 	return(result)
 }

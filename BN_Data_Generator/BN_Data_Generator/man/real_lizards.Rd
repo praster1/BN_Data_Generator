@@ -1,5 +1,5 @@
-\name{real_asia}
-\alias{real_asia}
+\name{real_lizards}
+\alias{real_lizards}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-real_asia(n, rep = T)
+real_lizards(n, rep = T)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -57,10 +57,10 @@ function (n, rep = T)
         0) {
         install.packages(setdiff(packages, rownames(installed.packages())))
     }
-    data(asia, package = "bnlearn")
-    data = asia[sample(c(1:5000), n, rep = rep), ]
-    res = empty.graph(names(asia))
-    modelstring(res) = "[A][S][T|A][L|S][B|S][D|B:E][E|T:L][X|E]"
+    data(lizards, package = "bnlearn")
+    data = lizards[sample(c(1:409), n, rep = rep), ]
+    res = empty.graph(names(lizards))
+    modelstring(res) = "[Species][Diameter|Species][Height|Species]"
     arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
     result = list(arcs_mat = arcs, node_names = dimnames(data)[[2]], 
         data = data, res = res)

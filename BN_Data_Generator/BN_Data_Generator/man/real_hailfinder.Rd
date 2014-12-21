@@ -8,12 +8,15 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-real_hailfinder(n)
+real_hailfinder(n, rep = T)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{n}{
 %%     ~~Describe \code{n} here~~
+}
+  \item{rep}{
+%%     ~~Describe \code{rep} here~~
 }
 }
 \details{
@@ -47,15 +50,15 @@ real_hailfinder(n)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (n) 
+function (n, rep = T) 
 {
-    data(hailfinder)
-    if (n >= 20000) {
-        data = hailfinder[sample(c(1:20000), n, rep = T), ]
+    packages = c("bnlearn")
+    if (length(setdiff(packages, rownames(installed.packages()))) > 
+        0) {
+        install.packages(setdiff(packages, rownames(installed.packages())))
     }
-    else {
-        data = hailfinder[sample(c(1:20000), n), ]
-    }
+    data(hailfinder, package = "bnlearn")
+    data = hailfinder[sample(c(1:20000), n, rep = rep), ]
     res = empty.graph(names(hailfinder))
     modelstring(res) = paste("[N07muVerMo][SubjVertMo][QGVertMotion][SatContMoist][RaoContMoist]", 
         "[VISCloudCov][IRCloudCover][AMInstabMt][WndHodograph][MorningBound][LoLevMoistAd][Date]", 
@@ -76,7 +79,9 @@ function (n)
         "[InsSclInScen|InsChange:AMInsWliScen][R5Fcst|MountainFcst:N34StarFcst]", 
         "[PlainsFcst|CapInScen:InsSclInScen:CurPropConv:ScnRelPlFcst]", 
         sep = "")
-    result = list(data = data, res = res)
+    arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+    result = list(arcs_mat = arcs, node_names = dimnames(data)[[2]], 
+        data = data, res = res)
     return(result)
   }
 }

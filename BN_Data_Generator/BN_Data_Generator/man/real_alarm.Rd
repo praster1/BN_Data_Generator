@@ -8,12 +8,15 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-real_alarm(n)
+real_alarm(n, rep = T)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{n}{
 %%     ~~Describe \code{n} here~~
+}
+  \item{rep}{
+%%     ~~Describe \code{rep} here~~
 }
 }
 \details{
@@ -47,15 +50,15 @@ real_alarm(n)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (n) 
+function (n, rep = T) 
 {
-    data = data(alarm)
-    if (n >= 20000) {
-        data = alarm[sample(c(1:20000), n, rep = T), ]
+    packages = c("bnlearn")
+    if (length(setdiff(packages, rownames(installed.packages()))) > 
+        0) {
+        install.packages(setdiff(packages, rownames(installed.packages())))
     }
-    else {
-        data = alarm[sample(c(1:20000), n), ]
-    }
+    data(alarm, package = "bnlearn")
+    data = alarm[sample(c(1:20000), n, rep = rep), ]
     res = empty.graph(names(alarm))
     modelstring(res) = paste("[HIST|LVF][CVP|LVV][PCWP|LVV][HYP][LVV|HYP:LVF]", 
         "[LVF][STKV|HYP:LVF][ERLO][HRBP|ERLO:HR][HREK|ERCA:HR][ERCA]", 
@@ -65,7 +68,9 @@ function (n)
         "[VTUB|DISC:VMCH][VLNG|INT:KINK:VTUB][VALV|INT:VLNG][ACO2|VALV]", 
         "[CCHL|ACO2:ANES:SAO2:TPR][HR|CCHL][CO|HR:STKV][BP|CO:TPR]", 
         sep = "")
-    result = list(data = data, res = res)
+    arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+    result = list(arcs_mat = arcs, node_names = dimnames(data)[[2]], 
+        data = data, res = res)
     return(result)
   }
 }

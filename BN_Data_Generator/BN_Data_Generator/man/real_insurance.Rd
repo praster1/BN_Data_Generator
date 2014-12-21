@@ -8,12 +8,15 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-real_insurance(n)
+real_insurance(n, rep = T)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{n}{
 %%     ~~Describe \code{n} here~~
+}
+  \item{rep}{
+%%     ~~Describe \code{rep} here~~
 }
 }
 \details{
@@ -47,15 +50,15 @@ real_insurance(n)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (n) 
+function (n, rep = T) 
 {
-    data(insurance)
-    if (n >= 20000) {
-        data = insurance[sample(c(1:20000), n, rep = T), ]
+    packages = c("bnlearn")
+    if (length(setdiff(packages, rownames(installed.packages()))) > 
+        0) {
+        install.packages(setdiff(packages, rownames(installed.packages())))
     }
-    else {
-        data = insurance[sample(c(1:20000), n), ]
-    }
+    data(insurance, package = "bnlearn")
+    data = insurance[sample(c(1:20000), n, rep = rep), ]
     res = empty.graph(names(insurance))
     modelstring(res) = paste("[Age][Mileage][SocioEcon|Age][GoodStudent|Age:SocioEcon]", 
         "[RiskAversion|Age:SocioEcon][OtherCar|SocioEcon][VehicleYear|SocioEcon:RiskAversion]", 
@@ -70,7 +73,9 @@ function (n)
         "[MedCost|Age:Accident:Cushioning][ILiCost|Accident]", 
         "[ThisCarCost|ThisCarDam:Theft:CarValue][PropCost|ThisCarCost:OtherCarCost]", 
         sep = "")
-    result = list(data = data, res = res)
+    arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+    result = list(arcs_mat = arcs, node_names = dimnames(data)[[2]], 
+        data = data, res = res)
     return(result)
   }
 }

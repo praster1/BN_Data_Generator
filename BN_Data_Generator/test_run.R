@@ -16,12 +16,19 @@ require(bnlearn)
 
 n = 1000
 
-nodes = 10
-temp = make_PseudoLoop(nodes)
+# nodes = 10
+# temp = make_PseudoLoop(nodes)
+# target_arcs_mat = temp$arcs_mat
+# res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
+# node_names = res$node_names
+# data = res$data
+
+
+temp = gen_asia()
 target_arcs_mat = temp$arcs_mat
 res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
-node_names = res$node_names
 data = res$data
+node_names = res$node_names
 
 
 # source("real_asia.R", encoding="utf8")
@@ -29,10 +36,15 @@ data = res$data
 # data = temp$data
 # res = temp$res
 
+
 # source("real_insurance.R", encoding="utf8")
 # temp = real_insurance(n)
 # data = temp$data
 # res = temp$res
+
+# arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+# arcs
+
 
 # source("real_alarm.R", encoding="utf8")
 # temp = real_alarm(n)
