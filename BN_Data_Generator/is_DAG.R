@@ -1,4 +1,4 @@
-is.DAG = function (amat) 
+is_DAG = function (amat) 
 {
 	unmakeMG = function (amat) 
 	{
@@ -29,7 +29,7 @@ is.DAG = function (amat)
         out = FALSE
     }
 	
-    if (!is.acyclic(dag)) {
+    if (!is_acyclic(dag)) {
         warning("Not acyclic.")
         out = FALSE
     }

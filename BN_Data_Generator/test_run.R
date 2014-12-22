@@ -16,19 +16,19 @@ require(bnlearn)
 
 n = 1000
 
-# nodes = 10
-# temp = make_PseudoLoop(nodes)
-# target_arcs_mat = temp$arcs_mat
-# res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
-# node_names = res$node_names
-# data = res$data
-
-
-temp = gen_asia()
+nodes = 10
+temp = make_topology(nodes, topology = "Collapse")
 target_arcs_mat = temp$arcs_mat
 res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
-data = res$data
 node_names = res$node_names
+data = res$data
+
+
+# temp = gen_asia()
+# target_arcs_mat = temp$arcs_mat
+# res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
+# data = res$data
+# node_names = res$node_names
 
 
 # source("real_asia.R", encoding="utf8")
@@ -50,6 +50,7 @@ node_names = res$node_names
 # temp = real_alarm(n)
 # data = temp$data
 # res = temp$res
+
 
 # source("real_hailfinder.R", encoding="utf8")
 # temp = real_hailfinder(n)

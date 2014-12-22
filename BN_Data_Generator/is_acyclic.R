@@ -1,4 +1,4 @@
-is.acyclic = function (amat) 
+is_acyclic = function (amat) 
 {
 	
 	transClos = function (amat) 

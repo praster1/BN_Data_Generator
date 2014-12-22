@@ -1,5 +1,5 @@
-\name{is.DAG}
-\alias{is.DAG}
+\name{is_DAG}
+\alias{is_DAG}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-is.DAG(amat)
+is_DAG(amat)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -73,7 +73,7 @@ function (amat)
         warning("There are double edges.")
         out = FALSE
     }
-    if (!is.acyclic(dag)) {
+    if (!is_acyclic(dag)) {
         warning("Not acyclic.")
         out = FALSE
     }

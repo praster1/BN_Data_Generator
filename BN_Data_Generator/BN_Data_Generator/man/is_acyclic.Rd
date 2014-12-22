@@ -1,5 +1,5 @@
-\name{is.acyclic}
-\alias{is.acyclic}
+\name{is_acyclic}
+\alias{is_acyclic}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-is.acyclic(amat)
+is_acyclic(amat)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

@@ -2,7 +2,7 @@ mat_to_fromto = function(arcs_mat)
 {
 	# Check DAG
 	check_dag_arcs = as.matrix(arcs)
-	if (is.DAG(check_dag_arcs) == FALSE) {
+	if (is_DAG(check_dag_arcs) == FALSE) {
 		stop("arcs must a DAG")
 	}
 	

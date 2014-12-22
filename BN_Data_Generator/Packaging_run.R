@@ -5,33 +5,29 @@ setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
 
 
 package.skeleton(name="BN_Data_Generator",
-								code_files=c(	"is.acyclic.R",
-													"is.DAG.R",
-								
-													"big_letters.R",
-													"toss_value.R",
-													"BN_Data_Generator.R",
-													"check_cardinalities.R",
-													
-													"make_Collapse.R",
-													"make_Diamond.R",
-													"make_Line.R",
-													"make_PseudoLoop.R",
-													"make_Rhombus.R",
-													"make_Star.R",
-													
-													"C_M_WO_WC.R",
-													"fromto_to_mat.R",
-													"mat_to_fromto.R",
-													
-													"gen_asia.R",
-													
-													"real_lizards.R",
-													"real_alarm.R",
-													"real_asia.R",
-													"real_hailfinder.R",
-													"real_insurance.R"
-								))
+							code_files=c(	"is_acyclic.R",
+												"is_DAG.R",
+							
+												"big_letters.R",
+												"toss_value.R",
+												"BN_Data_Generator.R",
+												"check_cardinalities.R",
+												
+												"make_topology.R",
+												
+												"C_M_WO_WC.R",
+												"fromto_to_mat.R",
+												"mat_to_fromto.R",
+												
+												"gen_asia.R",
+												
+												"real_lizards.R",
+												"real_alarm.R",
+												"real_asia.R",
+												"real_hailfinder.R",
+												"real_insurance.R"
+											)
+						)
 
 
 # Further steps are described in './BN_Data_Generator/Read-and-delete-me'
@@ -54,4 +50,4 @@ Rd = parse_Rd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_G
 
 ##### run at terminal
 setwd("~/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator/man")
-system("R CMD Rd2pdf --vanilla .")
+system("R CMD Rd2pdf .")

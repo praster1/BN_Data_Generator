@@ -15,7 +15,7 @@ More about what it does (maybe more than one line)
 Package: \tab BN_Data_Generator\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
-Date: \tab 2014-12-21\cr
+Date: \tab 2014-12-22\cr
 License: \tab What license is it under?\cr
 }
 ~~ An overview of how to use the package, including the most important ~~

@@ -50,7 +50,7 @@ mat_to_fromto(arcs_mat)
 function (arcs_mat) 
 {
     check_dag_arcs = as.matrix(arcs)
-    if (is.DAG(check_dag_arcs) == FALSE) {
+    if (is_DAG(check_dag_arcs) == FALSE) {
         stop("arcs must a DAG")
     }
     node_names = dimnames(arcs_mat)[[2]]
