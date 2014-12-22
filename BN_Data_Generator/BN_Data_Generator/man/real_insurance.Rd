@@ -73,8 +73,8 @@ function (n, rep = T)
         "[MedCost|Age:Accident:Cushioning][ILiCost|Accident]", 
         "[ThisCarCost|ThisCarDam:Theft:CarValue][PropCost|ThisCarCost:OtherCarCost]", 
         sep = "")
-    arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
-    result = list(arcs_mat = arcs, node_names = dimnames(data)[[2]], 
+    arcs_mat = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+    result = list(arcs_mat = arcs_mat, node_names = dimnames(data)[[2]], 
         data = data, res = res)
     return(result)
   }

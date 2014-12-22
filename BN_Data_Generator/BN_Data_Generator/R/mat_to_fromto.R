@@ -1,9 +1,9 @@
 mat_to_fromto = function(arcs_mat)
 {
 	# Check DAG
-	check_dag_arcs = as.matrix(arcs)
+	check_dag_arcs = as.matrix(arcs_mat)
 	if (is_DAG(check_dag_arcs) == FALSE) {
-		stop("arcs must a DAG")
+		stop("arcs_mat must a DAG")
 	}
 	
 	node_names = dimnames(arcs_mat)[[2]]
@@ -13,7 +13,7 @@ mat_to_fromto = function(arcs_mat)
 
 	for (i in 1:num_of_nodes)
 	{
-		where = which(arcs[i,] == 1)
+		where = which(arcs_mat[i,] == 1)
 		len = length(where)
 		if (len > 0)
 		{

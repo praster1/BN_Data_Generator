@@ -79,35 +79,35 @@ function (nodes, topology = "Collapse", input_Probs = NULL, node_names = NULL,
     }, Rhombus = {
         NeedMoreNodes(4)
     }, )
-    arcs = matrix(0, nodes, nodes)
+    arcs_mat = matrix(0, nodes, nodes)
     switch(topology, Collapse = {
-        arcs[, nodes] = 1
-        arcs[nodes, nodes] = 0
+        arcs_mat[, nodes] = 1
+        arcs_mat[nodes, nodes] = 0
     }, Line = {
         for (i in 1:(nodes - 1)) {
-            arcs[i, (i + 1)] = 1
+            arcs_mat[i, (i + 1)] = 1
         }
     }, Star = {
-        arcs[1, ] = 1
-        arcs[1, 1] = 0
+        arcs_mat[1, ] = 1
+        arcs_mat[1, 1] = 0
     }, PseudoLoop = {
-        arcs[1, nodes] = 1
+        arcs_mat[1, nodes] = 1
         for (i in 1:(nodes - 1)) {
-            arcs[i, (i + 1)] = 1
+            arcs_mat[i, (i + 1)] = 1
         }
     }, Diamond = {
-        arcs[1, ] = 1
-        arcs[1, 1] = 0
-        arcs[, nodes] = 1
-        arcs[1, nodes] = 0
-        arcs[nodes, nodes] = 0
+        arcs_mat[1, ] = 1
+        arcs_mat[1, 1] = 0
+        arcs_mat[, nodes] = 1
+        arcs_mat[1, nodes] = 0
+        arcs_mat[nodes, nodes] = 0
     }, Rhombus = {
-        arcs[1, ] = 1
-        arcs[2, ] = 1
-        arcs[(1:2), (1:2)] = 0
-        arcs[nodes, nodes] = 0
+        arcs_mat[1, ] = 1
+        arcs_mat[2, ] = 1
+        arcs_mat[(1:2), (1:2)] = 0
+        arcs_mat[nodes, nodes] = 0
     }, )
-    checker = check_cardinalities(arcs = arcs, node_names = node_names, 
+    checker = check_cardinalities(arcs_mat = arcs_mat, node_names = node_names, 
         cardinalities = cardinalities)
     cardinalities = checker$cardinalities
     num_of_probs = checker$num_of_probs
@@ -155,7 +155,7 @@ function (nodes, topology = "Collapse", input_Probs = NULL, node_names = NULL,
             input_Probs[[i]] = runif(num_of_probs[i])
         }
     }
-    result = list(arcs_mat = arcs, Probs = input_Probs, node_names = node_names, 
+    result = list(arcs_mat = arcs_mat, Probs = input_Probs, node_names = node_names, 
         cardinalities = cardinalities, num_of_nodes = nodes)
     return(result)
   }

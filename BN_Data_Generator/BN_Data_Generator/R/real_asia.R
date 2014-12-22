@@ -15,9 +15,9 @@ real_asia = function(n, rep=T)
 	res = empty.graph(names(asia))
 	modelstring(res) = "[A][S][T|A][L|S][B|S][D|B:E][E|T:L][X|E]"
 
-	arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+	arcs_mat = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
 	  
-	result = list(	arcs_mat = arcs,
+	result = list(	arcs_mat = arcs_mat,
 						node_names = dimnames(data)[[2]],
 						data = data,
 						res = res)

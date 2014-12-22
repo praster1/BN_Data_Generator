@@ -1,11 +1,11 @@
-is_acyclic = function (amat) 
+is_acyclic = function (arcs_mat) 
 {
 	
-	transClos = function (amat) 
+	transClos = function (arcs_mat) 
 	{
-		if (nrow(amat) == 1) 
-			return(amat)
-		A = amat
+		if (nrow(arcs_mat) == 1) 
+			return(arcs_mat)
+		A = arcs_mat
 		diag(A) = 1
 		repeat {
 			B = sign(A %*% A)
@@ -17,7 +17,7 @@ is_acyclic = function (amat)
 		A
 	}
 
-	B = transClos(amat)
+	B = transClos(arcs_mat)
 	l = B[lower.tri(B)]
 	u = t(B)[lower.tri(t(B))]
 	com = (l & u)

@@ -68,8 +68,8 @@ function (n, rep = T)
         "[VTUB|DISC:VMCH][VLNG|INT:KINK:VTUB][VALV|INT:VLNG][ACO2|VALV]", 
         "[CCHL|ACO2:ANES:SAO2:TPR][HR|CCHL][CO|HR:STKV][BP|CO:TPR]", 
         sep = "")
-    arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
-    result = list(arcs_mat = arcs, node_names = dimnames(data)[[2]], 
+    arcs_mat = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+    result = list(arcs_mat = arcs_mat, node_names = dimnames(data)[[2]], 
         data = data, res = res)
     return(result)
   }

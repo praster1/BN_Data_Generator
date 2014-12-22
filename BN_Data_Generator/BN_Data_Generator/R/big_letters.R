@@ -1,4 +1,4 @@
-big_letters = function(size)
+big_letters = function(char_size)
 {
 	letters_list = list()
 	letters_list[[1]] = letters
@@ -12,7 +12,7 @@ big_letters = function(size)
 			num_of_letters = num_of_letters + length(letters_list[[i]]);
 		}
 		
-		if (num_of_letters < size)
+		if (num_of_letters < char_size)
 		{
 			merge_mat = merge(letters, letters_list[[len_letters_list]])
 			letters_list[[len_letters_list+1]] = sort(paste(merge_mat[,1], merge_mat[,2], sep=""))
@@ -29,5 +29,5 @@ big_letters = function(size)
 	}
 	result = sort(result)
 	
-	return(result[1:size])
+	return(result[1:char_size])
 }

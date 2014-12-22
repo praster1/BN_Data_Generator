@@ -1,6 +1,6 @@
 # Written by Jae-seong Yoo 20141101
 
-BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
+BN_Data_Generator = function (arcs_mat, input_Probs, n, node_names = NULL, cardinalities = NULL)
 {
 	# Check Sample Size
 	if (n <= 0) {
@@ -17,7 +17,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	#####
 
 	# Node 개수
-	num_of_nodes = dim(arcs)[1];
+	num_of_nodes = dim(arcs_mat)[1];
 	
 	# 결과는 여기에 저장이 된다.
 	result_mat = matrix(0, temp_n, num_of_nodes);
@@ -25,7 +25,7 @@ BN_Data_Generator = function (arcs, input_Probs, n, node_names = NULL, cardinali
 	# result_mat
 
 	# Check Input Probs & Cardinalities
-	checker = check_cardinalities(arcs = arcs, node_names = node_names, cardinalities = cardinalities)
+	checker = check_cardinalities(arcs_mat = arcs_mat, node_names = node_names, cardinalities = cardinalities)
 	cardinalities = checker$cardinalities;
 	node_names = checker$node_names;
 	list_parent_nodes = checker$list_parent_nodes;

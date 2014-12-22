@@ -18,7 +18,7 @@ n = 1000
 
 
 # Asia
-arcs = rbind(
+arcs_mat = rbind(
 		#	A	S	T	L	B	E	X	D
 		c(0,	0,	1,	0,	0,	0,	0,	0),	#A
 		c(0,	0,	0,	1,	1,	0,	0,	0),	#S
@@ -30,8 +30,8 @@ arcs = rbind(
 		c(0,	0,	0,	0,	0,	0,	0,	0)	#D
 		)
 node_names = c("A", "S", "T", "L", "B", "E", "X", "D")
-dimnames(arcs)[[1]] = node_names
-dimnames(arcs)[[2]] = node_names
+dimnames(arcs_mat)[[1]] = node_names
+dimnames(arcs_mat)[[2]] = node_names
 
 input_Probs = list(
 		c(0.1),									# P(A)
@@ -51,9 +51,9 @@ cardinalities = c(2,	3,	2,	2,	3,	2,	2,	2)
 
 
 # Check DAG
-check_dag_arcs = as.matrix(arcs)
+check_dag_arcs = as.matrix(arcs_mat)
 if (is_DAG(check_dag_arcs) == FALSE) {
-	stop("arcs must a DAG")
+	stop("arcs_mat must a DAG")
 }
 
 # Check Sample Size
@@ -74,7 +74,7 @@ if (n < 10000) {
 
 
 # Node 개수
-num_of_nodes = dim(arcs)[1];
+num_of_nodes = dim(arcs_mat)[1];
 
 
 # node_names가 NULL이면 임의로 node 이름을 부여한다.
@@ -94,14 +94,14 @@ if (is.null(cardinalities)) {
 
 
 # 각 Node의 Parent Node 개수
-num_of_parent_nodes = apply(arcs, 2, sum);
+num_of_parent_nodes = apply(arcs_mat, 2, sum);
 
 list_parent_nodes = list();
 for(i in 1:num_of_nodes) {
-	if (length(which(arcs[,i]==1)) == 0) {
+	if (length(which(arcs_mat[,i]==1)) == 0) {
 		list_parent_nodes[[i]] = NULL;
 	} else {
-		list_parent_nodes[[i]] = which(arcs[,i]==1);
+		list_parent_nodes[[i]] = which(arcs_mat[,i]==1);
 	}
 }
 

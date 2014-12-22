@@ -10,7 +10,7 @@ source("include_sources.R", encoding="utf8")
 
 
 ##### Start
-# set.seed(1234)
+set.seed(1234)
 require(bnlearn)
 
 
@@ -19,14 +19,14 @@ n = 1000
 nodes = 10
 temp = make_topology(nodes, topology = "Collapse")
 target_arcs_mat = temp$arcs_mat
-res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
+res = BN_Data_Generator(temp$arcs_mat, temp$Probs, n, temp$node_names)
 node_names = res$node_names
 data = res$data
 
 
 # temp = gen_asia()
 # target_arcs_mat = temp$arcs_mat
-# res = BN_Data_Generator(temp$arcs, temp$Probs, n, temp$node_names)
+# res = BN_Data_Generator(temp$arcs_mat, temp$Probs, n, temp$node_names)
 # data = res$data
 # node_names = res$node_names
 
@@ -42,8 +42,8 @@ data = res$data
 # data = temp$data
 # res = temp$res
 
-# arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
-# arcs
+# arcs_mat = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+# arcs_mat
 
 
 # source("real_alarm.R", encoding="utf8")
@@ -59,7 +59,7 @@ data = res$data
 
 # nodes = dim(data)[2]
 # node_names = names(data)
-# target_arcs_mat = fromto_to_mat(res$arcs, node_names)
+# target_arcs_mat = fromto_to_mat(res$arcs_mat, node_names)
 
 
 

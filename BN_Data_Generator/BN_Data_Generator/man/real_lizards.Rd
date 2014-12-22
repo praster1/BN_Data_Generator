@@ -61,8 +61,8 @@ function (n, rep = T)
     data = lizards[sample(c(1:409), n, rep = rep), ]
     res = empty.graph(names(lizards))
     modelstring(res) = "[Species][Diameter|Species][Height|Species]"
-    arcs = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
-    result = list(arcs_mat = arcs, node_names = dimnames(data)[[2]], 
+    arcs_mat = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
+    result = list(arcs_mat = arcs_mat, node_names = dimnames(data)[[2]], 
         data = data, res = res)
     return(result)
   }

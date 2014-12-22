@@ -1,11 +1,11 @@
-is_DAG = function (amat) 
+is_DAG = function (arcs_mat) 
 {
-	unmakeMG = function (amat) 
+	unmakeMG = function (arcs_mat) 
 	{
-		d = nrow(amat)
-		ug = dg = bg = amat
+		d = nrow(arcs_mat)
+		ug = dg = bg = arcs_mat
 		M = expand.grid(dg = 0:1, ug = 0:1, bg = 0:1)
-		i = strtoi(as.character(amat), 2)
+		i = strtoi(as.character(arcs_mat), 2)
 		GG = M[i + 1, ]
 		ug[, ] = GG[, 2]
 		dg[, ] = GG[, 1]
@@ -17,14 +17,14 @@ is_DAG = function (amat)
 		return(list(dg = dg, ug = ug, bg = bg))
 	}
 
-    comp = unmakeMG(amat)
+    comp = unmakeMG(arcs_mat)
     ug = comp$ug
     dag = comp$dg
     bg = comp$bg
     
 	out = TRUE
 	
-    if (any(amat > 100)) {
+    if (any(arcs_mat > 100)) {
         warning("There are double edges.")
         out = FALSE
     }

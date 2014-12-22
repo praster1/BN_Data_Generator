@@ -8,12 +8,12 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-is_DAG(amat)
+is_DAG(arcs_mat)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{amat}{
-%%     ~~Describe \code{amat} here~~
+  \item{arcs_mat}{
+%%     ~~Describe \code{arcs_mat} here~~
 }
 }
 \details{
@@ -47,13 +47,13 @@ is_DAG(amat)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (amat) 
+function (arcs_mat) 
 {
-    unmakeMG = function(amat) {
-        d = nrow(amat)
-        ug = dg = bg = amat
+    unmakeMG = function(arcs_mat) {
+        d = nrow(arcs_mat)
+        ug = dg = bg = arcs_mat
         M = expand.grid(dg = 0:1, ug = 0:1, bg = 0:1)
-        i = strtoi(as.character(amat), 2)
+        i = strtoi(as.character(arcs_mat), 2)
         GG = M[i + 1, ]
         ug[, ] = GG[, 2]
         dg[, ] = GG[, 1]
@@ -64,12 +64,12 @@ function (amat)
             stop("Undirected edges are wrongly coded.")
         return(list(dg = dg, ug = ug, bg = bg))
     }
-    comp = unmakeMG(amat)
+    comp = unmakeMG(arcs_mat)
     ug = comp$ug
     dag = comp$dg
     bg = comp$bg
     out = TRUE
-    if (any(amat > 100)) {
+    if (any(arcs_mat > 100)) {
         warning("There are double edges.")
         out = FALSE
     }

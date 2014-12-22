@@ -8,12 +8,12 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-BN_Data_Generator(arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
+BN_Data_Generator(arcs_mat, input_Probs, n, node_names = NULL, cardinalities = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{arcs}{
-%%     ~~Describe \code{arcs} here~~
+  \item{arcs_mat}{
+%%     ~~Describe \code{arcs_mat} here~~
 }
   \item{input_Probs}{
 %%     ~~Describe \code{input_Probs} here~~
@@ -59,7 +59,7 @@ BN_Data_Generator(arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL) 
+function (arcs_mat, input_Probs, n, node_names = NULL, cardinalities = NULL) 
 {
     if (n <= 0) {
         stop("Sample size 'n' must be greater than 0.")
@@ -70,10 +70,10 @@ function (arcs, input_Probs, n, node_names = NULL, cardinalities = NULL)
     else {
         temp_n = n
     }
-    num_of_nodes = dim(arcs)[1]
+    num_of_nodes = dim(arcs_mat)[1]
     result_mat = matrix(0, temp_n, num_of_nodes)
     dimnames(result_mat)[[2]] = node_names
-    checker = check_cardinalities(arcs = arcs, node_names = node_names, 
+    checker = check_cardinalities(arcs_mat = arcs_mat, node_names = node_names, 
         cardinalities = cardinalities)
     cardinalities = checker$cardinalities
     node_names = checker$node_names

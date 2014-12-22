@@ -19,42 +19,42 @@ make_topology = function (nodes, topology = "Collapse", input_Probs = NULL, node
 	)
 	
 	
-	# arcs_mat
-	arcs = matrix(0, nodes, nodes);
+	# arcs_mat_mat
+	arcs_mat = matrix(0, nodes, nodes);
 	switch (topology,
-		"Collapse" = {	arcs[,nodes] = 1;
-								arcs[nodes,nodes] = 0;
+		"Collapse" = {	arcs_mat[,nodes] = 1;
+								arcs_mat[nodes,nodes] = 0;
 							},
 		"Line" = {	for (i in 1:(nodes-1))
 						{
-							arcs[i,(i+1)] = 1
+							arcs_mat[i,(i+1)] = 1
 						}
 					},
-		"Star" = {	arcs[1,] = 1
-						arcs[1,1] = 0
+		"Star" = {	arcs_mat[1,] = 1
+						arcs_mat[1,1] = 0
 					},
-		"PseudoLoop" = {	arcs[1, nodes] = 1
+		"PseudoLoop" = {	arcs_mat[1, nodes] = 1
 									for (i in 1:(nodes-1))
 									{
-										arcs[i,(i+1)] = 1
+										arcs_mat[i,(i+1)] = 1
 									}
 								},
-		"Diamond" = {	arcs[1,] = 1
-								arcs[1,1] = 0
-								arcs[,nodes] = 1
-								arcs[1,nodes] = 0
-								arcs[nodes,nodes] = 0
+		"Diamond" = {	arcs_mat[1,] = 1
+								arcs_mat[1,1] = 0
+								arcs_mat[,nodes] = 1
+								arcs_mat[1,nodes] = 0
+								arcs_mat[nodes,nodes] = 0
 							},
-		"Rhombus" = {	arcs[1,] = 1
-								arcs[2,] = 1
-								arcs[(1:2),(1:2)] = 0
-								arcs[nodes,nodes] = 0
+		"Rhombus" = {	arcs_mat[1,] = 1
+								arcs_mat[2,] = 1
+								arcs_mat[(1:2),(1:2)] = 0
+								arcs_mat[nodes,nodes] = 0
 							},
 	)
 	
 	
 	# Check Input Probs & Cardinalities
-	checker = check_cardinalities(arcs = arcs, node_names = node_names, cardinalities = cardinalities)
+	checker = check_cardinalities(arcs_mat = arcs_mat, node_names = node_names, cardinalities = cardinalities)
 	cardinalities = checker$cardinalities;
 	num_of_probs = checker$num_of_probs;
 	node_names = checker$node_names;
@@ -114,7 +114,7 @@ make_topology = function (nodes, topology = "Collapse", input_Probs = NULL, node
 	}
 	
 	
-	result = list(	arcs_mat = arcs,
+	result = list(	arcs_mat = arcs_mat,
 						Probs = input_Probs,
 						node_names = node_names,
 						cardinalities = cardinalities,

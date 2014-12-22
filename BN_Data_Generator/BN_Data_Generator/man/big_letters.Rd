@@ -8,12 +8,12 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-big_letters(size)
+big_letters(char_size)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{size}{
-%%     ~~Describe \code{size} here~~
+  \item{char_size}{
+%%     ~~Describe \code{char_size} here~~
 }
 }
 \details{
@@ -47,7 +47,7 @@ big_letters(size)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (size) 
+function (char_size) 
 {
     letters_list = list()
     letters_list[[1]] = letters
@@ -57,7 +57,7 @@ function (size)
         for (i in 1:len_letters_list) {
             num_of_letters = num_of_letters + length(letters_list[[i]])
         }
-        if (num_of_letters < size) {
+        if (num_of_letters < char_size) {
             merge_mat = merge(letters, letters_list[[len_letters_list]])
             letters_list[[len_letters_list + 1]] = sort(paste(merge_mat[, 
                 1], merge_mat[, 2], sep = ""))
@@ -71,7 +71,7 @@ function (size)
         result = c(result, letters_list[[i]])
     }
     result = sort(result)
-    return(result[1:size])
+    return(result[1:char_size])
   }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

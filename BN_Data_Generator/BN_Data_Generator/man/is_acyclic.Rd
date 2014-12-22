@@ -8,12 +8,12 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-is_acyclic(amat)
+is_acyclic(arcs_mat)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{amat}{
-%%     ~~Describe \code{amat} here~~
+  \item{arcs_mat}{
+%%     ~~Describe \code{arcs_mat} here~~
 }
 }
 \details{
@@ -47,12 +47,12 @@ is_acyclic(amat)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (amat) 
+function (arcs_mat) 
 {
-    transClos = function(amat) {
-        if (nrow(amat) == 1) 
-            return(amat)
-        A = amat
+    transClos = function(arcs_mat) {
+        if (nrow(arcs_mat) == 1) 
+            return(arcs_mat)
+        A = arcs_mat
         diag(A) = 1
         repeat {
             B = sign(A \%*\% A)
@@ -63,7 +63,7 @@ function (amat)
         diag(A) = 0
         A
     }
-    B = transClos(amat)
+    B = transClos(arcs_mat)
     l = B[lower.tri(B)]
     u = t(B)[lower.tri(t(B))]
     com = (l & u)

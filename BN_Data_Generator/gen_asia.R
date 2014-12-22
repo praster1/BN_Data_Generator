@@ -2,7 +2,7 @@
 
 gen_asia = function()
 {
-	arcs = rbind(
+	arcs_mat = rbind(
 			#	A	S	T	L	B	E	X	D
 			c(0,	0,	1,	0,	0,	0,	0,	0),	#A
 			c(0,	0,	0,	1,	1,	0,	0,	0),	#S
@@ -15,8 +15,8 @@ gen_asia = function()
 			)
 	
 	node_names = c("A", "S", "T", "L", "B", "E", "X", "D")
-	dimnames(arcs)[[1]] = node_names
-	dimnames(arcs)[[2]] = node_names
+	dimnames(arcs_mat)[[1]] = node_names
+	dimnames(arcs_mat)[[2]] = node_names
 
 	
 	input_Probs = list(
@@ -34,7 +34,7 @@ gen_asia = function()
 	cardinalities = rep(2, num_of_nodes)
 	
 	
-	result = list(	arcs_mat = arcs,
+	result = list(	arcs_mat = arcs_mat,
 						Probs = input_Probs,
 						node_names = node_names,
 						cardinalities = cardinalities,

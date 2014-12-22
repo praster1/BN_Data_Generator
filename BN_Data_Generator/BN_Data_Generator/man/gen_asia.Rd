@@ -44,20 +44,20 @@ gen_asia()
 ## The function is currently defined as
 function () 
 {
-    arcs = rbind(c(0, 0, 1, 0, 0, 0, 0, 0), c(0, 0, 0, 1, 1, 
-        0, 0, 0), c(0, 0, 0, 0, 0, 1, 0, 0), c(0, 0, 0, 0, 0, 
-        1, 0, 0), c(0, 0, 0, 0, 0, 0, 0, 1), c(0, 0, 0, 0, 0, 
-        0, 1, 1), c(0, 0, 0, 0, 0, 0, 0, 0), c(0, 0, 0, 0, 0, 
-        0, 0, 0))
+    arcs_mat = rbind(c(0, 0, 1, 0, 0, 0, 0, 0), c(0, 0, 0, 1, 
+        1, 0, 0, 0), c(0, 0, 0, 0, 0, 1, 0, 0), c(0, 0, 0, 0, 
+        0, 1, 0, 0), c(0, 0, 0, 0, 0, 0, 0, 1), c(0, 0, 0, 0, 
+        0, 0, 1, 1), c(0, 0, 0, 0, 0, 0, 0, 0), c(0, 0, 0, 0, 
+        0, 0, 0, 0))
     node_names = c("A", "S", "T", "L", "B", "E", "X", "D")
-    dimnames(arcs)[[1]] = node_names
-    dimnames(arcs)[[2]] = node_names
+    dimnames(arcs_mat)[[1]] = node_names
+    dimnames(arcs_mat)[[2]] = node_names
     input_Probs = list(c(0.01), c(0.5), c(0.05, 0.01), c(0.1, 
         0.01), c(0.6, 0.3), c(1, 1, 1, 0), c(0.98, 0.05), c(0.9, 
         0.7, 0.8, 0.1))
     num_of_nodes = length(node_names)
     cardinalities = rep(2, num_of_nodes)
-    result = list(arcs_mat = arcs, Probs = input_Probs, node_names = node_names, 
+    result = list(arcs_mat = arcs_mat, Probs = input_Probs, node_names = node_names, 
         cardinalities = cardinalities, num_of_nodes = num_of_nodes)
     return(result)
   }

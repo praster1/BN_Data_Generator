@@ -8,12 +8,12 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-check_cardinalities(arcs, node_names = NULL, cardinalities = NULL)
+check_cardinalities(arcs_mat, node_names = NULL, cardinalities = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{arcs}{
-%%     ~~Describe \code{arcs} here~~
+  \item{arcs_mat}{
+%%     ~~Describe \code{arcs_mat} here~~
 }
   \item{node_names}{
 %%     ~~Describe \code{node_names} here~~
@@ -53,13 +53,13 @@ check_cardinalities(arcs, node_names = NULL, cardinalities = NULL)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (arcs, node_names = NULL, cardinalities = NULL) 
+function (arcs_mat, node_names = NULL, cardinalities = NULL) 
 {
-    check_dag_arcs = as.matrix(arcs)
+    check_dag_arcs = as.matrix(arcs_mat)
     if (is_DAG(check_dag_arcs) == FALSE) {
-        stop("arcs must a DAG")
+        stop("arcs_mat must a DAG")
     }
-    num_of_nodes = dim(arcs)[1]
+    num_of_nodes = dim(arcs_mat)[1]
     if (is.null(node_names)) {
         node_names = big_letters(num_of_nodes)
     }
@@ -72,14 +72,14 @@ function (arcs, node_names = NULL, cardinalities = NULL)
     else if (num_of_nodes != length(cardinalities)) {
         stop("Wrong length of cardinalities")
     }
-    num_of_parent_nodes = apply(arcs, 2, sum)
+    num_of_parent_nodes = apply(arcs_mat, 2, sum)
     list_parent_nodes = list()
     for (m in 1:num_of_nodes) {
-        if (length(which(arcs[, m] == 1)) == 0) {
+        if (length(which(arcs_mat[, m] == 1)) == 0) {
             list_parent_nodes[[m]] = NULL
         }
         else {
-            list_parent_nodes[[m]] = which(arcs[, m] == 1)
+            list_parent_nodes[[m]] = which(arcs_mat[, m] == 1)
         }
     }
     num_of_root_nodes = sum(num_of_parent_nodes == 0)

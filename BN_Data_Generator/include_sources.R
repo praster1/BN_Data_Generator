@@ -1,5 +1,5 @@
-source("is_acyclic.R", encoding="utf8")					# is_acyclic = function (amat) 
-source("is_DAG.R", encoding="utf8")						# is_DAG = function (amat) 
+source("is_acyclic.R", encoding="utf8")				# is_acyclic = function (arcs_mat) 
+source("is_DAG.R", encoding="utf8")					# is_DAG = function (arcs_mat) 
 
 source("big_letters.R", encoding="utf8")				# big_letters = function(size)
 source("toss_value.R", encoding="utf8")				# tosscoin = function (times, makespace = FALSE)

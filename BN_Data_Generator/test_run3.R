@@ -11,7 +11,7 @@ require(bnlearn)
 n = 1000
 
 # Asia
-arcs = rbind(
+arcs_mat = rbind(
 		#	A	S	T	L	B	E	X	D
 		c(0,	0,	1,	0,	0,	0,	0,	0),	#A
 		c(0,	0,	0,	1,	1,	0,	0,	0),	#S
@@ -23,8 +23,8 @@ arcs = rbind(
 		c(0,	0,	0,	0,	0,	0,	0,	0)	#D	
 		)
 node_names = c("A", "S", "T", "L", "B", "E", "X", "D")
-dimnames(arcs)[[1]] = node_names
-dimnames(arcs)[[2]] = node_names
+dimnames(arcs_mat)[[1]] = node_names
+dimnames(arcs_mat)[[2]] = node_names
 
 input_Probs = list(
 		c(0.1),									# P(A)
@@ -42,13 +42,13 @@ input_Probs = list(
 cardinalities = c(2,	3,	2,	2,	3,	2,	2,	2)
 
 # check_cardinalities
-res1 = check_cardinalities(arcs, node_names, cardinalities)
+res1 = check_cardinalities(arcs_mat, node_names, cardinalities)
 res1
 
 
 
 
-res2 = BN_Data_Generator(arcs, input_Probs, n, node_names, cardinalities)
+res2 = BN_Data_Generator(arcs_mat, input_Probs, n, node_names, cardinalities)
 res2
 data = res2$data
 
