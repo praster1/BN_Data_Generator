@@ -1,6 +1,6 @@
-fromto_to_mat = function(input_arcs, node_names)
+fromto_to_mat = function(fromto, node_names)
 {
-	if(dim(input_arcs)[1] == 0)
+	if(dim(fromto)[1] == 0)
 	{
 		stop("It has not any arc");
 	}
@@ -9,7 +9,7 @@ fromto_to_mat = function(input_arcs, node_names)
 	arcs_mat = matrix(0, num_of_nodes, num_of_nodes)
 
 	arcs_order_mat = cbind(node_names, c(1:length(node_names)))
-	temp_arcs = cbind(match(input_arcs[,1], arcs_order_mat), match(input_arcs[,2], arcs_order_mat))
+	temp_arcs = cbind(match(fromto[,1], arcs_order_mat), match(fromto[,2], arcs_order_mat))
 
 
 	if (length(temp_arcs) > 0)

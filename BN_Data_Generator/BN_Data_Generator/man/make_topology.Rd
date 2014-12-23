@@ -62,8 +62,8 @@ make_topology(nodes, topology = "Collapse", input_Probs = NULL, node_names = NUL
 function (nodes, topology = "Collapse", input_Probs = NULL, node_names = NULL, 
     cardinalities = NULL) 
 {
-    NeedMoreNodes = function(nodes) {
-        if (nodes < nodes) 
+    NeedMoreNodes = function(num_of_nodes) {
+        if (nodes < num_of_nodes) 
             stop("Need More Nodes!")
     }
     switch(topology, Collapse = {

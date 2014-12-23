@@ -3,9 +3,9 @@
 make_topology = function (nodes, topology = "Collapse", input_Probs = NULL, node_names = NULL, cardinalities = NULL)
 {
 	# Check Num of Nodes
-	NeedMoreNodes = function(nodes)
+	NeedMoreNodes = function(num_of_nodes)
 	{
-		if(nodes < nodes)
+		if(nodes < num_of_nodes)
 			stop("Need More Nodes!");
 	}
 	

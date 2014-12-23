@@ -8,12 +8,12 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-fromto_to_mat(input_arcs, node_names)
+fromto_to_mat(fromto, node_names)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{input_arcs}{
-%%     ~~Describe \code{input_arcs} here~~
+  \item{fromto}{
+%%     ~~Describe \code{fromto} here~~
 }
   \item{node_names}{
 %%     ~~Describe \code{node_names} here~~
@@ -50,16 +50,16 @@ fromto_to_mat(input_arcs, node_names)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (input_arcs, node_names) 
+function (fromto, node_names) 
 {
-    if (dim(input_arcs)[1] == 0) {
+    if (dim(fromto)[1] == 0) {
         stop("It has not any arc")
     }
     num_of_nodes = length(node_names)
     arcs_mat = matrix(0, num_of_nodes, num_of_nodes)
     arcs_order_mat = cbind(node_names, c(1:length(node_names)))
-    temp_arcs = cbind(match(input_arcs[, 1], arcs_order_mat), 
-        match(input_arcs[, 2], arcs_order_mat))
+    temp_arcs = cbind(match(fromto[, 1], arcs_order_mat), match(fromto[, 
+        2], arcs_order_mat))
     if (length(temp_arcs) > 0) {
         for (i in 1:dim(temp_arcs)[1]) {
             from = as.numeric(temp_arcs[i, 1])
