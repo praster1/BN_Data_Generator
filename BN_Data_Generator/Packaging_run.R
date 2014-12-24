@@ -47,7 +47,12 @@ require(tools)
 Rd = parse_Rd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator/man/BN_Data_Generator-package.Rd", verbose=TRUE)
 
 
+##### run at terminal
+setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator/man")
+system("R CMD Rd2pdf .")
+
+
 
 ##### run at terminal
 setwd("~/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator/man")
-system("R CMD Rd2pdf .")
+system("R CMD Rd2pdf --no-preview --no-clean .")

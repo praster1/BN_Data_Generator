@@ -1,0 +1,433 @@
+\documentclass[letterpaper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8,latin1]{inputenc}
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package 'BN\_Data\_Generator'}}
+\par\bigskip{\large \today}
+\end{center}
+
+{\textbf{Type} Package}
+
+{\textbf{Title} Data Generator based on Bayesian Network Model}
+
+{\textbf{Version} 1.0}
+
+{\textbf{Date} 2014-12-24}
+
+{\textbf{Depends} \R{} (>=3.1.2)}
+
+{\textbf{Suggests} bnlearn}
+
+{\textbf{Author} Jae-seong Yoo}
+
+{\textbf{Maintainer} Jae-seong Yoo <praster1@gmail.com>}
+
+{\textbf{Description} Previous tools suffer from serious trade-off between cost and complexity, restricting most studies relevant to Bayesian network to using only real data. To address such problem, a data generator based on Bayesian network model using R is built and introduced.}
+
+{\textbf{URL} \url{http://www.github.com/praster1/BN\_Data\_Generator}}
+
+{\textbf{License} GPL (>=2)}
+
+{\textbf{Repository} CRAN}
+
+\Rdcontents{\R{} topics documented:}
+\inputencoding{utf8}
+\HeaderA{BN\_Data\_Generator-package}{Data Generator based on Bayesian Network Model}{BN.Rul.Data.Rul.Generator.Rdash.package}
+\aliasA{BN\_Data\_Generator}{BN\_Data\_Generator-package}{BN.Rul.Data.Rul.Generator}
+\keyword{Bayesian Network}{BN\_Data\_Generator-package}
+%
+\begin{Details}\relax
+
+
+\Tabular{ll}{
+Package: & BN\_Data\_Generator\\{}
+Type: & Package\\{}
+Version: & 1.0\\{}
+Date: & 2014-12-24\\{}
+License: & GPL (>=2)\\{}
+}
+\end{Details}
+%
+\begin{Author}\relax
+Jae-seong Yoo <praster1@gmail.com>
+\end{Author}
+%
+\begin{References}\relax
+Jae-seong Yoo, (2014), "A Study on Comparison of Bayesian Network Structure Learning Algorithms for Selecting Appropriate Models", M.S. thesis, Department of Statistics, Korea University, Seoul.
+\end{References}
+%
+\begin{SeeAlso}\relax
+\textasciitilde{}\textasciitilde{} Optional links to other man pages, e.g. \textasciitilde{}\textasciitilde{}
+\textasciitilde{}\textasciitilde{} \code{\LinkA{<pkg>}{<pkg>}} \textasciitilde{}\textasciitilde{}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+~~ simple examples of the most important functions ~~
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{big\_letters}{}{big.Rul.letters}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{big\_letters}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{big\_letters}
+%
+\begin{Description}\relax
+the 26 lower-case letters of the Roman alphabet;
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+	big_letters(len)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{len}] 
+
+
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{BN\_Data\_Generator}{Data Generator based on Bayesian Network Model}{BN.Rul.Data.Rul.Generator}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{BN\_Data\_Generator}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{BN\_Data\_Generator}
+%
+\begin{Description}\relax
+Data Generator based on Bayesian Network Model
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+BN_Data_Generator(arcs_mat, input_Probs, n, node_names = NULL, cardinalities = NULL)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{arcs\_mat}]  A matrix that determines the arcs.
+
+\item[\code{input\_Probs}]  The conditional probabilities. 
+\item[\code{n}]  Data size. 
+\item[\code{node\_names}]  The names of each nodes. 
+\item[\code{cardinalities}]  The cardinalities of each nodes. 
+\end{ldescription}
+\end{Arguments}
+%
+\begin{References}\relax
+Jae-seong Yoo, (2014), "A Study on Comparison of Bayesian Network Structure Learning Algorithms for Selecting Appropriate Models", M.S. thesis, Department of Statistics, Korea University, Seoul.
+\end{References}
+\inputencoding{utf8}
+\HeaderA{check\_cardinalities}{}{check.Rul.cardinalities}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{check\_cardinalities}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{check\_cardinalities}
+%
+\begin{Usage}
+\begin{verbatim}
+check_cardinalities(arcs_mat, node_names = NULL, cardinalities = NULL)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{arcs\_mat}]  A matrix that determines the arcs. 
+\item[\code{node\_names}]  The names of each nodes. 
+\item[\code{cardinalities}]  The cardinalities of each nodes. 
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{C\_M\_WO\_WC}{}{C.Rul.M.Rul.WO.Rul.WC}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{C\_M\_WO\_WC}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{C\_M\_WO\_WC}
+%
+\begin{Description}\relax
+The existence of the known network structures allows us to define three important terms which indicate the performance of the algorithm (in terms of the number of graphical errors in the learnt structure).
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+	C_M_WO_WC(target_arcs_mat, learnt_arcs_mat)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{target\_arcs\_mat}]  A matrix of known network structure. 
+\item[\code{learnt\_arcs\_mat}]  A matrix of learnt network structure. 
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+\begin{ldescription}
+\item[\code{C (Correct Arcs)}] Edges present in the original network and in the learnt network structure.
+\item[\code{M (Missing Arcs)}] Edges present in the original network but not in the learnt network structure.
+\item[\code{WO (Wrongly Oriented Arcs)}] Edges present in the learnt network structure, but having opposite orientation when compared with the corresponding edge in the original network structure.
+\item[\code{WC (Wrongly Corrected Arcs)}] Edges not present in the original network but included in the learnt network structure.
+\end{ldescription}
+\end{Value}
+%
+\begin{References}\relax
+X.-w. Chen, G. Anantha, and X. Wang, (2006), An effective structure learning method for constructing gene networks, Bioinformatics, Vol. 22, 1367-1374.
+\end{References}
+\inputencoding{utf8}
+\HeaderA{fromto\_to\_mat}{}{fromto.Rul.to.Rul.mat}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{fromto\_to\_mat}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{fromto\_to\_mat}
+%
+\begin{Usage}
+\begin{verbatim}
+	fromto_to_mat(fromto, node_names)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{fromto}]  aa 
+\item[\code{node\_names}]  The names of each nodes. 
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{gen\_asia}{}{gen.Rul.asia}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{gen\_asia}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{gen\_asia}
+%
+\begin{Usage}
+\begin{verbatim}
+gen_asia()
+\end{verbatim}
+\end{Usage}
+\inputencoding{utf8}
+\HeaderA{is\_acyclic}{}{is.Rul.acyclic}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{is\_acyclic}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{is\_acyclic}
+%
+\begin{Description}\relax
+This function checks for each node in a DAG whether backtracing arcs leading to it results in an "infinite recursion" error indicating that there actually is a cyclic part in the DAG (which then obviously seems not to be a DAG).
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+	is_acyclic(arcs_mat)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{arcs\_mat}]  A matrix that determines the arcs. 
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A list with two elements. acyclic is a boolean indicating whether the DAG is acyclic (=TRUE) or contains a cyclic component (=FALSE). nodewise is a vector containing 1 boolean per node in the DAG, TRUE indicating that backtracing from this node does not lead to a cyclic component, FALSE indicating that backtracing from this node leads to a cyclic component.
+\end{Value}
+%
+\begin{SeeAlso}\relax
+\code{\LinkA{is\_DAG}{is.Rul.DAG}}
+\end{SeeAlso}
+\inputencoding{utf8}
+\HeaderA{is\_DAG}{}{is.Rul.DAG}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{is\_DAG}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{is\_DAG}
+%
+\begin{Description}\relax
+This function tests whether the given graph is a DAG, a directed acyclic graph.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+	is_DAG(arcs_mat)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{arcs\_mat}]  A matrix that determines the arcs. 
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Details}\relax
+is\_dag checks whether there is a directed cycle in the graph. If not, the graph is a DAG.
+\end{Details}
+%
+\begin{Value}
+A logical vector of length one.
+\end{Value}
+%
+\begin{SeeAlso}\relax
+\code{\LinkA{is\_acyclic}{is.Rul.acyclic}}
+\end{SeeAlso}
+\inputencoding{utf8}
+\HeaderA{make\_topology}{}{make.Rul.topology}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{make\_topology}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{make\_topology}
+%
+\begin{Description}\relax
+Bayesian Networks with varying topologies (DAGs) with number of nodes.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+	make_topology(nodes, topology = "Collapse", input_Probs = NULL, node_names = NULL, cardinalities = NULL)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{nodes}]  The number of nodes. 
+\item[\code{topology}]  Geometric characteristic. 
+\item[\code{input\_Probs}]  The conditional probabilities. 
+\item[\code{node\_names}]  The names of each nodes. 
+\item[\code{cardinalities}]  The cardinalities of each nodes. 
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Details}\relax
+The volume of the manifold is a geometric characteristic associated with the BN<e2><80><99>s topology. Each BN produces a different magnitude of the volume based on the BN<e2><80><99>s DAG.
+<e2><80><9c>Collapse<e2><80><9d>, <e2><80><9c>Line<e2><80><9d>, <e2><80><9c>Star<e2><80><9d>, <e2><80><9c>PseudoLoop<e2><80><9d>, <e2><80><9c>Diamond<e2><80><9d>, <e2><80><9c>Rhombus<e2><80><9d>.
+\end{Details}
+%
+\begin{References}\relax
+Eitel J. M. L., (2008), An Information-geometric approach to learning Bayesian network topologies from data, Innovations in Bayesian Networks Studies in Computational Intelligence, Vol. 156, 187-217.
+\end{References}
+\inputencoding{utf8}
+\HeaderA{mat\_to\_fromto}{}{mat.Rul.to.Rul.fromto}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{mat\_to\_fromto}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{mat\_to\_fromto}
+%
+\begin{Usage}
+\begin{verbatim}
+mat_to_fromto(arcs_mat)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{arcs\_mat}]  A matrix that determines the arcs. 
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{real\_alarm}{}{real.Rul.alarm}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{real\_alarm}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{real\_alarm}
+%
+\begin{Usage}
+\begin{verbatim}
+	real_alarm(n, rep = T)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{n}]  Data size. 
+\item[\code{rep}]  Should sampling be with replacement? 
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{real\_asia}{}{real.Rul.asia}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{real\_asia}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{real\_asia}
+%
+\begin{Usage}
+\begin{verbatim}
+	real_asia(n, rep = T)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{n}]  Data size. 
+\item[\code{rep}]  Should sampling be with replacement? 
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{real\_hailfinder}{}{real.Rul.hailfinder}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{real\_hailfinder}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{real\_hailfinder}
+%
+\begin{Usage}
+\begin{verbatim}
+real_hailfinder(n, rep = T)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{n}]  Data size. 
+\item[\code{rep}]  Should sampling be with replacement? 
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{real\_insurance}{}{real.Rul.insurance}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{real\_insurance}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{real\_insurance}
+%
+\begin{Usage}
+\begin{verbatim}
+	real_insurance(n, rep = T)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{n}]  Data size. 
+\item[\code{rep}]  Should sampling be with replacement? 
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{real\_lizards}{}{real.Rul.lizards}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{real\_lizards}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{real\_lizards}
+%
+\begin{Usage}
+\begin{verbatim}
+	real_lizards(n, rep = T)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{n}]  Data size. 
+\item[\code{rep}]  Should sampling be with replacement? 
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{toss\_value}{}{toss.Rul.value}
+\keyword{\textbackslash{}textasciitilde{}kwd1}{toss\_value}
+\keyword{\textbackslash{}textasciitilde{}kwd2}{toss\_value}
+%
+\begin{Description}\relax
+Sets up a sample space for the experiment of tossing a coin repeatedly with the outcomes "H" or "T".
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+	toss_value(times, num_of_cases, makespace = FALSE)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{times}]  Number of tosses. 
+\item[\code{num\_of\_cases}]  Cardinality. 
+\item[\code{makespace}]  Logical. 
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A data frame, with an equally likely probs column if makespace is TRUE.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+	toss_value(1, 3)
+	toss_value(2, 3)
+	toss_value(3, 4, makespace = TRUE)
+\end{ExampleCode}
+\end{Examples}
+\printindex{}
+\end{document}

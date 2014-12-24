@@ -1,43 +1,42 @@
 \name{toss_value}
 \alias{toss_value}
 %- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 %%  ~~function to do ... ~~
 }
+
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+	Sets up a sample space for the experiment of tossing a coin repeatedly with the outcomes "H" or "T".
 }
+
 \usage{
-toss_value(times, num_of_cases, makespace = FALSE)
+	toss_value(times, num_of_cases, makespace = FALSE)
 }
+
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{times}{
-%%     ~~Describe \code{times} here~~
+  \item{times}{ Number of tosses. }
+  \item{num_of_cases}{ Cardinality. }
+  \item{makespace}{ Logical. }
 }
-  \item{num_of_cases}{
-%%     ~~Describe \code{num_of_cases} here~~
-}
-  \item{makespace}{
-%%     ~~Describe \code{makespace} here~~
-}
-}
+
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
+
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+	A data frame, with an equally likely probs column if makespace is TRUE.
 }
+
 \references{
 %% ~put references to the literature/web site here ~
 }
+
 \author{
 %%  ~~who you are~~
 }
+
 \note{
 %%  ~~further notes~~
 }
@@ -47,26 +46,13 @@ toss_value(times, num_of_cases, makespace = FALSE)
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
-function (times, num_of_cases, makespace = FALSE) 
-{
-    mat_values = merge("Value", c(1:num_of_cases))
-    temp = list()
-    for (i in 1:times) {
-        temp[[i]] = paste(mat_values[, 1], mat_values[, 2], sep = "")
-    }
-    res = expand.grid(temp, KEEP.OUT.ATTRS = FALSE)
-    names(res) = c(paste(rep("toss", times), 1:times, sep = ""))
-    if (makespace) 
-        res$probs = rep(1, 2^times)/2^times
-    return(res)
-  }
+\examples{
+	toss_value(1, 3)
+	toss_value(2, 3)
+	toss_value(3, 4, makespace = TRUE)
 }
+
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ ~kwd1 }

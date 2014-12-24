@@ -4,28 +4,28 @@
 \title{
 %%  ~~function to do ... ~~
 }
+
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+	This function checks for each node in a DAG whether backtracing arcs leading to it results in an "infinite recursion" error indicating that there actually is a cyclic part in the DAG (which then obviously seems not to be a DAG).
 }
+
 \usage{
-is_acyclic(arcs_mat)
+	is_acyclic(arcs_mat)
 }
+
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{arcs_mat}{
-%%     ~~Describe \code{arcs_mat} here~~
+  \item{arcs_mat}{ A matrix that determines the arcs. }
 }
-}
+
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
+
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+	A list with two elements. acyclic is a boolean indicating whether the DAG is acyclic (=TRUE) or contains a cyclic component (=FALSE). nodewise is a vector containing 1 boolean per node in the DAG, TRUE indicating that backtracing from this node does not lead to a cyclic component, FALSE indicating that backtracing from this node leads to a cyclic component.
 }
+
 \references{
 %% ~put references to the literature/web site here ~
 }
@@ -39,37 +39,13 @@ is_acyclic(arcs_mat)
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+	\code{\link{is_DAG}}
 }
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
-function (arcs_mat) 
-{
-    transClos = function(arcs_mat) {
-        if (nrow(arcs_mat) == 1) 
-            return(arcs_mat)
-        A = arcs_mat
-        diag(A) = 1
-        repeat {
-            B = sign(A \%*\% A)
-            if (all(B == A)) 
-                break
-            else A = B
-        }
-        diag(A) = 0
-        A
-    }
-    B = transClos(arcs_mat)
-    l = B[lower.tri(B)]
-    u = t(B)[lower.tri(t(B))]
-    com = (l & u)
-    return(all(!com))
-  }
+\examples{
+
 }
+
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ ~kwd1 }
