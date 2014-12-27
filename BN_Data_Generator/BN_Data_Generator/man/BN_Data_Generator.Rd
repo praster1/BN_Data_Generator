@@ -10,7 +10,7 @@
 }
 
 \usage{
-	BN_Data_Generator(arcs_mat, input_Probs, n,// node_names = NULL, cardinalities = NULL)
+	BN_Data_Generator(arcs_mat, input_Probs, n, node_names = NULL, cardinalities = NULL)
 }
 
 \arguments{

@@ -111,25 +111,11 @@ Rd files with duplicated alias 'BN_Data_Generator':
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
-* checking Rd \usage sections ... WARNING
-Bad \usage lines found in documentation object 'BN_Data_Generator':
-  	BN_Data_Generator(arcs_mat, input_Probs, n,// node_names = NULL, cardinalities = NULL)
-
-Functions with \usage entries need to have the appropriate \alias
-entries, and all their arguments documented.
-The \usage entries must correspond to syntactically valid R code.
-See the chapter 'Writing R documentation files' in the 'Writing R
-Extensions' manual.
+* checking Rd \usage sections ... OK
 * checking Rd contents ... OK
 * checking for unstated dependencies in examples ... OK
 * checking examples ... OK
-* checking PDF version of manual ... WARNING
-LaTeX errors when creating PDF version.
-This typically indicates Rd problems.
-LaTeX errors found:
-!pdfTeX error: pdflatex.EXE (file t1-zi4r-0): Font t1-zi4r-0 at 540 not found
- ==> Fatal error occurred, no output PDF file produced!
-* checking PDF version of manual without hyperrefs or index ... OK
+* checking PDF version of manual ... OK
 * DONE
-WARNING: There were 5 warnings.
+WARNING: There were 3 warnings.
 NOTE: There was 1 note.

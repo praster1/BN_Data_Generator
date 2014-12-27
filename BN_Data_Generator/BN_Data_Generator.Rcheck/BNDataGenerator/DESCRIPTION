@@ -8,4 +8,4 @@ Depends: R (>= 3.0.0)
 Description: Previous tools suffer from serious trade-off between cost and complexity, restricting most studies relevant to Bayesian network to using only real data. To address such problem, a data generator based on Bayesian network model using R is built and introduced.
 License: GPL (>= 2)
 URL: http://www.github.com/praster1/BN_Data_Generator
-Built: R 3.1.2; ; 2014-12-27 18:23:20 UTC; windows
+Built: R 3.1.2; ; 2014-12-27 18:34:44 UTC; windows
