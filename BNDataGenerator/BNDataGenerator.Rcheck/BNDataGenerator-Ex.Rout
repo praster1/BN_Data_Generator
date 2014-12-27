@@ -1,0 +1,253 @@
+
+R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "BNDataGenerator"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> library('BNDataGenerator')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("big_letters")
+> ### * big_letters
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: big_letters
+> ### Title: Letters built
+> ### Aliases: big_letters
+> 
+> ### ** Examples
+> 
+> 	big_letters(26)
+ [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s"
+[20] "t" "u" "v" "w" "x" "y" "z"
+> 	big_letters(50)
+ [1] "a"  "b"  "c"  "d"  "e"  "f"  "g"  "h"  "i"  "j"  "k"  "l"  "m"  "n"  "o" 
+[16] "p"  "q"  "r"  "s"  "t"  "u"  "v"  "w"  "x"  "y"  "z"  "aa" "ab" "ac" "ad"
+[31] "ae" "af" "ag" "ah" "ai" "aj" "ak" "al" "am" "an" "ao" "ap" "aq" "ar" "as"
+[46] "at" "au" "av" "aw" "ax"
+> 	big_letters(100)
+  [1] "a"  "b"  "c"  "d"  "e"  "f"  "g"  "h"  "i"  "j"  "k"  "l"  "m"  "n"  "o" 
+ [16] "p"  "q"  "r"  "s"  "t"  "u"  "v"  "w"  "x"  "y"  "z"  "aa" "ab" "ac" "ad"
+ [31] "ae" "af" "ag" "ah" "ai" "aj" "ak" "al" "am" "an" "ao" "ap" "aq" "ar" "as"
+ [46] "at" "au" "av" "aw" "ax" "ay" "az" "ba" "bb" "bc" "bd" "be" "bf" "bg" "bh"
+ [61] "bi" "bj" "bk" "bl" "bm" "bn" "bo" "bp" "bq" "br" "bs" "bt" "bu" "bv" "bw"
+ [76] "bx" "by" "bz" "ca" "cb" "cc" "cd" "ce" "cf" "cg" "ch" "ci" "cj" "ck" "cl"
+ [91] "cm" "cn" "co" "cp" "cq" "cr" "cs" "ct" "cu" "cv"
+> 	big_letters(999)
+  [1] "a"   "b"   "c"   "d"   "e"   "f"   "g"   "h"   "i"   "j"   "k"   "l"  
+ [13] "m"   "n"   "o"   "p"   "q"   "r"   "s"   "t"   "u"   "v"   "w"   "x"  
+ [25] "y"   "z"   "aa"  "ab"  "ac"  "ad"  "ae"  "af"  "ag"  "ah"  "ai"  "aj" 
+ [37] "ak"  "al"  "am"  "an"  "ao"  "ap"  "aq"  "ar"  "as"  "at"  "au"  "av" 
+ [49] "aw"  "ax"  "ay"  "az"  "ba"  "bb"  "bc"  "bd"  "be"  "bf"  "bg"  "bh" 
+ [61] "bi"  "bj"  "bk"  "bl"  "bm"  "bn"  "bo"  "bp"  "bq"  "br"  "bs"  "bt" 
+ [73] "bu"  "bv"  "bw"  "bx"  "by"  "bz"  "ca"  "cb"  "cc"  "cd"  "ce"  "cf" 
+ [85] "cg"  "ch"  "ci"  "cj"  "ck"  "cl"  "cm"  "cn"  "co"  "cp"  "cq"  "cr" 
+ [97] "cs"  "ct"  "cu"  "cv"  "cw"  "cx"  "cy"  "cz"  "da"  "db"  "dc"  "dd" 
+[109] "de"  "df"  "dg"  "dh"  "di"  "dj"  "dk"  "dl"  "dm"  "dn"  "do"  "dp" 
+[121] "dq"  "dr"  "ds"  "dt"  "du"  "dv"  "dw"  "dx"  "dy"  "dz"  "ea"  "eb" 
+[133] "ec"  "ed"  "ee"  "ef"  "eg"  "eh"  "ei"  "ej"  "ek"  "el"  "em"  "en" 
+[145] "eo"  "ep"  "eq"  "er"  "es"  "et"  "eu"  "ev"  "ew"  "ex"  "ey"  "ez" 
+[157] "fa"  "fb"  "fc"  "fd"  "fe"  "ff"  "fg"  "fh"  "fi"  "fj"  "fk"  "fl" 
+[169] "fm"  "fn"  "fo"  "fp"  "fq"  "fr"  "fs"  "ft"  "fu"  "fv"  "fw"  "fx" 
+[181] "fy"  "fz"  "ga"  "gb"  "gc"  "gd"  "ge"  "gf"  "gg"  "gh"  "gi"  "gj" 
+[193] "gk"  "gl"  "gm"  "gn"  "go"  "gp"  "gq"  "gr"  "gs"  "gt"  "gu"  "gv" 
+[205] "gw"  "gx"  "gy"  "gz"  "ha"  "hb"  "hc"  "hd"  "he"  "hf"  "hg"  "hh" 
+[217] "hi"  "hj"  "hk"  "hl"  "hm"  "hn"  "ho"  "hp"  "hq"  "hr"  "hs"  "ht" 
+[229] "hu"  "hv"  "hw"  "hx"  "hy"  "hz"  "ia"  "ib"  "ic"  "id"  "ie"  "if" 
+[241] "ig"  "ih"  "ii"  "ij"  "ik"  "il"  "im"  "in"  "io"  "ip"  "iq"  "ir" 
+[253] "is"  "it"  "iu"  "iv"  "iw"  "ix"  "iy"  "iz"  "ja"  "jb"  "jc"  "jd" 
+[265] "je"  "jf"  "jg"  "jh"  "ji"  "jj"  "jk"  "jl"  "jm"  "jn"  "jo"  "jp" 
+[277] "jq"  "jr"  "js"  "jt"  "ju"  "jv"  "jw"  "jx"  "jy"  "jz"  "ka"  "kb" 
+[289] "kc"  "kd"  "ke"  "kf"  "kg"  "kh"  "ki"  "kj"  "kk"  "kl"  "km"  "kn" 
+[301] "ko"  "kp"  "kq"  "kr"  "ks"  "kt"  "ku"  "kv"  "kw"  "kx"  "ky"  "kz" 
+[313] "la"  "lb"  "lc"  "ld"  "le"  "lf"  "lg"  "lh"  "li"  "lj"  "lk"  "ll" 
+[325] "lm"  "ln"  "lo"  "lp"  "lq"  "lr"  "ls"  "lt"  "lu"  "lv"  "lw"  "lx" 
+[337] "ly"  "lz"  "ma"  "mb"  "mc"  "md"  "me"  "mf"  "mg"  "mh"  "mi"  "mj" 
+[349] "mk"  "ml"  "mm"  "mn"  "mo"  "mp"  "mq"  "mr"  "ms"  "mt"  "mu"  "mv" 
+[361] "mw"  "mx"  "my"  "mz"  "na"  "nb"  "nc"  "nd"  "ne"  "nf"  "ng"  "nh" 
+[373] "ni"  "nj"  "nk"  "nl"  "nm"  "nn"  "no"  "np"  "nq"  "nr"  "ns"  "nt" 
+[385] "nu"  "nv"  "nw"  "nx"  "ny"  "nz"  "oa"  "ob"  "oc"  "od"  "oe"  "of" 
+[397] "og"  "oh"  "oi"  "oj"  "ok"  "ol"  "om"  "on"  "oo"  "op"  "oq"  "or" 
+[409] "os"  "ot"  "ou"  "ov"  "ow"  "ox"  "oy"  "oz"  "pa"  "pb"  "pc"  "pd" 
+[421] "pe"  "pf"  "pg"  "ph"  "pi"  "pj"  "pk"  "pl"  "pm"  "pn"  "po"  "pp" 
+[433] "pq"  "pr"  "ps"  "pt"  "pu"  "pv"  "pw"  "px"  "py"  "pz"  "qa"  "qb" 
+[445] "qc"  "qd"  "qe"  "qf"  "qg"  "qh"  "qi"  "qj"  "qk"  "ql"  "qm"  "qn" 
+[457] "qo"  "qp"  "qq"  "qr"  "qs"  "qt"  "qu"  "qv"  "qw"  "qx"  "qy"  "qz" 
+[469] "ra"  "rb"  "rc"  "rd"  "re"  "rf"  "rg"  "rh"  "ri"  "rj"  "rk"  "rl" 
+[481] "rm"  "rn"  "ro"  "rp"  "rq"  "rr"  "rs"  "rt"  "ru"  "rv"  "rw"  "rx" 
+[493] "ry"  "rz"  "sa"  "sb"  "sc"  "sd"  "se"  "sf"  "sg"  "sh"  "si"  "sj" 
+[505] "sk"  "sl"  "sm"  "sn"  "so"  "sp"  "sq"  "sr"  "ss"  "st"  "su"  "sv" 
+[517] "sw"  "sx"  "sy"  "sz"  "ta"  "tb"  "tc"  "td"  "te"  "tf"  "tg"  "th" 
+[529] "ti"  "tj"  "tk"  "tl"  "tm"  "tn"  "to"  "tp"  "tq"  "tr"  "ts"  "tt" 
+[541] "tu"  "tv"  "tw"  "tx"  "ty"  "tz"  "ua"  "ub"  "uc"  "ud"  "ue"  "uf" 
+[553] "ug"  "uh"  "ui"  "uj"  "uk"  "ul"  "um"  "un"  "uo"  "up"  "uq"  "ur" 
+[565] "us"  "ut"  "uu"  "uv"  "uw"  "ux"  "uy"  "uz"  "va"  "vb"  "vc"  "vd" 
+[577] "ve"  "vf"  "vg"  "vh"  "vi"  "vj"  "vk"  "vl"  "vm"  "vn"  "vo"  "vp" 
+[589] "vq"  "vr"  "vs"  "vt"  "vu"  "vv"  "vw"  "vx"  "vy"  "vz"  "wa"  "wb" 
+[601] "wc"  "wd"  "we"  "wf"  "wg"  "wh"  "wi"  "wj"  "wk"  "wl"  "wm"  "wn" 
+[613] "wo"  "wp"  "wq"  "wr"  "ws"  "wt"  "wu"  "wv"  "ww"  "wx"  "wy"  "wz" 
+[625] "xa"  "xb"  "xc"  "xd"  "xe"  "xf"  "xg"  "xh"  "xi"  "xj"  "xk"  "xl" 
+[637] "xm"  "xn"  "xo"  "xp"  "xq"  "xr"  "xs"  "xt"  "xu"  "xv"  "xw"  "xx" 
+[649] "xy"  "xz"  "ya"  "yb"  "yc"  "yd"  "ye"  "yf"  "yg"  "yh"  "yi"  "yj" 
+[661] "yk"  "yl"  "ym"  "yn"  "yo"  "yp"  "yq"  "yr"  "ys"  "yt"  "yu"  "yv" 
+[673] "yw"  "yx"  "yy"  "yz"  "za"  "zb"  "zc"  "zd"  "ze"  "zf"  "zg"  "zh" 
+[685] "zi"  "zj"  "zk"  "zl"  "zm"  "zn"  "zo"  "zp"  "zq"  "zr"  "zs"  "zt" 
+[697] "zu"  "zv"  "zw"  "zx"  "zy"  "zz"  "aaa" "aab" "aac" "aad" "aae" "aaf"
+[709] "aag" "aah" "aai" "aaj" "aak" "aal" "aam" "aan" "aao" "aap" "aaq" "aar"
+[721] "aas" "aat" "aau" "aav" "aaw" "aax" "aay" "aaz" "aba" "abb" "abc" "abd"
+[733] "abe" "abf" "abg" "abh" "abi" "abj" "abk" "abl" "abm" "abn" "abo" "abp"
+[745] "abq" "abr" "abs" "abt" "abu" "abv" "abw" "abx" "aby" "abz" "aca" "acb"
+[757] "acc" "acd" "ace" "acf" "acg" "ach" "aci" "acj" "ack" "acl" "acm" "acn"
+[769] "aco" "acp" "acq" "acr" "acs" "act" "acu" "acv" "acw" "acx" "acy" "acz"
+[781] "ada" "adb" "adc" "add" "ade" "adf" "adg" "adh" "adi" "adj" "adk" "adl"
+[793] "adm" "adn" "ado" "adp" "adq" "adr" "ads" "adt" "adu" "adv" "adw" "adx"
+[805] "ady" "adz" "aea" "aeb" "aec" "aed" "aee" "aef" "aeg" "aeh" "aei" "aej"
+[817] "aek" "ael" "aem" "aen" "aeo" "aep" "aeq" "aer" "aes" "aet" "aeu" "aev"
+[829] "aew" "aex" "aey" "aez" "afa" "afb" "afc" "afd" "afe" "aff" "afg" "afh"
+[841] "afi" "afj" "afk" "afl" "afm" "afn" "afo" "afp" "afq" "afr" "afs" "aft"
+[853] "afu" "afv" "afw" "afx" "afy" "afz" "aga" "agb" "agc" "agd" "age" "agf"
+[865] "agg" "agh" "agi" "agj" "agk" "agl" "agm" "agn" "ago" "agp" "agq" "agr"
+[877] "ags" "agt" "agu" "agv" "agw" "agx" "agy" "agz" "aha" "ahb" "ahc" "ahd"
+[889] "ahe" "ahf" "ahg" "ahh" "ahi" "ahj" "ahk" "ahl" "ahm" "ahn" "aho" "ahp"
+[901] "ahq" "ahr" "ahs" "aht" "ahu" "ahv" "ahw" "ahx" "ahy" "ahz" "aia" "aib"
+[913] "aic" "aid" "aie" "aif" "aig" "aih" "aii" "aij" "aik" "ail" "aim" "ain"
+[925] "aio" "aip" "aiq" "air" "ais" "ait" "aiu" "aiv" "aiw" "aix" "aiy" "aiz"
+[937] "aja" "ajb" "ajc" "ajd" "aje" "ajf" "ajg" "ajh" "aji" "ajj" "ajk" "ajl"
+[949] "ajm" "ajn" "ajo" "ajp" "ajq" "ajr" "ajs" "ajt" "aju" "ajv" "ajw" "ajx"
+[961] "ajy" "ajz" "aka" "akb" "akc" "akd" "ake" "akf" "akg" "akh" "aki" "akj"
+[973] "akk" "akl" "akm" "akn" "ako" "akp" "akq" "akr" "aks" "akt" "aku" "akv"
+[985] "akw" "akx" "aky" "akz" "ala" "alb" "alc" "ald" "ale" "alf" "alg" "alh"
+[997] "ali" "alj" "alk"
+> 
+> 
+> 
+> cleanEx()
+> nameEx("toss_value")
+> ### * toss_value
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: toss_value
+> ### Title: Tossing a Cardinality
+> ### Aliases: toss_value
+> 
+> ### ** Examples
+> 
+> 	toss_value(1, 3)
+   toss1
+1 Value1
+2 Value2
+3 Value3
+> 	toss_value(2, 3)
+   toss1  toss2
+1 Value1 Value1
+2 Value2 Value1
+3 Value3 Value1
+4 Value1 Value2
+5 Value2 Value2
+6 Value3 Value2
+7 Value1 Value3
+8 Value2 Value3
+9 Value3 Value3
+> 	toss_value(3, 4, makespace = TRUE)
+    toss1  toss2  toss3 probs
+1  Value1 Value1 Value1 0.125
+2  Value2 Value1 Value1 0.125
+3  Value3 Value1 Value1 0.125
+4  Value4 Value1 Value1 0.125
+5  Value1 Value2 Value1 0.125
+6  Value2 Value2 Value1 0.125
+7  Value3 Value2 Value1 0.125
+8  Value4 Value2 Value1 0.125
+9  Value1 Value3 Value1 0.125
+10 Value2 Value3 Value1 0.125
+11 Value3 Value3 Value1 0.125
+12 Value4 Value3 Value1 0.125
+13 Value1 Value4 Value1 0.125
+14 Value2 Value4 Value1 0.125
+15 Value3 Value4 Value1 0.125
+16 Value4 Value4 Value1 0.125
+17 Value1 Value1 Value2 0.125
+18 Value2 Value1 Value2 0.125
+19 Value3 Value1 Value2 0.125
+20 Value4 Value1 Value2 0.125
+21 Value1 Value2 Value2 0.125
+22 Value2 Value2 Value2 0.125
+23 Value3 Value2 Value2 0.125
+24 Value4 Value2 Value2 0.125
+25 Value1 Value3 Value2 0.125
+26 Value2 Value3 Value2 0.125
+27 Value3 Value3 Value2 0.125
+28 Value4 Value3 Value2 0.125
+29 Value1 Value4 Value2 0.125
+30 Value2 Value4 Value2 0.125
+31 Value3 Value4 Value2 0.125
+32 Value4 Value4 Value2 0.125
+33 Value1 Value1 Value3 0.125
+34 Value2 Value1 Value3 0.125
+35 Value3 Value1 Value3 0.125
+36 Value4 Value1 Value3 0.125
+37 Value1 Value2 Value3 0.125
+38 Value2 Value2 Value3 0.125
+39 Value3 Value2 Value3 0.125
+40 Value4 Value2 Value3 0.125
+41 Value1 Value3 Value3 0.125
+42 Value2 Value3 Value3 0.125
+43 Value3 Value3 Value3 0.125
+44 Value4 Value3 Value3 0.125
+45 Value1 Value4 Value3 0.125
+46 Value2 Value4 Value3 0.125
+47 Value3 Value4 Value3 0.125
+48 Value4 Value4 Value3 0.125
+49 Value1 Value1 Value4 0.125
+50 Value2 Value1 Value4 0.125
+51 Value3 Value1 Value4 0.125
+52 Value4 Value1 Value4 0.125
+53 Value1 Value2 Value4 0.125
+54 Value2 Value2 Value4 0.125
+55 Value3 Value2 Value4 0.125
+56 Value4 Value2 Value4 0.125
+57 Value1 Value3 Value4 0.125
+58 Value2 Value3 Value4 0.125
+59 Value3 Value3 Value4 0.125
+60 Value4 Value3 Value4 0.125
+61 Value1 Value4 Value4 0.125
+62 Value2 Value4 Value4 0.125
+63 Value3 Value4 Value4 0.125
+64 Value4 Value4 Value4 0.125
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.45 0.05 0.5 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')
