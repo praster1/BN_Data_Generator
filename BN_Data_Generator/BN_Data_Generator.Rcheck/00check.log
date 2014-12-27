@@ -11,6 +11,125 @@
 * checking for executable files ... OK
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
-* checking whether package 'BNDataGenerator' can be installed ... ERROR
-Installation failed.
-See 'D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator.Rcheck/00install.out' for details.
+* checking whether package 'BNDataGenerator' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... WARNING
+Empty or missing file 'demo/00Index'.
+See the information on INDEX files and package subdirectories in the
+chapter 'Creating R packages' of the 'Writing R Extensions' manual.
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+BN_Data_Generator: warning in sample(mat_values, temp_n, prob = c(p, 1
+  - sum(p)), rep = T): partial argument match of 'rep' to 'replace'
+BN_Data_Generator: warning in sample(mat_values, len, prob = c(temp_p,
+  1 - sum(temp_p)), rep = T): partial argument match of 'rep' to
+  'replace'
+* checking Rd files ... WARNING
+prepare_Rd: BN_Data_Generator-package.Rd:29-30: Dropping empty section \seealso
+prepare_Rd: BN_Data_Generator-package.Rd:32-33: Dropping empty section \examples
+checkRd: (5) BN_Data_Generator-package.Rd:0-34: Must have a \description
+prepare_Rd: BN_Data_Generator.Rd:45-46: Dropping empty section \keyword
+prepare_Rd: BN_Data_Generator.Rd:24-25: Dropping empty section \details
+prepare_Rd: BN_Data_Generator.Rd:27-28: Dropping empty section \value
+prepare_Rd: BN_Data_Generator.Rd:36-37: Dropping empty section \note
+prepare_Rd: BN_Data_Generator.Rd:39-40: Dropping empty section \seealso
+prepare_Rd: BN_Data_Generator.Rd:42-43: Dropping empty section \examples
+prepare_Rd: C_M_WO_WC.Rd:46: Dropping empty section \keyword
+prepare_Rd: C_M_WO_WC.Rd:21-22: Dropping empty section \details
+prepare_Rd: C_M_WO_WC.Rd:37-38: Dropping empty section \note
+prepare_Rd: C_M_WO_WC.Rd:40-41: Dropping empty section \seealso
+prepare_Rd: C_M_WO_WC.Rd:43-44: Dropping empty section \examples
+prepare_Rd: big_letters.Rd:39: Dropping empty section \keyword
+prepare_Rd: big_letters.Rd:19-20: Dropping empty section \details
+prepare_Rd: big_letters.Rd:22-23: Dropping empty section \value
+prepare_Rd: big_letters.Rd:30-31: Dropping empty section \note
+prepare_Rd: big_letters.Rd:25-26: Dropping empty section \references
+prepare_Rd: big_letters.Rd:33-34: Dropping empty section \seealso
+prepare_Rd: big_letters.Rd:36-37: Dropping empty section \examples
+prepare_Rd: check_cardinalities.Rd:42: Dropping empty section \keyword
+prepare_Rd: check_cardinalities.Rd:22-23: Dropping empty section \details
+prepare_Rd: check_cardinalities.Rd:25-26: Dropping empty section \value
+prepare_Rd: check_cardinalities.Rd:33-34: Dropping empty section \note
+prepare_Rd: check_cardinalities.Rd:28-29: Dropping empty section \references
+prepare_Rd: check_cardinalities.Rd:36-37: Dropping empty section \seealso
+prepare_Rd: check_cardinalities.Rd:39-40: Dropping empty section \examples
+prepare_Rd: fromto_to_mat.Rd:41: Dropping empty section \keyword
+prepare_Rd: fromto_to_mat.Rd:21-22: Dropping empty section \details
+prepare_Rd: fromto_to_mat.Rd:24-25: Dropping empty section \value
+prepare_Rd: fromto_to_mat.Rd:32-33: Dropping empty section \note
+prepare_Rd: fromto_to_mat.Rd:27-28: Dropping empty section \references
+prepare_Rd: fromto_to_mat.Rd:35-36: Dropping empty section \seealso
+prepare_Rd: fromto_to_mat.Rd:38-39: Dropping empty section \examples
+prepare_Rd: gen_asia.Rd:48: Dropping empty section \keyword
+prepare_Rd: gen_asia.Rd:16-17: Dropping empty section \details
+prepare_Rd: gen_asia.Rd:42-43: Dropping empty section \seealso
+prepare_Rd: gen_asia.Rd:45-46: Dropping empty section \examples
+prepare_Rd: is_DAG.Rd:42: Dropping empty section \keyword
+prepare_Rd: is_DAG.Rd:32-33: Dropping empty section \note
+prepare_Rd: is_DAG.Rd:27-28: Dropping empty section \references
+prepare_Rd: is_DAG.Rd:39-40: Dropping empty section \examples
+prepare_Rd: is_acyclic.Rd:42: Dropping empty section \keyword
+prepare_Rd: is_acyclic.Rd:20-21: Dropping empty section \details
+prepare_Rd: is_acyclic.Rd:32-33: Dropping empty section \note
+prepare_Rd: is_acyclic.Rd:27-28: Dropping empty section \references
+prepare_Rd: is_acyclic.Rd:39-40: Dropping empty section \examples
+prepare_Rd: make_topology.Rd:48: Dropping empty section \keyword
+prepare_Rd: make_topology.Rd:30-31: Dropping empty section \value
+prepare_Rd: make_topology.Rd:39-40: Dropping empty section \note
+prepare_Rd: make_topology.Rd:42-43: Dropping empty section \seealso
+prepare_Rd: make_topology.Rd:45-46: Dropping empty section \examples
+prepare_Rd: mat_to_fromto.Rd:40: Dropping empty section \keyword
+prepare_Rd: mat_to_fromto.Rd:20-21: Dropping empty section \details
+prepare_Rd: mat_to_fromto.Rd:23-24: Dropping empty section \value
+prepare_Rd: mat_to_fromto.Rd:31-32: Dropping empty section \note
+prepare_Rd: mat_to_fromto.Rd:26-27: Dropping empty section \references
+prepare_Rd: mat_to_fromto.Rd:34-35: Dropping empty section \seealso
+prepare_Rd: mat_to_fromto.Rd:37-38: Dropping empty section \examples
+prepare_Rd: toss_value.Rd:47: Dropping empty section \keyword
+prepare_Rd: toss_value.Rd:22-23: Dropping empty section \details
+prepare_Rd: toss_value.Rd:29-30: Dropping empty section \references
+prepare_Rd: toss_value.Rd:38-39: Dropping empty section \seealso
+* checking Rd metadata ... WARNING
+Rd files with duplicated alias 'BN_Data_Generator':
+  'BN_Data_Generator-package.Rd' 'BN_Data_Generator.Rd'
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Bad \usage lines found in documentation object 'BN_Data_Generator':
+  	BN_Data_Generator(arcs_mat, input_Probs, n,// node_names = NULL, cardinalities = NULL)
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See the chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... OK
+* checking PDF version of manual ... WARNING
+LaTeX errors when creating PDF version.
+This typically indicates Rd problems.
+LaTeX errors found:
+!pdfTeX error: pdflatex.EXE (file t1-zi4r-0): Font t1-zi4r-0 at 540 not found
+ ==> Fatal error occurred, no output PDF file produced!
+* checking PDF version of manual without hyperrefs or index ... OK
+* DONE
+WARNING: There were 5 warnings.
+NOTE: There was 1 note.

@@ -6,12 +6,11 @@ require(BN_Data_Generator)
 n = 1000
 
 
-temp = real_insurance(n)
-data = temp$data
-res = temp$res
-
-arcs_mat = fromto_to_mat(temp$res$arcs, dimnames(temp$data)[[2]])
-arcs_mat
+temp = gen_asia()
+target_arcs_mat = temp$arcs_mat
+res = BN_Data_Generator(temp$arcs_mat, temp$Probs, n, temp$node_names)
+data = res$data
+node_names = res$node_names
 
 
 

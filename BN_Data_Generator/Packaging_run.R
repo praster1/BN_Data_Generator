@@ -19,13 +19,7 @@ package.skeleton(name="BN_Data_Generator",
 												"fromto_to_mat.R",
 												"mat_to_fromto.R",
 												
-												"gen_asia.R",
-												
-												"real_lizards.R",
-												"real_alarm.R",
-												"real_asia.R",
-												"real_hailfinder.R",
-												"real_insurance.R"
+												"gen_asia.R"
 											)
 						)
 

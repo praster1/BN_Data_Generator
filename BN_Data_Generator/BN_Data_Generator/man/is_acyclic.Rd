@@ -1,6 +1,6 @@
 \name{is_acyclic}
 \alias{is_acyclic}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 	Acyclic graphs
 }
@@ -13,13 +13,11 @@
 	is_acyclic(arcs_mat)
 }
 
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{arcs_mat}{ A matrix that determines the arcs. }
 }
 
 \details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 
 \value{
@@ -27,26 +25,18 @@
 }
 
 \references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
+\author{ Jae-seong Yoo <praster1@gmail.com> }
+
+\note{
+}
 
 \seealso{
 	\code{\link{is_DAG}}
 }
 
 \examples{
-
 }
 
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ }

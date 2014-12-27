@@ -4,6 +4,8 @@
 ** preparing package for lazy loading
 ** help
 *** installing help indices
-¥Ÿ¿Ωø° ø¿∑˘∞° ¿÷Ω¿¥œ¥Ÿgsub("&", "&amp;", x, fixed = TRUE) : 
-  '<c2>Ä<3c>99> perching behaviour data set'ø°º≠ ¿Ø»ø«œ¡ˆ æ ¿∫ ∏÷∆ºπŸ¿Ã∆Æ πÆ¿⁄ø≠¿Ã ¿÷Ω¿¥œ¥Ÿ
-* removing 'D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator.Rcheck/BNDataGenerator'
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+*** arch - x64
+* DONE (BNDataGenerator)

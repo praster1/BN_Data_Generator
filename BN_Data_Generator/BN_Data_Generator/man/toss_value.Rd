@@ -1,20 +1,18 @@
 \name{toss_value}
 \alias{toss_value}
-%- Also NEED an '\alias' for EACH other topic documented here.
 
 \title{
 	Tossing a Cardinality
 }
 
 \description{
-	Sets up a sample space for the experiment of tossing a cardinality repeatedly with the outcomes "Values"
+	Sets up a sample space for the experiment of tossing a cardinality repeatedly with the outcomes "Values".
 }
 
 \usage{
 	toss_value(times, num_of_cases, makespace = FALSE)
 }
 
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{times}{ Number of tosses. }
   \item{num_of_cases}{ Cardinality. }
@@ -22,7 +20,6 @@
 }
 
 \details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 
 \value{
@@ -30,21 +27,15 @@
 }
 
 \references{
-%% ~put references to the literature/web site here ~
 }
 
-\author{
-%%  ~~who you are~~
-}
+\author{ Jae-seong Yoo <praster1@gmail.com> }
 
 \note{
-%%  ~~further notes~~
+	It developed of 'tosscoin' function in prob package.
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 
 \examples{
@@ -53,7 +44,4 @@
 	toss_value(3, 4, makespace = TRUE)
 }
 
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ }
