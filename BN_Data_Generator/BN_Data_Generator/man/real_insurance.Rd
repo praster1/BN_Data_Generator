@@ -2,10 +2,10 @@
 \alias{real_insurance}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+	Insurance evaluation network (synthetic) data set
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+	Insurance is a network for evaluating car insurance risks.
 }
 \usage{
 	real_insurance(n, rep = T)

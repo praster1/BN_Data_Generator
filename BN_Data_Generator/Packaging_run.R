@@ -56,3 +56,8 @@ system("R CMD Rd2pdf .")
 ##### run at terminal
 setwd("~/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator/man")
 system("R CMD Rd2pdf --no-preview --no-clean .")
+
+
+setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator")
+system("Rcmd check BN_Data_Generator")
+system("Rcmd build BN_Data_Generator")

@@ -2,10 +2,10 @@
 \alias{big_letters}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+	the 26 or more lower-case letters of the Roman alphabet;
 }
 \description{
-	the 26 lower-case letters of the Roman alphabet;
+	%the 26 or more lower-case letters of the Roman alphabet;
 }
 
 \usage{

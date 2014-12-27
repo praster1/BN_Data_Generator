@@ -3,11 +3,11 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 
 \title{
-%%  ~~function to do ... ~~
+	Tossing a Cardinality
 }
 
 \description{
-	Sets up a sample space for the experiment of tossing a coin repeatedly with the outcomes "H" or "T".
+	Sets up a sample space for the experiment of tossing a cardinality repeatedly with the outcomes "Values"
 }
 
 \usage{

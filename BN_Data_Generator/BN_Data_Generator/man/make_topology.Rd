@@ -2,7 +2,7 @@
 \alias{make_topology}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+	Bayesian Networks with varying topologies
 }
 
 \description{

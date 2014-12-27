@@ -2,7 +2,7 @@
 \alias{C_M_WO_WC}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Correct, Missing, Wrongly Oriented, Wronglyy Corrected Arcs
 }
 \description{
 	The existence of the known network structures allows us to define three important terms which indicate the performance of the algorithm (in terms of the number of graphical errors in the learnt structure).

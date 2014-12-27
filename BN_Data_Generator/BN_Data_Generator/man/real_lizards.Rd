@@ -2,10 +2,11 @@
 \alias{real_lizards}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+	Lizards’ perching behaviour data set
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+	Real-world data set about the perching behaviour of two species of lizards in the South Bimini
+island, from Shoener (1968).
 }
 \usage{
 	real_lizards(n, rep = T)

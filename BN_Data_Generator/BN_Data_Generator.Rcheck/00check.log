@@ -1,0 +1,16 @@
+* using log directory 'D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator.Rcheck'
+* using R version 3.1.2 (2014-10-31)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: CP949
+* checking for file 'BN_Data_Generator/DESCRIPTION' ... OK
+* this is package 'BNDataGenerator' version '1.0'
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking whether package 'BNDataGenerator' can be installed ... ERROR
+Installation failed.
+See 'D:/Dropbox/__GitHub/BN_Data_Generator/BN_Data_Generator/BN_Data_Generator.Rcheck/00install.out' for details.

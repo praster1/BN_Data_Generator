@@ -2,7 +2,7 @@
 \alias{is_acyclic}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+	Acyclic graphs
 }
 
 \description{

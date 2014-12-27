@@ -2,11 +2,11 @@
 \alias{real_hailfinder}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+	The HailFinder weather forecast system (synthetic) data set
 }
 
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+	Hailfinder is a Bayesian network designed to forecast severe summer hail in northeastern Colorado.
 }
 
 \usage{

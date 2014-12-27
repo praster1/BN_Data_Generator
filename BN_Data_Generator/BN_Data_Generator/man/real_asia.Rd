@@ -2,10 +2,10 @@
 \alias{real_asia}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+	Asia (synthetic) data set by Lauritzen and Spiegelhalter
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+	Small synthetic data set from Lauritzen and Spiegelhalter (1988) about lung diseases (tuberculosis, lung cancer or bronchitis) and visits to Asia.
 }
 
 \usage{

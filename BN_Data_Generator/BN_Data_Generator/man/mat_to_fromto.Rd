@@ -2,7 +2,7 @@
 \alias{mat_to_fromto}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+	Convert from 'matrix' to 'fromto'
 }
 
 \description{

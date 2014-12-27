@@ -2,10 +2,10 @@
 \alias{real_alarm}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+	ALARM Monitoring System (synthetic) data set
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+	The ALARM ("A Logical Alarm Reduction Mechanism") is a Bayesian network designed to provide an alarm message system for patient monitoring.
 }
 
 \usage{
