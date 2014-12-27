@@ -7,7 +7,7 @@ BN_Data_Generator는 Bayesian Network Model에 기반하여 데이터를 생성�
 
 이 함수는 Jae-seong Yoo의 Korea University 통계학 석사 학위 논문과 함께 제작되었습니다.
 
-Submitted as R package to CRAN at 2014-12-28.
+Submitted as a R package to CRAN at 2014-12-28. This package's name is "BNDataGenerator".
 
 - BN_Data_Generator : BN_Data_Generator 및 관련 R 함수.
 
