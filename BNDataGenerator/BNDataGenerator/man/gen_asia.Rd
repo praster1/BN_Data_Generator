@@ -37,5 +37,5 @@
 }
 
 \seealso{
-	See demo(gen_asia).
+	See demo(asia).
 }

@@ -17,10 +17,7 @@
 * checking DESCRIPTION meta-information ... OK
 * checking top-level files ... OK
 * checking for left-over files ... OK
-* checking index information ... WARNING
-Empty or missing file 'demo/00Index'.
-See the information on INDEX files and package subdirectories in the
-chapter 'Creating R packages' of the 'Writing R Extensions' manual.
+* checking index information ... OK
 * checking package subdirectories ... OK
 * checking R files for non-ASCII characters ... OK
 * checking R files for syntax errors ... OK
@@ -45,4 +42,3 @@ chapter 'Creating R packages' of the 'Writing R Extensions' manual.
 * checking examples ... OK
 * checking PDF version of manual ... OK
 * DONE
-WARNING: There was 1 warning.

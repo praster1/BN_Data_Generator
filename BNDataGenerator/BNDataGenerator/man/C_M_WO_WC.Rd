@@ -32,5 +32,5 @@
 \author{ Jae-seong Yoo <praster1@gmail.com> }
 
 \seealso{
-	See demo(gen_asia) or demo(topology).
+	See demo(asia) or demo(topology).
 }

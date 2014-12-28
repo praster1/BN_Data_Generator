@@ -30,5 +30,5 @@
 \keyword{ Bayesian Network }
 
 \seealso{
-	See demo(gen_asia) or demo(topology).
+	See demo(asia) or demo(topology).
 }

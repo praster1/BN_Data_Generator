@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.15)  28 DEC 2014 13:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.15)  28 DEC 2014 15:33
 entering extended mode
-**C:/Users/JAESEO?1/AppData/Local/Temp/RtmpSO8bck/Rd2pdf11a478313dcf/Rd2.tex
-(C:/Users/JAESEO~1/AppData/Local/Temp/RtmpSO8bck/Rd2pdf11a478313dcf/Rd2.tex
+**C:/Users/JAESEO?1/AppData/Local/Temp/RtmpKsvtdh/Rd2pdf1bccdce4baf/Rd2.tex
+(C:/Users/JAESEO~1/AppData/Local/Temp/RtmpKsvtdh/Rd2pdf1bccdce4baf/Rd2.tex
 LaTeX2e <2011/06/27>
 Babel <3.9l> and hyphenation patterns for 68 languages loaded.
 
@@ -614,7 +614,7 @@ File: latin1.def 2008/03/30 v1.1d Input encoding file
 \@indexfile=\write3
 
 Writing index file Rd2.idx
-(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpSO8bck\Rd2pdf11a478313dcf\Rd2.aux)
+(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpKsvtdh\Rd2pdf1bccdce4baf\Rd2.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
@@ -669,8 +669,8 @@ LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
 LaTeX Info: Redefining \nameref on input line 8.
 
-(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpSO8bck\Rd2pdf11a478313dcf\Rd2.out)
-(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpSO8bck\Rd2pdf11a478313dcf\Rd2.out)
+(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpKsvtdh\Rd2pdf1bccdce4baf\Rd2.out)
+(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpKsvtdh\Rd2pdf1bccdce4baf\Rd2.out)
 \@outlinefile=\write4
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
@@ -694,7 +694,7 @@ LaTeX Font Info:    Try loading font information for T1+phv on input line 27.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpSO8bck\Rd2pdf11a478313dcf\Rd2.toc)
+(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpKsvtdh\Rd2pdf1bccdce4baf\Rd2.toc)
 \tf@toc=\write5
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
@@ -736,7 +736,7 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 ) [9]
-(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpSO8bck\Rd2pdf11a478313dcf\Rd2.ind
+(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpKsvtdh\Rd2pdf1bccdce4baf\Rd2.ind
 [10]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
@@ -752,7 +752,7 @@ LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 422.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 422.
 
-(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpSO8bck\Rd2pdf11a478313dcf\Rd2.aux)
+(C:\Users\JAESEO~1\AppData\Local\Temp\RtmpKsvtdh\Rd2pdf1bccdce4baf\Rd2.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 422.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 422.
 Package rerunfilecheck Info: File `Rd2.out' has not changed.
@@ -765,12 +765,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 422.
  ) 
 Here is how much of TeX's memory you used:
  6446 strings out of 493889
- 93143 string characters out of 3146781
+ 93128 string characters out of 3146781
  170690 words of memory out of 3000000
  9541 multiletter control sequences out of 15000+200000
  40674 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 38i,5n,34p,495b,516s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,5n,34p,494b,516s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program File
 s/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-0.enc}<C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Program Files/MiKTeX
@@ -779,7 +779,7 @@ ts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/t
 imes/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (11 pages, 122911 bytes).
+Output written on Rd2.pdf (11 pages, 122897 bytes).
 PDF statistics:
  278 PDF objects out of 1000 (max. 8388607)
  110 named destinations out of 1000 (max. 500000)

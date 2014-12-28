@@ -9,4 +9,4 @@ Suggests: bnlearn
 Description: Data generator based on Bayesian network model
 License: GPL (>= 2)
 URL: http://www.github.com/praster1/BN_Data_Generator
-Built: R 3.1.2; ; 2014-12-28 04:44:44 UTC; windows
+Built: R 3.1.2; ; 2014-12-28 06:32:40 UTC; windows
