@@ -1,6 +1,6 @@
 # Written by Jae-seong Yoo 20141101
 
-BN_Data_Generator = function (arcs_mat, input_Probs, n, node_names = NULL, cardinalities = NULL)
+BN_Data_Generator = function (arcs_mat, Probs, n, nodename=NULL, cardinality=NULL)
 {
 	# Check Sample Size
 	if (n <= 0) {
@@ -21,13 +21,13 @@ BN_Data_Generator = function (arcs_mat, input_Probs, n, node_names = NULL, cardi
 	
 	# 결과는 여기에 저장이 된다.
 	result_mat = matrix(0, temp_n, num_of_nodes);
-	dimnames(result_mat)[[2]] = node_names;
+	dimnames(result_mat)[[2]] = nodename;
 	# result_mat
 
-	# Check Input Probs & Cardinalities
-	checker = check_cardinalities(arcs_mat = arcs_mat, node_names = node_names, cardinalities = cardinalities)
-	cardinalities = checker$cardinalities;
-	node_names = checker$node_names;
+	# Check Input Probs & cardinality
+	checker = check_cardinality(arcs_mat = arcs_mat, nodename = nodename, cardinality = cardinality)
+	cardinality = checker$cardinality;
+	nodename = checker$nodename;
 	list_parent_nodes = checker$list_parent_nodes;
 	num_of_probs = checker$num_of_probs;
 	num_of_parent_nodes = checker$num_of_parent_nodes;
@@ -35,9 +35,9 @@ BN_Data_Generator = function (arcs_mat, input_Probs, n, node_names = NULL, cardi
 
 	
 	# 지정해야할 조건부 확률 개수만큼 input이 맞는지 확인. 만일 false이면 프로그램 종료
-	input_prob_len = length(input_Probs);
+	input_prob_len = length(Probs);
 	for (i in 1:input_prob_len) {
-		if	(	as.numeric(length(input_Probs[[i]]))
+		if	(	as.numeric(length(Probs[[i]]))
 								!=
 				as.numeric(num_of_probs[i])
 			)
@@ -48,13 +48,13 @@ BN_Data_Generator = function (arcs_mat, input_Probs, n, node_names = NULL, cardi
 	
 	# Root Node Initialization
 	for(i in 1:num_of_root_nodes) {
-		p = input_Probs[[i]];
-		mat_values = merge("Value", c(1:cardinalities[i]))
+		p = Probs[[i]];
+		mat_values = merge("Value", c(1:cardinality[i]))
 		mat_values = paste(mat_values[,1], mat_values[,2], sep="")
 
 		result_mat[,i] = sample(
 											mat_values, temp_n,
-											prob=c(p, 1-sum(p)), rep=T
+											prob=c(p, 1-sum(p)), replace=T
 											);
 	}
 
@@ -64,15 +64,15 @@ BN_Data_Generator = function (arcs_mat, input_Probs, n, node_names = NULL, cardi
 
 	mat = NULL
 	for (i in init:num_of_nodes) {
-		p = input_Probs[[i]]
+		p = Probs[[i]]
 		temp_list_of_pn = as.numeric(list_parent_nodes[[i]]);
-		num_of_c_cases = prod(cardinalities[temp_list_of_pn])
+		num_of_c_cases = prod(cardinality[temp_list_of_pn])
 
 		temp_cases = list();
 		cases = NULL;
 		for (j in 1:length(temp_list_of_pn))
 		{
-			temp_cases[[j]] = toss_value(1, cardinalities[temp_list_of_pn[j]])
+			temp_cases[[j]] = toss_value(1, cardinality[temp_list_of_pn[j]])
 			if (is.null(cases)) {
 				cases = temp_cases[[j]]
 				names(cases) = 1;
@@ -82,7 +82,7 @@ BN_Data_Generator = function (arcs_mat, input_Probs, n, node_names = NULL, cardi
 			}
 		}
 		cases = as.matrix(cases)
-		mat_values = merge("Value", c(1:cardinalities[i]))
+		mat_values = merge("Value", c(1:cardinality[i]))
 		mat_values = sort(paste(mat_values[,1], mat_values[,2], sep=""))
 		
 		stack = 1
@@ -96,20 +96,20 @@ BN_Data_Generator = function (arcs_mat, input_Probs, n, node_names = NULL, cardi
 					);
 			mat = (apply(mat, 1, sum) == dim(mat)[2])
 			
-			if (cardinalities[i] == 2)
+			if (cardinality[i] == 2)
 			{
 				temp_p = p[j]
 			} else {
-				temp_p = p[stack:(stack + cardinalities[i]-2)]
+				temp_p = p[stack:(stack + cardinality[i]-2)]
 			}
 			len = length(which(mat))
 			
 			result_mat[which(mat),i] = sample(
 															mat_values, len,
-															prob=c(temp_p, 1-sum(temp_p)), rep=T
+															prob=c(temp_p, 1-sum(temp_p)), replace=T
 														);
 			
-			stack = stack + (cardinalities[i]-1)
+			stack = stack + (cardinality[i]-1)
 		}
 	}
 
@@ -123,7 +123,7 @@ BN_Data_Generator = function (arcs_mat, input_Probs, n, node_names = NULL, cardi
 	#####
 
 	res = list(	data = data.frame(result_mat),
-					node_names = node_names,
+					nodename = nodename,
 					num_of_nodes = num_of_nodes,
 					num_of_parent_nodes = num_of_parent_nodes,
 					list_parent_nodes = list_parent_nodes);

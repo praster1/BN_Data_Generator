@@ -6,8 +6,8 @@ mat_to_fromto = function(arcs_mat)
 		stop("arcs_mat must a DAG")
 	}
 	
-	node_names = dimnames(arcs_mat)[[2]]
-	num_of_nodes = length(node_names)
+	nodename = dimnames(arcs_mat)[[2]]
+	num_of_nodes = length(nodename)
 	result_mat = NULL
 	
 
@@ -19,7 +19,7 @@ mat_to_fromto = function(arcs_mat)
 		{
 			for (j in 1:len)
 			{
-				temp = c(node_names[i], node_names[where[j]])
+				temp = c(nodename[i], nodename[where[j]])
 				result_mat = rbind(result_mat, temp)
 			}
 		}

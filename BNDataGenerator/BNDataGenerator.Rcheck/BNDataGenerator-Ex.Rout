@@ -33,6 +33,7 @@ Type 'q()' to quit R.
 > ### Name: big_letters
 > ### Title: Letters built
 > ### Aliases: big_letters
+> ### Keywords: letters
 > 
 > ### ** Examples
 > 
@@ -241,7 +242,7 @@ Type 'q()' to quit R.
 > ###
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  0.45 0.05 0.5 NA NA 
+Time elapsed:  0.42 0 0.43 NA NA 
 > grDevices::dev.off()
 null device 
           1 

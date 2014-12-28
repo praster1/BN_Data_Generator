@@ -16,22 +16,7 @@
 	  \item{len}{ Get or set the length of letters. }
 }
 
-\details{
-}
-
-\value{
-}
-
-\references{
-}
-
 \author{ Jae-seong Yoo <praster1@gmail.com> }
-
-\note{
-}
-
-\seealso{
-}
 
 \examples{
 	big_letters(26)
@@ -40,4 +25,4 @@
 	big_letters(999)
 }
 
-\keyword{ }
+\keyword{ letters }

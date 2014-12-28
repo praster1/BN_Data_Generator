@@ -3,7 +3,7 @@
 
 # Toss Value
 
-toss_value = function (times, num_of_cases, makespace = FALSE) 
+toss_value = function (times, num_of_cases, makespace=FALSE) 
 {
 	mat_values = merge("Value", c(1:num_of_cases))
 	

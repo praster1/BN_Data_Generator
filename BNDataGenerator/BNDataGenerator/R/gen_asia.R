@@ -14,9 +14,9 @@ gen_asia = function()
 			c(0,	0,	0,	0,	0,	0,	0,	0)		#D
 			)
 	
-	node_names = c("A", "S", "T", "L", "B", "E", "X", "D")
-	dimnames(arcs_mat)[[1]] = node_names
-	dimnames(arcs_mat)[[2]] = node_names
+	nodename = c("A", "S", "T", "L", "B", "E", "X", "D")
+	dimnames(arcs_mat)[[1]] = nodename
+	dimnames(arcs_mat)[[2]] = nodename
 
 	
 	input_Probs = list(
@@ -30,14 +30,14 @@ gen_asia = function()
 							c(0.9, 0.7, 0.8, 0.1)		# P(D|B,E), P(D|~B,E), P(D|B,~E), P(D|~B,~E)
 							)
 							
-	num_of_nodes = length(node_names)
-	cardinalities = rep(2, num_of_nodes)
+	num_of_nodes = length(nodename)
+	cardinality = rep(2, num_of_nodes)
 	
 	
 	result = list(	arcs_mat = arcs_mat,
 						Probs = input_Probs,
-						node_names = node_names,
-						cardinalities = cardinalities,
+						nodename = nodename,
+						cardinality = cardinality,
 						num_of_nodes = num_of_nodes
 					)
 	return(result)

@@ -1,5 +1,5 @@
-\name{check_cardinalities}
-\alias{check_cardinalities}
+\name{check_cardinality}
+\alias{check_cardinality}
 
 \title{
 	A checker of needs of input_Prob follows cardinality
@@ -10,33 +10,13 @@
 }
 
 \usage{
-	check_cardinalities(arcs_mat, node_names = NULL, cardinalities = NULL)
+	check_cardinality(arcs_mat, nodename=NULL, cardinality=NULL)
 }
 
 \arguments{
   \item{arcs_mat}{ A matrix that determines the arcs. }
-  \item{node_names}{ The names of each nodes. }
-  \item{cardinalities}{ The cardinalities of each nodes. }
-}
-
-\details{
-}
-
-\value{
-}
-
-\references{
+  \item{nodename}{ The names of each nodes. }
+  \item{cardinality}{ The cardinality of each nodes. }
 }
 
 \author{ Jae-seong Yoo <praster1@gmail.com> }
-
-\note{
-}
-
-\seealso{
-}
-
-\examples{
-}
-
-\keyword{ }

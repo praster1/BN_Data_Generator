@@ -17,24 +17,4 @@
 	\item{arcs_mat}{ A matrix that determines the arcs that determines the arcs. }
 }
 
-\details{
-}
-
-\value{
-}
-
-\references{
-}
-
 \author{ Jae-seong Yoo <praster1@gmail.com> }
-
-\note{
-}
-
-\seealso{
-}
-
-\examples{
-}
-
-\keyword{ }

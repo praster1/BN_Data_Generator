@@ -10,24 +10,20 @@
 }
 
 \usage{
-	make_topology(nodes, topology = "Collapse", input_Probs = NULL, node_names = NULL, cardinalities = NULL)
+	make_topology(nodes, topology, Probs, nodename=NULL, cardinality=NULL)
 }
 
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{nodes}{ The number of nodes. }
-  \item{topology}{ Geometric characteristic. }
-  \item{input_Probs}{ The conditional probabilities. }
-  \item{node_names}{ The names of each nodes. }
-  \item{cardinalities}{ The cardinalities of each nodes. }
+  \item{topology}{ Geometric characteristic. Collapse, Line, Star, PseudoLoop, Diamond, Rhombus. }
+  \item{Probs}{ The conditional probabilities. }
+  \item{nodename}{ The names of each nodes. }
+  \item{cardinality}{ The cardinality of each nodes. }
 }
 
 \details{
 	The volume of the manifold is a geometric characteristic associated with the topology of Bayesian network. Each BN produces a different magnitude of the volume based on the DAG of Bayesian network.
 	Collapse, Line, Star, PseudoLoop, Diamond, Rhombus.
-}
-
-\value{
 }
 
 \references{
@@ -36,14 +32,6 @@
 
 \author{ Jae-seong Yoo <praster1@gmail.com> }
 
-\note{
-}
-
 \seealso{
 	See demo(topology).
 }
-
-\examples{
-}
-
-\keyword{ }

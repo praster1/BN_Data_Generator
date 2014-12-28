@@ -7,8 +7,11 @@
 	Data Generator based on Bayesian Network Model
 }
 
-\details{
+\description{
+	Data Generator based on Bayesian Network Model
+}
 
+\details{
 	\tabular{ll}{
 		Package: \tab BN_Data_Generator\cr
 		Type: \tab Package\cr
@@ -28,7 +31,4 @@
 
 \seealso{
 	See demo(gen_asia) or demo(topology).
-}
-
-\examples{
 }

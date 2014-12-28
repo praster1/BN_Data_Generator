@@ -10,32 +10,12 @@
 }
 
 \usage{
-	fromto_to_mat(fromto, node_names)
+	fromto_to_mat(fromto, nodename)
 }
 
 \arguments{
   \item{fromto}{ A matrix form structured 'fromto' that determines the arcs.}
-  \item{node_names}{ The names of each nodes. }
-}
-
-\details{
-}
-
-\value{
-}
-
-\references{
+  \item{nodename}{ The names of each nodes. }
 }
 
 \author{ Jae-seong Yoo <praster1@gmail.com> }
-
-\note{
-}
-
-\seealso{
-}
-
-\examples{
-}
-
-\keyword{ }

@@ -6,6 +6,7 @@ if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
   install.packages(setdiff(packages, rownames(installed.packages())))  
 }
 
+require(bnlearn)
 require(BNDataGenerator)
 
 n = 1000
@@ -13,9 +14,9 @@ n = 1000
 
 temp = gen_asia()
 target_arcs_mat = temp$arcs_mat
-res = BN_Data_Generator(temp$arcs_mat, temp$Probs, n, temp$node_names)
+res = BN_Data_Generator(temp$arcs_mat, temp$Probs, n, temp$nodename)
 data = res$data
-node_names = res$node_names
+nodename = res$nodename
 
 
 
@@ -74,10 +75,10 @@ round(score(bn_rsmax2, data, type = "aic"), 2)
 round(score(bn_rsmax2, data, type = "bic"), 2)
 
 
-bn_hc_arcs_mat = fromto_to_mat(bn_hc$arcs, node_names)
-bn_tabu_arcs_mat = fromto_to_mat(bn_tabu$arcs, node_names)
-bn_mmhc_arcs_mat = fromto_to_mat(bn_mmhc$arcs, node_names)
-bn_rsmax2_arcs_mat = fromto_to_mat(bn_rsmax2$arcs, node_names)
+bn_hc_arcs_mat = fromto_to_mat(bn_hc$arcs, nodename)
+bn_tabu_arcs_mat = fromto_to_mat(bn_tabu$arcs, nodename)
+bn_mmhc_arcs_mat = fromto_to_mat(bn_mmhc$arcs, nodename)
+bn_rsmax2_arcs_mat = fromto_to_mat(bn_rsmax2$arcs, nodename)
 
 
 ## C		# Correct Edges

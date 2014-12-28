@@ -1,6 +1,6 @@
 # Written by Jae-seong Yoo 20141217
 
-check_cardinalities = function (arcs_mat, node_names = NULL, cardinalities = NULL)
+check_cardinality = function (arcs_mat, nodename=NULL, cardinality=NULL)
 {
 	# Check DAG
 	check_dag_arcs = as.matrix(arcs_mat)
@@ -13,20 +13,20 @@ check_cardinalities = function (arcs_mat, node_names = NULL, cardinalities = NUL
 	num_of_nodes = dim(arcs_mat)[1];
 
 	
-	# node_names가 NULL이면 임의로 node 이름을 부여한다.
-	if (is.null(node_names)) {
-		node_names = big_letters(num_of_nodes)
+	# nodename가 NULL이면 임의로 node 이름을 부여한다.
+	if (is.null(nodename)) {
+		nodename = big_letters(num_of_nodes)
 	}
 
 	
 	# Cardinality가 NULL이면 모두 2로 설정한다.
 	# Cardinality는 모두 2보다 커야 한다.
-	if (is.null(cardinalities)) {
-		cardinalities = rep(2, num_of_nodes)
-	} else if (sum(cardinalities < 2) > 0) {
+	if (is.null(cardinality)) {
+		cardinality = rep(2, num_of_nodes)
+	} else if (sum(cardinality < 2) > 0) {
 		stop("All cardinality must be at least 2.")
-	} else if (num_of_nodes != length(cardinalities)) {
-		stop("Wrong length of cardinalities")
+	} else if (num_of_nodes != length(cardinality)) {
+		stop("Wrong length of cardinality")
 	}
 
 	
@@ -50,7 +50,7 @@ check_cardinalities = function (arcs_mat, node_names = NULL, cardinalities = NUL
 	# 지정해야할 조건부 확률 개수
 	num_of_probs = NULL;
 	for (k in 1:num_of_nodes) {
-		num_of_probs[k] = (cardinalities[k]-1) * prod(cardinalities[list_parent_nodes[[k]]])
+		num_of_probs[k] = (cardinality[k]-1) * prod(cardinality[list_parent_nodes[[k]]])
 	}
 	
 	
@@ -58,14 +58,14 @@ check_cardinalities = function (arcs_mat, node_names = NULL, cardinalities = NUL
 	for(i in 1:length(num_of_parent_nodes))
 	{
 		temp_text = NULL;
-		present_cardinality = as.matrix(toss_value(1, cardinalities[i]));
+		present_cardinality = as.matrix(toss_value(1, cardinality[i]));
 		
 		if (num_of_parent_nodes[i] == 0) {		### it is root node
-			for (j in 1:(cardinalities[i]-1))
+			for (j in 1:(cardinality[i]-1))
 			{
 				temp_text = c(	temp_text,
 										paste(	"P(",
-													node_names[i], " = ", present_cardinality[j,1],
+													nodename[i], " = ", present_cardinality[j,1],
 													")",
 													sep=""
 												)
@@ -74,14 +74,14 @@ check_cardinalities = function (arcs_mat, node_names = NULL, cardinalities = NUL
 		} else {		### it is not a root node
 			temp_list_of_pn = as.numeric(list_parent_nodes[[i]]);
 			
-			for (j in 1:(cardinalities[i]-1))
+			for (j in 1:(cardinality[i]-1))
 			{
 				temp_cases = list();
 				cases = NULL;
 				
 				for (k in 1:length(temp_list_of_pn))
 				{
-					temp_cases[[k]] = toss_value(1, cardinalities[temp_list_of_pn[k]])
+					temp_cases[[k]] = toss_value(1, cardinality[temp_list_of_pn[k]])
 					if (is.null(cases)) {
 						cases = temp_cases[[k]]
 						names(cases) = 1;
@@ -99,7 +99,7 @@ check_cardinalities = function (arcs_mat, node_names = NULL, cardinalities = NUL
 					
 					for (m in 1:dim(cases)[2])
 					{
-						case_value = paste(	node_names[temp_list_of_pn[m]],
+						case_value = paste(	nodename[temp_list_of_pn[m]],
 														" = ", 
 														cases[k, m],
 														sep=""
@@ -114,7 +114,7 @@ check_cardinalities = function (arcs_mat, node_names = NULL, cardinalities = NUL
 					
 					temp_text = c(	temp_text,
 											paste(	"P(",
-														node_names[i], " = ", present_cardinality[j,1],
+														nodename[i], " = ", present_cardinality[j,1],
 														"|",
 														temp_text_conditional,
 														")",
@@ -129,8 +129,8 @@ check_cardinalities = function (arcs_mat, node_names = NULL, cardinalities = NUL
 	}
 
 	
-	res = list(	cardinalities = cardinalities,
-					node_names = node_names,
+	res = list(	cardinality = cardinality,
+					nodename = nodename,
 					num_of_root_nodes = num_of_root_nodes,
 					num_of_probs = num_of_probs,
 					num_of_parent_nodes = num_of_parent_nodes,

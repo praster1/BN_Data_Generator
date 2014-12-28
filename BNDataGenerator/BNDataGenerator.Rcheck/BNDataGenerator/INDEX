@@ -4,7 +4,7 @@ BN_Data_Generator       Data Generator based on Bayesian Network Model
 C_M_WO_WC               Correct, Missing, Wrongly Oriented, Wronglyy
                         Corrected Arcs
 big_letters             Letters built
-check_cardinalities     A checker of needs of input_Prob follows
+check_cardinality       A checker of needs of input_Prob follows
                         cardinality
 fromto_to_mat           Convert from 'fromto' to 'matrix'
 gen_asia                Asia (synthetic) data based on a model set by

@@ -1,14 +1,14 @@
-fromto_to_mat = function(fromto, node_names)
+fromto_to_mat = function(fromto, nodename)
 {
 	if(dim(fromto)[1] == 0)
 	{
 		stop("It has not any arc");
 	}
 	
-	num_of_nodes = length(node_names)
+	num_of_nodes = length(nodename)
 	arcs_mat = matrix(0, num_of_nodes, num_of_nodes)
 
-	arcs_order_mat = cbind(node_names, c(1:length(node_names)))
+	arcs_order_mat = cbind(nodename, c(1:length(nodename)))
 	temp_arcs = cbind(match(fromto[,1], arcs_order_mat), match(fromto[,2], arcs_order_mat))
 
 
@@ -22,8 +22,8 @@ fromto_to_mat = function(fromto, node_names)
 		}
 	}
 	
-	dimnames(arcs_mat)[[1]] = node_names
-	dimnames(arcs_mat)[[2]] = node_names
+	dimnames(arcs_mat)[[1]] = nodename
+	dimnames(arcs_mat)[[2]] = nodename
 	
 	return(arcs_mat);
 }

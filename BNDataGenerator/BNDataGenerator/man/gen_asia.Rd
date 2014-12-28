@@ -13,9 +13,6 @@
 	gen_asia()
 }
 
-\details{
-}
-
 \value{
 	\item{D (dyspnoea)}{A two-level factor with levels yes and no.}
 	\item{T (tuberculosis)}{A two-level factor with levels yes and no.}
@@ -42,8 +39,3 @@
 \seealso{
 	See demo(gen_asia).
 }
-
-\examples{
-}
-
-\keyword{ }

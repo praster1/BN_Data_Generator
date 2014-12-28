@@ -10,7 +10,7 @@
 }
 
 \usage{
-	toss_value(times, num_of_cases, makespace = FALSE)
+	toss_value(times, num_of_cases, makespace=FALSE)
 }
 
 \arguments{
@@ -19,14 +19,8 @@
   \item{makespace}{ Logical. }
 }
 
-\details{
-}
-
 \value{
 	A data frame, with an equally likely probs column if makespace is TRUE.
-}
-
-\references{
 }
 
 \author{ Jae-seong Yoo <praster1@gmail.com> }
@@ -35,13 +29,8 @@
 	It developed of 'tosscoin' function in prob package.
 }
 
-\seealso{
-}
-
 \examples{
 	toss_value(1, 3)
 	toss_value(2, 3)
 	toss_value(3, 4, makespace = TRUE)
 }
-
-\keyword{ }

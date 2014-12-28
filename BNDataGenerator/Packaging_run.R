@@ -11,7 +11,7 @@ package.skeleton(name="BNDataGenerator",
 												"big_letters.R",
 												"toss_value.R",
 												"BN_Data_Generator.R",
-												"check_cardinalities.R",
+												"check_cardinality.R",
 												
 												"make_topology.R",
 												

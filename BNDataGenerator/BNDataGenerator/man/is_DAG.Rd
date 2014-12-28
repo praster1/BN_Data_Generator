@@ -24,19 +24,8 @@
 	A logical vector of length one.
 }
 
-\references{
-}
-
 \author{ Jae-seong Yoo <praster1@gmail.com> }
-
-\note{
-}
 
 \seealso{
 	\code{\link{is_acyclic}}
 }
-
-\examples{
-}
-
-\keyword{ }

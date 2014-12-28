@@ -2,7 +2,7 @@
 \alias{C_M_WO_WC}
 
 \title{
-Correct, Missing, Wrongly Oriented, Wronglyy Corrected Arcs
+	Correct, Missing, Wrongly Oriented, Wronglyy Corrected Arcs
 }
 
 \description{
@@ -18,9 +18,6 @@ Correct, Missing, Wrongly Oriented, Wronglyy Corrected Arcs
 	\item{learnt_arcs_mat}{ A matrix of learnt network structure. }
 }
 
-\details{
-}
-
 \value{
 	\item{C (Correct Arcs)}{Edges present in the original network and in the learnt network structure.}
 	\item{M (Missing Arcs)}{Edges present in the original network but not in the learnt network structure.}
@@ -34,14 +31,6 @@ Correct, Missing, Wrongly Oriented, Wronglyy Corrected Arcs
 
 \author{ Jae-seong Yoo <praster1@gmail.com> }
 
-\note{
-}
-
 \seealso{
 	See demo(gen_asia) or demo(topology).
 }
-
-\examples{
-}
-
-\keyword{ }

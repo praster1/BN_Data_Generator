@@ -1,6 +1,6 @@
 # Written by Jae-seong Yoo 20141222
 
-make_topology = function (nodes, topology = "Collapse", input_Probs = NULL, node_names = NULL, cardinalities = NULL)
+make_topology = function (nodes, topology, Probs=NULL, nodename=NULL, cardinality=NULL)
 {
 	# Check Num of Nodes
 	NeedMoreNodes = function(num_of_nodes)
@@ -53,71 +53,71 @@ make_topology = function (nodes, topology = "Collapse", input_Probs = NULL, node
 	)
 	
 	
-	# Check Input Probs & Cardinalities
-	checker = check_cardinalities(arcs_mat = arcs_mat, node_names = node_names, cardinalities = cardinalities)
-	cardinalities = checker$cardinalities;
+	# Check Input Probs & cardinality
+	checker = check_cardinality(arcs_mat = arcs_mat, nodename = nodename, cardinality = cardinality)
+	cardinality = checker$cardinality;
 	num_of_probs = checker$num_of_probs;
-	node_names = checker$node_names;
+	nodename = checker$nodename;
 	
 	
 	# Random Probs
-	if (is.null(input_Probs) & is.null(cardinalities))
+	if (is.null(Probs) & is.null(cardinality))
 	{
-		input_Probs = list()
+		Probs = list()
 		switch (topology,
 			"Collapse" = {	for (i in 1:(nodes-1))
 									{
-										input_Probs[[i]] = runif(1)
+										Probs[[i]] = runif(1)
 									}
-									input_Probs[[nodes]] = runif(2^(nodes-1))
+									Probs[[nodes]] = runif(2^(nodes-1))
 								},
-			"Line" = {	input_Probs[[1]] = runif(1)
+			"Line" = {	Probs[[1]] = runif(1)
 							for (i in 2:nodes)
 							{
-								input_Probs[[i]] = runif(2)
+								Probs[[i]] = runif(2)
 							}
 						},
-			"Star" = {	input_Probs[[1]] = runif(1)
+			"Star" = {	Probs[[1]] = runif(1)
 							for (i in 2:nodes)
 							{
-								input_Probs[[i]] = runif(2)
+								Probs[[i]] = runif(2)
 							}
 						},
-			"PseudoLoop" = {	input_Probs[[1]] = runif(1)
+			"PseudoLoop" = {	Probs[[1]] = runif(1)
 										for (i in 2:(nodes-1))
 										{
-											input_Probs[[i]] = runif(2)
+											Probs[[i]] = runif(2)
 										}
-										input_Probs[[nodes]] = runif(4)
+										Probs[[nodes]] = runif(4)
 									},
-			"Diamond" = {	input_Probs[[1]] = runif(1)
+			"Diamond" = {	Probs[[1]] = runif(1)
 									for (i in 2:(nodes-1))
 									{
-										input_Probs[[i]] = runif(2)
+										Probs[[i]] = runif(2)
 									}
-									input_Probs[[nodes]] = runif(2^(nodes-2))
+									Probs[[nodes]] = runif(2^(nodes-2))
 								},
-			"Rhombus" = {	input_Probs[[1]] = runif(1)
-									input_Probs[[2]] = runif(1)
+			"Rhombus" = {	Probs[[1]] = runif(1)
+									Probs[[2]] = runif(1)
 									for (i in 3:nodes)
 									{
-										input_Probs[[i]] = runif(2^2)
+										Probs[[i]] = runif(2^2)
 									}
 								},
 		)
-	} else if (is.null(input_Probs)) {
-		input_Probs = list()
+	} else if (is.null(Probs)) {
+		Probs = list()
 		for (i in 1:length(num_of_probs))
 		{
-			input_Probs[[i]] = runif(num_of_probs[i])
+			Probs[[i]] = runif(num_of_probs[i])
 		}
 	}
 	
 	
 	result = list(	arcs_mat = arcs_mat,
-						Probs = input_Probs,
-						node_names = node_names,
-						cardinalities = cardinalities,
+						Probs = Probs,
+						nodename = nodename,
+						cardinality = cardinality,
 						num_of_nodes = nodes
 					)
 	return(result)
