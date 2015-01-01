@@ -1,0 +1,16 @@
+BNDataGenerator-package
+                        Data Generator based on Bayesian Network Model
+BN_Data_Generator       Data Generator based on Bayesian Network Model
+C_M_WO_WC               Correct, Missing, Wrongly Oriented, Wronglyy
+                        Corrected Arcs
+big_letters             Letters built
+check_cardinality       A checker of needs of input_Prob follows
+                        cardinality
+fromto_to_mat           Convert from 'fromto' to 'matrix'
+gen_asia                Asia (synthetic) data based on a model set by
+                        Lauritzen and Spiegelhalter
+is_DAG                  Directed acyclic graphs
+is_acyclic              Acyclic graphs
+make_topology           Bayesian Networks with varying topologies
+mat_to_fromto           Convert from 'matrix' to 'fromto'
+toss_value              Tossing a Cardinality
