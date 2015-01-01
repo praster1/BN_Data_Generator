@@ -1,41 +1,68 @@
 \name{gen_asia}
 \alias{gen_asia}
-
+%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-	Asia (synthetic) data based on a model set by Lauritzen and Spiegelhalter
+%%  ~~function to do ... ~~
 }
-
 \description{
-	Small synthetic data set from Lauritzen and Spiegelhalter (1988) about lung diseases (tuberculosis, lung cancer or bronchitis) and visits to Asia.
+%%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
-
 \usage{
-	gen_asia()
+gen_asia()
 }
-
+%- maybe also 'usage' for other objects documented here.
+\details{
+%%  ~~ If necessary, more details than the description above ~~
+}
 \value{
-	\item{D (dyspnoea)}{A two-level factor with levels yes and no.}
-	\item{T (tuberculosis)}{A two-level factor with levels yes and no.}
-	\item{L (lung cancer)}{A two-level factor with levels yes and no.}
-	\item{B (bronchitis)}{A two-level factor with levels yes and no.}
-	\item{A (visit to Asia)}{A two-level factor with levels yes and no.}
-	\item{S (smoking)}{A two-level factor with levels yes and no.}
-	\item{X (chest X-ray)}{A two-level factor with levels yes and no.}
-	\item{E (tuberculosis versus lung cancer/bronchitis)}{A two-level factor with levels yes and no.}
+%%  ~Describe the value returned
+%%  If it is a LIST, use
+%%  \item{comp1 }{Description of 'comp1'}
+%%  \item{comp2 }{Description of 'comp2'}
+%% ...
 }
-
 \references{
-	Lauritzen S, Spiegelhalter D (1988). "Local Computation with Probabilities on Graphical Structures and their Application to Expert Systems (with discussion)". Journal of the Royal Statistical Society: Series B (Statistical Methodology), 50(2), 157-224.
+%% ~put references to the literature/web site here ~
 }
-
-\author{ Jae-seong Yoo <praster1@gmail.com> }
-
+\author{
+%%  ~~who you are~~
+}
 \note{
-	Lauritzen and Spiegelhalter (1988) motivate this example as follows:
-	Shortness-of-breath (dyspnoea) may be due to tuberculosis, lung cancer or bronchitis, or none of them, or more than one of them. A recent visit to Asia increases the chances of tuberculosis, while smoking is known to be a risk factor for both lung cancer and bronchitis. The results of a single chest X-ray do not discriminate between lung cancer and tuberculosis, as neither does the presence or absence of dyspnoea.
-	Standard learning algorithms are not able to recover the true structure of the network because of the presence of a node (E) with conditional probabilities equal to both 0 and 1. Monte Carlo tests seems to behave better than their parametric counterparts.
+%%  ~~further notes~~
 }
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-	See demo(asia).
+%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
+\examples{
+##---- Should be DIRECTLY executable !! ----
+##-- ==>  Define data, use random,
+##--	or do  help(data=index)  for the standard data sets.
+
+## The function is currently defined as
+function () 
+{
+    arcs_mat = rbind(c(0, 0, 1, 0, 0, 0, 0, 0), c(0, 0, 0, 1, 
+        1, 0, 0, 0), c(0, 0, 0, 0, 0, 1, 0, 0), c(0, 0, 0, 0, 
+        0, 1, 0, 0), c(0, 0, 0, 0, 0, 0, 0, 1), c(0, 0, 0, 0, 
+        0, 0, 1, 1), c(0, 0, 0, 0, 0, 0, 0, 0), c(0, 0, 0, 0, 
+        0, 0, 0, 0))
+    nodename = c("A", "S", "T", "L", "B", "E", "X", "D")
+    dimnames(arcs_mat)[[1]] = nodename
+    dimnames(arcs_mat)[[2]] = nodename
+    input_Probs = list(c(0.01), c(0.5), c(0.05, 0.01), c(0.1, 
+        0.01), c(0.6, 0.3), c(1, 1, 1, 0), c(0.98, 0.05), c(0.9, 
+        0.7, 0.8, 0.1))
+    num_of_nodes = length(nodename)
+    cardinality = rep(2, num_of_nodes)
+    result = list(arcs_mat = arcs_mat, Probs = input_Probs, nodename = nodename, 
+        cardinality = cardinality, num_of_nodes = num_of_nodes)
+    return(result)
+  }
+}
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{ ~kwd1 }
+\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

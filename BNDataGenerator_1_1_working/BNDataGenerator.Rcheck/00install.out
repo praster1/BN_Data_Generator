@@ -1,11 +1,12 @@
 * installing *source* package 'BNDataGenerator' ...
 ** R
-** demo
 ** preparing package for lazy loading
 ** help
+경고: E:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator_1_1_working/BNDataGenerator/man/BNDataGenerator-package.Rd:33: All text must be in a section
+경고: E:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator_1_1_working/BNDataGenerator/man/BNDataGenerator-package.Rd:34: All text must be in a section
 *** installing help indices
-** building package indices
-** testing if installed package can be loaded
-*** arch - i386
-*** arch - x64
-* DONE (BNDataGenerator)
+다음에 오류가 있습니다Rd_info(db[[i]]) : 
+  'E:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator_1_1_working/BNDataGenerator/man/BN_Data_Generator.Rd'내에 \title 항목이 비어있습니다 
+Rd 파일은 반드시 비어있지 않은 \title 를 가지고 있어야 합니다.
+'Writing R Extensions' 매뉴얼의 'Writing R documentation' 챕터를 보세요.
+* removing 'E:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator_1_1_working/BNDataGenerator.Rcheck/BNDataGenerator'

@@ -2,33 +2,41 @@
 \alias{BNDataGenerator-package}
 \alias{BNDataGenerator}
 \docType{package}
-
 \title{
-	Data Generator based on Bayesian Network Model
+What the package does (short line)
+~~ package title ~~
 }
-
 \description{
-	Data Generator based on Bayesian Network Model
+More about what it does (maybe more than one line)
+~~ A concise (1-5 lines) description of the package ~~
 }
-
 \details{
-	\tabular{ll}{
-		Package: \tab BN_Data_Generator\cr
-		Type: \tab Package\cr
-		Version: \tab 1.0\cr
-		Date: \tab 2014-12-28\cr
-		License: \tab GPL (>=2)\cr
-		}
+\tabular{ll}{
+Package: \tab BNDataGenerator\cr
+Type: \tab Package\cr
+Version: \tab 1.0\cr
+Date: \tab 2015-01-01\cr
+License: \tab What license is it under?\cr
 }
+~~ An overview of how to use the package, including the most ~~
+~~ important functions ~~
+}
+\author{
+Who wrote it
 
-\author{ Jae-seong Yoo <praster1@gmail.com> }
-
+Maintainer: Who to complain to <yourfault@somewhere.net>
+~~ The author and/or maintainer of the package ~~
+}
 \references{
-	Jae-seong Yoo, (2014), "A Study on Comparison of Bayesian Network Structure Learning Algorithms for Selecting Appropriate Models", M.S. thesis, Department of Statistics, Korea University, Seoul.
+~~ Literature or other references for background information ~~
 }
-
-\keyword{ Bayesian Network }
-
+~~ Optionally other standard keywords, one per line, from ~~
+~~ file KEYWORDS in the R documentation directory ~~
+\keyword{ package }
 \seealso{
-	See demo(asia) or demo(topology).
+~~ Optional links to other man pages, e.g. ~~
+~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+}
+\examples{
+~~ simple examples of the most important functions ~~
 }

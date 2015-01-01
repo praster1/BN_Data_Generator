@@ -1,7 +1,7 @@
 # Written by Jae-seong Yoo 20141101
 
 rm(list = ls())
-setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator")
+setwd("E:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator_1_1_working")
 
 
 package.skeleton(name="BNDataGenerator",
@@ -38,10 +38,10 @@ package.skeleton(name="BNDataGenerator",
 
 
 ##### run at terminal
-setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator/BNDataGenerator/man")
+setwd("E:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator_1_1_working/BNDataGenerator/man")
 system("R CMD Rd2pdf .")
 
 
-setwd("D:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator")
+setwd("E:/Dropbox/__GitHub/BN_Data_Generator/BNDataGenerator_1_1_working")
 system("Rcmd check BNDataGenerator")
 system("Rcmd build BNDataGenerator")

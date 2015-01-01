@@ -1,11 +1,9 @@
 Package: BNDataGenerator
+Type: Package
+Title: What the package does (short line)
 Version: 1.0
-Date: 2014-12-28
-Title: Data Generator based on Bayesian Network Model
-Author: Jae-seong Yoo
-Maintainer: Jae-seong Yoo <praster1@gmail.com>
-Depends: R (>= 3.0.0)
-Suggests: bnlearn
-Description: Data generator based on Bayesian network model
-License: GPL (>= 2)
-URL: http://www.github.com/praster1/BN_Data_Generator
+Date: 2015-01-01
+Author: Who wrote it
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than one line)
+License: What license is it under?
