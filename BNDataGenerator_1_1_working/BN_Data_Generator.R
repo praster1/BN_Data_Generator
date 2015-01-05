@@ -10,7 +10,7 @@ BN_Data_Generator = function (arcs_mat, Probs, n, nodename=NULL, cardinality=NUL
 	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 	# 이를 보완하기 위한 부분.
 	if (n < 10000) {
-		temp_n = 1000;
+		temp_n = 10000;
 	} else {
 		temp_n = n;
 	}
@@ -117,8 +117,8 @@ BN_Data_Generator = function (arcs_mat, Probs, n, nodename=NULL, cardinality=NUL
 
 	# 20141209: sample size가 1000개보다 적으면 데이터가 올바르게 생성되지 않는 버그가 있다.
 	# 이를 보완하기 위한 부분.
-	if (n < 1000) {
-		result_mat = result_mat[sample(c(1:1000), size=n), ]
+	if (n < 10000) {
+		result_mat = result_mat[sample(c(1:10000), size=n), ]
 	}
 	#####
 
