@@ -121,7 +121,22 @@ BN_Data_Generator = function (arcs_mat, Probs, n, nodename=NULL, cardinality=NUL
 		result_mat = result_mat[sample(c(1:10000), size=n), ]
 	}
 	#####
+	
+	
+	# 20150106: Value 개수가 2보다 작은지 확인
+	checker_num_of_values = apply(result_mat, 2, unique)
+	checker_len = length(checker_num_of_values)
+	for (i in 1:checker_len)
+	{
+		if (length(checker_num_of_values[[i]]) == 1)
+		{
+			result_mat = as.matrix(result_mat)
+			result_mat[round(runif(1, min=1, max=n),0), i] = "Value2"
+			result_mat = result_mat.frame(result_mat)
+		}
+	}
 
+	
 	res = list(	data = data.frame(result_mat),
 					nodename = nodename,
 					num_of_nodes = num_of_nodes,
