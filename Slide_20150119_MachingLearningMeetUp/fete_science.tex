@@ -1,0 +1,1244 @@
+\documentclass{beamer}
+
+\usepackage{mathpazo}
+\usepackage[english]{babel}
+\usepackage{kotex}
+\usepackage{epstopdf}
+\usepackage{wallpaper}
+\usepackage{mdframed}
+\usepackage{geometry}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\pdfmapfile{+sansmathaccent.map}
+
+%%
+\usetheme{ENSLyon} %http://mike.depalatis.net/beamerthemes/
+%\useoutertheme[footline=authorinstitutetitle]{miniframes}
+\title[Title]{A Study on Comparison of\\ Bayesian Network Structure Learning Algorithms\\ for Selecting Appropriate Models}
+\author[Joe]{Jae-seong Yoo}
+\institute[]{Dept. of Statistics}
+%\date{\today}
+\date{January 19, 2015}
+  \setbeamersize{text margin left=5mm}
+  \setbeamersize{text margin right=5mm}
+
+
+% pour supprimer les symboles de navigation
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme{ENSLyon_blue}
+
+
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+{\includegraphics[	width=\paperwidth,
+								height=\paperheight,keepaspectratio]
+								{background.jpg}}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Title}
+{\scriptsize{}
+	\tableofcontents
+}
+\end{frame}
+
+
+\section{Introduction}
+\subsection{Goal}
+\begin{frame}
+\frametitle{Goal}
+{\scriptsize{}
+\begin{itemize}
+	\item In this paper, we \textcolor{red}{compare the performance} between the Bayesian network \textcolor{red}{structure learning algorithms} provided by \textbf{bnlearn} package in \textbf{R}.
+
+	{}\
+	
+	\item The performance is \textcolor{red}{evaluated} by
+
+	\begin{itemize}
+		\item \textcolor{red}{using a score}
+		
+		 or
+		 
+		\item comparing between the \textcolor{red}{target network} and the \textcolor{red}{learnt network}.
+	\end{itemize}	
+	
+		In this paper, it was confirmed that algorithm specific performance test results using fore-mentioned methods are different.
+
+	{}\
+
+	\item A \textcolor{red}{data generator} based on Bayesian network model using \textbf{R} is built and introduced.
+
+	{}\
+
+	\item The aim of this paper is to provide objective guidance of selecting suitable algorithm in accordance to target network \textcolor{red}{using synthetic data generated based on topology}.
+\end{itemize}
+}
+\end{frame}
+
+
+\subsection{Bayesian Network}
+\begin{frame}
+\frametitle{Bayesian Network}
+{\scriptsize{}
+A BN defines a unique joint probability distribution over $X$ given by
+$$P_{B}(X_{1},\cdots,X_{n})=\prod_{i=1}^{n}P_{B}(X_{i}|\prod_{X_{i}}).$$
+
+\begin{itemize}
+	\item A BN encodes the independence assumptions over the component random variables of $X$.
+	
+	\item An edge $(j, i)$ in $E$ represents a direct dependency of $X_{i}$ from $X_{j}$.
+	
+	\item The set of all Bayesian networks with $n$ variables is denotes by $B_{n}$.
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics[height=60pt]{images/image01}
+		\caption{{\scriptsize{}$P(A,B,C,D,E)=P(A)P(B|A)P(C|A)P(D|B,C)P(E|D)$}}
+\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+{\scriptsize{}
+	\begin{itemize}
+
+		\item \underline{\textbf{베이지안 네트워크}}(이하 BN)는 확률 값이 모인 집합의 결합확률분포의 \textcolor[rgb]{1.00,0.00,0.00}{\textbf{결정모델}}이다.
+
+		{}\
+
+		\item 특정 분야의 영역지식을 확률적으로 표현하는 수단
+		
+		{}\		
+		
+		\item 변수들간의 확률적 의존 관계를 나타내는 \textcolor[rgb]{1.00,0.00,0.00}{\textbf{그래프}}와, 각 변수별 \textcolor[rgb]{1.00,0.00,0.00}{\textbf{조건부 확률}}로 구성된다.
+
+		{}\
+
+		\item 하나의 BN은 각 노드마다 하나의 \textcolor[rgb]{1.00,0.00,0.00}{\textbf{조건부 확률표(CPT ; Conditional Probability Table)}}를 갖는 \textcolor[rgb]{1.00,0.00,0.00}{\textbf{비순환유향그래프(DAG ; Directed Acycle Graph)}}로 정의할 수 있다.
+
+		{}\
+
+		\item 노드와 노드를 연결하는 \textcolor[rgb]{1.00,0.00,0.00}{\textbf{호(arc or edge)}}는 노드 사이의 관계를 나타내며, 변수의 확률적인 인과관계로 네트워크를 구성하고 조건부확률표(CPT)를 가지고 다음의 식과 같은 베이즈 정리(Bayes Theorem)을 이용하여 결과를 추론할 수 있다.
+		
+		$$P(A|B)=\frac{P(A,B)}{P(B)}$$		
+	\end{itemize}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image91}
+		\caption{\scriptsize{}{Nodes}}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image92}
+		\caption{{\scriptsize{}Edges}}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image93}
+		\caption{{\scriptsize{}Edges = directed, (No cycles!)}}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+{\scriptsize{}
+	\begin{itemize}
+
+		\item 일반적인 베이지안 네트워크는 베이즈 정리, 곱셈 규칙, 체인 규칙(chain rule)에 의하여 다음과 같은 식이 만들어진다.	
+
+		$$P(A,B,C,D,E)=\prod_{i}P(x_{i}|\mbox{parent}_{i})$$
+		
+		여기서 $x_{1}, \cdots, x_{n}$은 특정 데이터의 속성 집합
+		
+		{}\		
+		
+		$\mbox{parent}(x_{i})$는 $x_{i}$의 부모 노드들의 집합
+		
+	\end{itemize}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image93}
+		\caption{{\scriptsize{}$P(A,B,C,D,E)=\prod_{i}P(\mbox{node}_{i}|\mbox{parents}_{i})$}}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image94}
+		\caption{{\scriptsize{}$P(A,B,C,D,E)=\textcolor[rgb]{1.00,0.50,0.25}{P(A)}$}}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image95}
+		\caption{{\scriptsize{}$P(A,B,C,D,E)=P(A)\textcolor[rgb]{1.00,0.50,0.25}{P(B|A)}$}}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image96}
+		\caption{{\scriptsize{}$P(A,B,C,D,E)=P(A)P(B|A)\textcolor[rgb]{1.00,0.50,0.25}{P(C|A)}$}}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image97}
+		\caption{{\scriptsize{}$P(A,B,C,D,E)=P(A)P(B|A)P(C|A)\textcolor[rgb]{1.00,0.50,0.25}{P(D|B,C)}$}}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{기본 개념}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image98}
+		\caption{{\scriptsize{}$P(A,B,C,D,E)=P(A)P(B|A)P(C|A)P(D|B,C)\textcolor[rgb]{1.00,0.50,0.25}{P(E|D)}$}}
+	\end{figure}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{S. L. Lauritzen and D. J. Spiegelhalter (1988)}
+
+{}\
+
+{\scriptsize{}{\underline{S. L. Lauritzen and D. J. Spiegelhalter (1988),}}
+}
+
+{\scriptsize{}{\underline{"Local Computations with Probabilities on Graphical Structures}}}
+
+\begin{flushright}
+{\scriptsize{}{\underline{and Their Application to Expert Systems",}}}
+\end{flushright}
+
+{\scriptsize{}{\underline{Journal of the Royal Statistical Society. Series B (Methodological), Vol. 50, No. 2, pp. 157-224}}}
+
+{\scriptsize{}
+\begin{center}
+Abstract
+\end{center}
+Casual Network는 변수 set에 포함되어있는 영향력의 패턴을 서술하는 것을 말하며, 많은 분야에서 사용되고 있다. 이는 전문가 시스템으로부터 크지만(large) 희소(sparse) 네트워크를 이용해 국지적 계산을 하여 구해진 평균을 통해 이 영향력을 추론하는 것이 보통이다. 이는 정확한 확률적인 방법을 이용하는 것이 불가능하였다.
+
+이 논문에서는 original network에 위상 변화를 주어 일부 범위를 결합 확률 분포로 나타낼 수 있고, 이를 이용해서 변수 사이의 국지적 영향력을 추론할 수 있다고 설명하고 있다.
+}
+\end{frame}
+
+
+
+\begin{frame}{S. L. Lauritzen and D. J. Spiegelhalter (1988)}
+
+	\begin{figure}
+		\includegraphics[height=150pt]{images/image82}
+		\caption{\tiny{아시아 방문 여부, 흡연 여부와 폐질환과의 관계를 도식화한 베이지안 네트워크 모형}}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}{S. L. Lauritzen and D. J. Spiegelhalter (1988)}
+
+	\begin{figure}
+		\includegraphics[height=150pt]{images/image83}
+		\caption{\tiny{실제 데이터의 모습과, 이의 베이지안 네트워크 그래프 모형}}
+	\end{figure}
+
+\end{frame}
+
+
+\begin{frame}{S. L. Lauritzen and D. J. Spiegelhalter (1988)}
+
+{\scriptsize{}Unit Test : 환자 1이 있는데, 그에 대한 정보가 아무것도 없다. $P(T=1)$, $P(L=1)$, $P(B=1)$}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image84}
+	\end{figure}
+
+{\scriptsize{}결론 : 결핵일 가능성은 약 1\%, 폐암일 가능성은 약 5\%, 기관지염이 있을 가능성은 약 46\%이다.}
+
+\end{frame}
+
+
+\begin{frame}{S. L. Lauritzen and D. J. Spiegelhalter (1988)}
+
+{\scriptsize{}Question 1 : 환자 2는 최근 아시아를 방문했고, 비흡연자이다. $P(T=1 | A=1, S=0)$}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image85}
+	\end{figure}
+
+{\scriptsize{}결론 : 기관지염이 있을 가능성이 약 34\% 이다.}
+
+\end{frame}
+
+
+
+\begin{frame}{S. L. Lauritzen and D. J. Spiegelhalter (1988)}
+
+{\scriptsize{}Question 2 : 환자 3은 최근 아시아를 방문했고 비흡연자이다. 호흡 곤란도 겪지 않고 있지만, X-Ray 테스트 결과 양성 반응을 보였다. $P(T=1 | A=1, S=0, D=0, X=1)$}
+
+	\begin{figure}
+		\includegraphics[height=120pt]{images/image86}
+	\end{figure}
+
+{\scriptsize{}결론 : 환자에게 결핵과 기관지염이 있을 가능성이 각각 약 33\%이다.}
+
+\end{frame}
+
+
+
+\subsection{베이지안 네트워크의 특징}
+
+\begin{frame}
+\frametitle{베이지안 네트워크의 특징}
+{\scriptsize{}
+	% 장점
+
+	\underline{\textbf{장점}}
+
+	\begin{itemize}
+
+		\item 특정 분야의 영역 지식을 확률적으로 표현하는 대표적인 수단
+		
+		\item 변수들 간의 확률적 의존 관계를 나타내는 그래프와 각 변수별 조건부 확률로 구성
+		
+		\item 분류 클래스 노드의 사후 확률분포를 구해줌으로써 개체들에 대한 하나의 자동분류기로 이용 가능
+		
+		\item 샘플이 어떤 부류로 분류되었을 때 왜 그런 결정이 내려졌는지 해석 가능
+
+	\end{itemize}
+
+	{}\
+
+	% 단점
+
+	\underline{\textbf{단점}}
+
+	\begin{itemize}
+
+		\item 입력값으로 수치형이 아닌 범주형을 사용
+		
+		\item 노드 수가 방대해지면 시간이 오래 소요될 수 있음		
+		
+	\end{itemize}
+}
+\end{frame}
+
+
+
+\subsection{다른 기법과의 장단점 비교}
+
+\begin{frame}
+\frametitle{다른 기법과의 비교 - \textcolor[rgb]{1.00,0.50,0.25}{로지스틱 회귀분석}}
+{\scriptsize{}
+	% 장점
+
+	\underline{\textbf{장점}}
+
+	\begin{itemize}
+
+		\item 다변량 분석으로 많이 쓰임
+
+		\item 다변량 변수를 독립변수로하여 종속변수에 미치는 영향을 파악 가능
+
+		\item 입력값으로 수치형과 범주형 모두 취급 가능
+		
+	\end{itemize}
+
+	{}\
+
+	% 단점
+
+	\underline{\textbf{단점}}
+
+	\begin{itemize}
+
+		\item 샘플이 어떤 부류로 분류되었을 때 왜 그런 결정이 내려졌는지 해석하기가 어려움
+
+		\item 분석자료에 가장 적합한 모델을 선정하는 데 시간 투자가 필요
+		
+	\end{itemize}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{다른 기법과의 비교 - \textcolor[rgb]{1.00,0.50,0.25}{신경망}}
+{\scriptsize{}
+	% 장점
+
+	\underline{\textbf{장점}}
+
+	\begin{itemize}
+
+		\item 분류문제 뿐만 아니라 예측, 평가, 합성, 제어 등의 다양한 분야에 적용 가능
+		
+		\item 학습능력을 갖추고 일반화 능력이 뛰어나고 구현이 쉬움
+		
+		\item 다층 퍼셉트론은 선형분리가 불가능한 경우에도 높은 성능을 보여주는 한 단계 진보한 신경망
+		
+	\end{itemize}
+
+	{}\
+
+	% 단점
+
+	\underline{\textbf{단점}}
+
+	\begin{itemize}
+
+		\item 샘플이 어떤 부류로 분류되었을 때 왜 그런 결정이 내려졌는지 이유를 분석하기가 어려움
+
+		\item 입력값으로 수치형이 아닌 범주형을 사용
+		
+	\end{itemize}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{다른 기법과의 비교 - \textcolor[rgb]{1.00,0.50,0.25}{의사 결정 트리}}
+{\scriptsize{}
+	% 장점
+
+	\underline{\textbf{장점}}
+
+	\begin{itemize}
+
+		\item 의사결정규칙을 도표화하여 관심대상에 해당하는 집단을 몇 개의 소집단으로 분류하거나 예측을 수행하는 계량적 분석 방법
+
+		\item 샘플이 어떤 부류로 분류되었을 때 왜 그런 결정이 내려졌는지 해석 가능
+
+		\item 입력값으로 수치형, 범주형 모두 취급 가능
+				
+	\end{itemize}
+
+	{}\
+
+	% 단점
+
+	\underline{\textbf{단점}}
+
+	\begin{itemize}
+
+		\item 반응변수가 수치형인 회귀모형에서는 그 예측력이 떨어짐
+		
+		\item 나무가 너무 깊은 경우에는 예측력 저하와 해석이 쉽지 않음
+		
+		\item 가지가 많을 경우 새로운 자료에 적용할 때 예측 오차가 큼		
+		
+	\end{itemize}
+}
+\end{frame}
+
+
+
+
+
+\subsection{베이지안 네트워크의 다양한 유형}
+
+\begin{frame}
+\frametitle{베이지안 네트워크의 다양한 유형}
+{\scriptsize{}
+	\begin{itemize}
+
+		\item \underline{나이브 베이지안 네트워크 (NBN)}
+		
+		가정의 단순함에도 불구하고 많은 연구를 통해 비교적 높은 분류성능을 보여준다.
+	
+		{}\	
+		
+		\item \underline{일반 베이지안 네트워크 (GBN)}
+		
+		클래스 노드조차 일반 속성 노드와의 차이를 두지 않고 모든 노드들 간의 상호의존도를 하나의 베이지안 네트워크로 표현한다.
+		
+		{}\		
+		
+		\item \underline{트리-확장 나이브 베이지안 네트워크 (TAN)}
+
+		속성 노드들 간에도 상호의존도가 존재한다고 가정하고, 이러한 속성 간 상호의존도를 하나의 일반 베이지안 네트워크 형태로 표현 가능하도록 NBN을 확장한 것이다.
+
+		{}\		
+		
+		\item \underline{동적 베이지안 네트워크 (DBN)}
+
+		시계열 분석을 위해 현재 변수의 확률을 계산할 때, 이전 시점의 정보를 함께 고려하는 베이지안 네트워크이다.
+
+	\end{itemize}
+}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{베이지안 네트워크의 다양한 유형}
+
+	\begin{figure}
+		\includegraphics[height=170pt]{images/image109}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{베이지안 네트워크의 다양한 유형}
+
+	\begin{figure}
+		\includegraphics[height=170pt]{images/image110}
+	\end{figure}
+
+\end{frame}
+
+
+
+
+
+\subsection{Bayesian Network Structure Learning}
+\begin{frame}
+\frametitle{Bayesian Network Structure Learning}
+{\scriptsize{}
+
+Learning a Bayesian network is as follows:
+
+{}\
+
+Given a data $T = \{y_{1}, \cdots, y_{n}\}$ and a scoring function $\phi$, the problem of learning a Bayesian network is to find a Bayesian network $B \in B_{n}$ that maximizes the value $\phi(B, T)$.
+
+{}\
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics[height=100pt]{images/image02}
+		\caption{{\scriptsize{}A model before learning structure}}
+\end{figure}	
+}
+\end{frame}
+
+
+
+\section{Structure Learning Algorithms in bnlearn}
+\subsection{Available Constraint-based Learning Algorithms}
+\begin{frame}
+\frametitle{Available constraint-based learning algorithms}
+{\scriptsize{}
+\begin{description}
+\item[Grow-Shrink (GS)] based on the Grow-Shrink Markov Blanket, the first (and simplest) Markov blanket detection algorithm used in a structure learning algorithm.
+
+{}\
+
+\item[Incremental Association (IAMB)] based on the Markov blanket detection algorithm of the same name, which is based on a two-phase selection scheme (a forward selection followed by an attempt to remove false positives).
+\end{description}
+}
+\end{frame}
+
+
+\subsection{Available Score-based Learning Algorithms}
+\begin{frame}
+\frametitle{Available Score-based Learning Algorithms}
+{\scriptsize{}
+\begin{description}
+\item[Hill-Climbing (HC)] a hill climbing greedy search on the space of the directed graphs. The optimized implementation uses score caching, score decomposability and score equivalence to reduce the number of duplicated tests.
+
+{}\
+
+\item[Tabu Search (TABU)] a modified hill climbing able to escape local optima by selecting a network that minimally decreases the score function.
+\end{description}
+}
+\end{frame}
+
+
+\subsection{Available Hybrid Learning Algorithms}
+\begin{frame}
+\frametitle{Available Hybrid Learning Algorithms}
+{\scriptsize{}
+\begin{description}
+\item[Max-Min Hill-Climbing (MHHC)] a hybrid algorithm which combines the Max-Min Parents and Children algorithm (to restrict the search space) and the Hill-Climbing algorithm (to find the optimal network structure in the restricted space).
+
+{}\
+
+\item[Restricted Maximization (RSMAX2)] a more general implementation of the Max-Min Hill-Climbing, which can use any combination of constraint-based and score-based algorithms.
+\end{description}
+}
+\end{frame}
+
+
+
+\section{The Comparison Methodology}
+\subsection{The Number of Graphical Errors in the Learnt Structure}
+\begin{frame}
+\frametitle{The Number of Graphical Errors in the Learnt Structure}
+{\scriptsize{}
+
+In terms of the number of graphical errors in the learnt structure.
+
+{}\
+	
+\begin{center}
+\begin{tabular}{c|l|c|c|c}
+\hline 
+& & \textbf{Target Network} & \textbf{Learnt Network} & \textbf{Direction}\tabularnewline
+\hline 
+\textbf{\textcolor{blue}{C}} & (Correct Arcs) & exist & exist & correct\tabularnewline
+\textbf{\textcolor{blue}{M}} & (Missing Arcs) & exist & \textcolor{red}{not exist} & \tabularnewline
+\textbf{\textcolor{blue}{WO}} & (Wrongly Oriented Arcs) & exist & exist & \textcolor{red}{wrong}\tabularnewline
+\textbf{\textcolor{blue}{WC}} & (Wrongly Corrected Arcs) & not exist & \textcolor{red}{exist} & \tabularnewline
+\hline 
+\end{tabular}
+\end{center}
+}
+\end{frame}
+
+
+
+
+	
+\subsection{Network Scores}
+\begin{frame}
+\frametitle{Network Scores}
+{\scriptsize{}
+In all four cases, the higher the value of the metric, the better the network.
+\begin{description}
+	\item[BDe]
+	$BDe(B,T) = P(B,T)=P(B)\times\prod_{i=1}^{n}\prod_{j=1}^{q_{i}}(\frac{\Gamma(N'_{ij})}{\Gamma(N_{ij}+N'_{ij})}\times\prod_{k=1}^{r_{i}}\frac{\Gamma(N_{ijk}+N'_{ijk})}{\Gamma(N'_{ijk})})$
+\end{description}
+
+{}\
+
+$$\phi(B|T) = LL(B|T) - f(N)|B|,$$
+
+\begin{description}
+	\item[Log-Likelihood(LL)] If $f(N) = 0$, we have the \textbf{LL} score.
+	
+	\item[AIC] If f(N) = 1, we have the \textbf{AIC} scoring function:
+	
+	\item[BIC] If $f(N) = \frac{1}{2} \log(N)$, we have the \textbf{BIC} score.
+\end{description}
+}
+\end{frame}
+
+
+
+
+
+
+\section{Data Generation with BN$\_$Data$\_$Generator in R}
+
+\begin{frame}
+\frametitle{Data Generation with BN$\_$Data$\_$Generator in R}
+
+{\scriptsize{}
+	\textbf{BN$\_$Data$\_$Generator} $\{$BNDataGenerator$\}$
+
+	{}\	
+	
+	\begin{description}
+		\item[Description] It based on a Bayesian network model to generates synthetic data.
+		
+		{}\
+		
+		\item[Usage] BN$\_$Data$\_$Generator (arcs, Probs, n, node$\_$names)
+
+		{}\
+			
+		\item[Suppose] bnlearn
+
+		{}\
+
+		\item[Repository] CRAN (Submitted at 2014-12-28)
+
+		{}\
+		
+		\item[URL] https://github.com/praster1/BN$\_$Data$\_$Generator		
+
+		{}\
+		
+		\item[Arguments]
+	\end{description}
+	
+	\begin{center}
+				\begin{tabular}{c|c|l}
+					\hline 
+					\textbf{arcs} & (matrix) & A matrix that determines the arcs.\tabularnewline
+					\hline 
+					\textbf{Probs} & (list) & The conditional probabilities.\tabularnewline
+					\hline 
+					\textbf{n} & (constant) & Data Size\tabularnewline
+					\hline 
+					\textbf{node$\_$names} & (vector) & Node names\tabularnewline
+					\hline 
+				\end{tabular}
+	\end{center}
+}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Data Generation with BN$\_$Data$\_$Generator in R}
+
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=170pt]{images/image24}
+	\end{center}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Data Generation with BN$\_$Data$\_$Generator in R}
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=170pt]{images/image23}
+	\end{center}
+}
+\end{frame}
+
+
+\section{Simulation}
+
+\begin{frame}
+\frametitle{Outline}
+{\scriptsize{}
+	\tableofcontents[currentsection]
+}
+\end{frame}
+
+
+\subsection{Real Datasets}
+
+\begin{frame}
+\frametitle{Asia DataSet}
+{\scriptsize{}
+\begin{description}
+	\item[Description] Small synthetic data set from Lauritzen and Spiegelhalter (1988) about lung diseases (tuberculosis, lung cancer or bronchitis) and visits to Asia.
+	
+	\item[Number of nodes] 8
+	
+	\item[Number of arcs] 8
+	
+	\item[Number of parameters] 18
+	
+	\item[Source] Lauritzen S, Spiegelhalter D (1988).
+	
+	"Local Computation with Probabilities on Graphical Structures and their Application to Expert Systems (with discussion)".
+	
+	Journal of the Royal Statistical Society: Series B (Statistical Methodology), 50(2), 157-224.
+\end{description}
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Asia DataSet}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/Model_Real_Asia}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Insurance DataSet}
+{\scriptsize{}
+\begin{description}
+	\item[Description] Insurance is a network for evaluating car insurance risks.
+	
+	\item[Number of nodes] 27
+	
+	\item[Number of arcs] 52
+	
+	\item[Number of parameters] 984
+	
+	\item[Source]  Binder J, Koller D, Russell S, Kanazawa K (1997).
+
+	 "Adaptive Probabilistic Networks with Hidden Variables".
+	 
+	  Machine Learning, 29(2-3), 213-244.
+\end{description}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Insurance DataSet}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/Model_Real_Insurance}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Alarm DataSet}
+{\scriptsize{}
+\begin{description}
+	\item[Description] The ALARM ("A Logical Alarm Reduction Mechanism") is a Bayesian network designed to provide an alarm message system for patient monitoring.
+	
+	\item[Number of nodes] 37
+	
+	\item[Number of arcs] 46
+	
+	\item[Number of parameters] 509
+	
+	\item[Source]  Beinlich I, Suermondt HJ, Chavez RM, Cooper GF (1989).
+	
+	"The ALARM Monitoring System: A Case Study with Two Probabilistic Inference Techniques for Belief Networks."
+	
+	In "Proceedings of the 2nd European Conference on Artificial Intelligence in Medicine", pp. 247-256. Springer-Verlag.
+\end{description}
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Alarm DataSet}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/Model_Real_ALARM}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{HailFinder DataSet}
+{\scriptsize{}
+\begin{description}
+	\item[Description] Hailfinder is a Bayesian network designed to forecast severe summer hail in northeastern Colorado.
+	
+	\item[Number of nodes] 56
+	
+	\item[Number of arcs] 66
+	
+	\item[Number of parameters] 2656
+	
+	\item[Source]  Abramson B, Brown J, Edwards W, Murphy A, Winkler RL (1996).
+	
+	"Hailfinder: A Bayesian system for forecasting severe weather".
+	
+	International Journal of Forecasting, 12(1), 57-71.
+\end{description}
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{HailFinder DataSet}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/Model_Real_Hailfinder}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Summary}
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=130pt]{images/Real_Result}
+	\end{center}
+}
+\end{frame}
+
+
+\subsection{Synthetic Data According to Topologies}
+\begin{frame}
+\frametitle{Varying topologies and number of nodes}
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=150pt]{images/image21}
+	\end{center}		
+}
+\tiny{
+		Eitel J. M. Lauría,
+		
+		"An Information-Geometric Approach to Learning Bayesian Network Topologies from Data",
+		
+		Innovations in Bayesian Networks Studies in Computational Intelligence Volume 156, 2008, pp 187-217
+		}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Prerequisite}
+{\scriptsize{}
+	\begin{itemize}
+		\item \textcolor{red}{Cardinality} was limited to \textcolor{red}{two}.
+
+		{}\
+
+		\item \textcolor{red}{The probability value}, which is imparted optionally under \textcolor{red}{U(0, 1)} distribution.
+
+		{}\
+
+		\item All experiments are \textcolor{red}{repeated 100 times}, and overall results are reported.
+		
+		{}\		
+		
+		\item \textcolor{red}{Constraint-based} Learning Algorithms often makes \textcolor{red}{undirected arcs}. So, this has been excluded from comparison.
+		
+	\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Collapse}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=50pt]{images/Topologies_Collapse}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Collapse (Score)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/01_Collapse_Score}
+	\end{figure}	
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Collapse (Arcs)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/01_Collapse_Arcs}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Collapse}
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=130pt]{images/Result_Collapse}
+	\end{center}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Line}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=50pt]{images/Topologies_Line}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Line (Score)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/02_Line_Score}
+	\end{figure}	
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Line (Arcs)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/02_Line_Arcs}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Line}
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=130pt]{images/Result_Line}
+	\end{center}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Star}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=50pt]{images/Topologies_Star}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Star (Score)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/03_Star_Score}
+	\end{figure}	
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Star (Arcs)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/03_Star_Arcs}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Star}
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=130pt]{images/Result_Star}
+	\end{center}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{PseudoLoop}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=50pt]{images/Topologies_PseudoLoop}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{PseudoLoop (Score)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/04_PseudoLoop_Score}
+	\end{figure}	
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{PseudoLoop (Arc)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/04_PseudoLoop_Arcs}
+	\end{figure}	
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{PseudoLoop}
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=130pt]{images/Result_PseudoLoop}
+	\end{center}
+}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Diamond}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=50pt]{images/Topologies_Diamond}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Diamond (Score)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/05_Diamond_Score}
+	\end{figure}	
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Diamond (Arc)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/05_Diamond_Arcs}
+	\end{figure}	
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Diamond}
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=130pt]{images/Result_Diamond}
+	\end{center}
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Rhombus}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=50pt]{images/Topologies_Rhombus}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Rhombus (Score)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/06_Rhombus_Score}
+	\end{figure}	
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Rhombus (Arc)}
+{\scriptsize{}
+	\begin{figure}
+		\includegraphics[height=170pt]{images/06_Rhombus_Arcs}
+	\end{figure}	
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Rhombus}
+{\scriptsize{}
+	\begin{center}
+		\includegraphics[height=130pt]{images/Result_Rhombus}
+	\end{center}
+}
+\end{frame}
+
+
+
+\section{Discussion}
+\begin{frame}
+\frametitle{Discussion}
+{\scriptsize{}
+	\begin{itemize}
+	\item In most cases using synthetic data according to topology,
+	
+	If \textcolor{red}{comparing by score}, then \textcolor{red}{TABU search} has good performance.
+	
+	But \textcolor{red}{comparing by reference to "What C is the lot?"}, then \textcolor{red}{HC} has also good performance.
+	
+	{}\	
+	
+	\item \textcolor{red}{Hybrid algorithm} compared to Score-based algorithm is found to be that \textcolor{red}{draw the arc more conservative}.
+
+	{}\
+
+	\item About  \textcolor{red}{Line} and  \textcolor{red}{Star} form, the performance difference due to relatively algorithm was not large compared to other topology.
+	\end{itemize}
+}
+\end{frame}
+\end{document}

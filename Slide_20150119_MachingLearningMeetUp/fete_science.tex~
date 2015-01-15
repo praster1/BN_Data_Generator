@@ -1,0 +1,63 @@
+\documentclass{beamer}
+\usepackage{mathpazo}
+\usepackage[french]{babel}
+%\usepackage{ulem}%sout
+%\usepackage{cancel}
+
+%%
+\usetheme{ENSLyon} %http://mike.depalatis.net/beamerthemes/
+%\useoutertheme[footline=authorinstitutetitle]{miniframes}
+\title[Title]{Title}
+\author[Joe]{}
+\institute[]{Laboratoire de Chimie - ENS Lyon - 46 Allée d'Italie - 69364 Lyon Cedex 7}
+\date{13 Octobre 2011}
+  \setbeamersize{text margin left=0mm}
+  \setbeamersize{text margin right=0mm}
+
+
+% pour supprimer les symboles de navigation
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme{ENSLyon_multi}
+
+%\setbeamertemplate{itemize item}{+}
+%\setbeamertemplate{itemize item}{-}
+%\setbeamercolor{normal text}{fg=black,bg=white}
+%\setbeamercovered{still covered={\opaqueness<1->{15}},again covered={\opaqueness<1->{15}}}
+
+
+\begin{document}
+
+
+
+\begin{frame}
+	\titlepage
+	\begin{center}
+	\includegraphics[height=0.5cm]{logoens.pdf}
+
+	\end{center}
+\end{frame}
+
+\section{Introduction}
+\subsection{Issues and objectives 1}
+\begin{frame}{Issues and objectives 1}
+
+\end{frame}
+\subsection{Issues and objectives 2}
+\begin{frame}{Issues and objectives 2}
+
+\end{frame}
+
+
+\section{First part}
+\subsection{Issue 1}
+\begin{frame}{Issue 1}
+
+\end{frame}
+\subsection{Issue 2}
+\begin{frame}{Issue 2}
+
+\end{frame}
+
+
+
+\end{document}
